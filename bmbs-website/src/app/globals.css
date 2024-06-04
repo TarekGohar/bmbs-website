@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+section#hero {
+  background-image: url("/images/bar-blurred.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  backdrop-filter: blur(10px);
+}
+
 /* Hamburger Menu */
 .hamburger {
   cursor: pointer;
