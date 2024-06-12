@@ -5,6 +5,8 @@ import Script from "next/script";
 import Link from "next/link";
 import { useState } from "react";
 
+// Implement responsive navbar with hamburger button
+
 export default function Navbar() {
   const [menu, setMenu] = useState(false);
   return (
@@ -25,7 +27,7 @@ export default function Navbar() {
         </Link>
 
         {/* Menu */}
-        <div className="hidden pl-10 h-10 font-alata md:flex md:space-x-4 lg:space-x-16 items-center">
+        <div className="hidden pl-10 h-10 font-normal md:flex md:space-x-4 lg:space-x-16 items-center">
           <div className="group">
             <Link href="/about">About</Link>
             <div className="mx-2 group-hover:border-b group-hover:border-blue-50"></div>
@@ -42,9 +44,7 @@ export default function Navbar() {
           </div>
           <div className="group">
             <Link href="/support">
-              <button className=" bg-pink-300 p-4 rounded-lg hover:bg-pink-500 duration-200">
-                Book Now
-              </button>
+              <button className="btn-white">Book Now</button>
             </Link>
           </div>
         </div>

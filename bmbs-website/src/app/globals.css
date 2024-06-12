@@ -54,3 +54,11 @@ section#hero {
 .open .hamburger-bottom {
   transform: rotate(-45deg) translateX(-10px) translateY(6px);
 }
+
+.btn-white {
+  @apply text-white border-4 border-white p-4 font-bold rounded-xl bg-white bg-opacity-40 duration-200 hover:bg-opacity-100 hover:text-black active:bg-slate-200;
+}
+
+.btn-black {
+  @apply text-black border-4 border-black p-4 font-bold rounded-xl bg-white bg-opacity-40 duration-200 hover:bg-opacity-100 hover:text-white active:bg-slate-200;
+}
