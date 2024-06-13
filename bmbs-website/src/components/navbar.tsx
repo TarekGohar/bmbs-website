@@ -11,7 +11,7 @@ export default function Navbar() {
   const [menu, setMenu] = useState(false);
   return (
     <>
-      <nav className="flex py-12 px-8 md:px-16 items-center justify-between font-light text-white">
+      <nav className="flex py-12 px-8 md:px-4 items-center justify-between font-light text-white">
         {/* Logo Button */}
         <Link href="/">
           <button draggable>
@@ -39,11 +39,11 @@ export default function Navbar() {
           </div>
 
           <div className="group">
-            <Link href="/support">Contact</Link>
+            <Link href="/contact">Contact</Link>
             <div className="mx-2 group-hover:border-b group-hover:border-blue-50"></div>
           </div>
           <div className="group">
-            <Link href="/support">
+            <Link href="/book-now">
               <button className="btn-white">Book Now</button>
             </Link>
           </div>

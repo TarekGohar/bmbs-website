@@ -62,3 +62,7 @@ section#hero {
 .btn-black {
   @apply text-black border-4 border-black p-4 font-bold rounded-xl bg-white bg-opacity-40 duration-200 hover:bg-opacity-100 hover:text-white active:bg-slate-200;
 }
+
+.icon {
+  @apply size-10 bg-gray-300 p-2 rounded-md duration-200 hover:bg-gray-400 active:bg-gray-500;
+}

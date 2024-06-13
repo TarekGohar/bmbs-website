@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -16,7 +17,9 @@ export default function Hero() {
           </p>
         </div>
         <div className="mt-12">
-          <button className="btn-white">Book Now</button>
+          <Link href="/book-now" className="btn-white">
+            Book Now
+          </Link>
         </div>
       </div>
     </section>
