@@ -11,7 +11,7 @@ export default function Navbar() {
   const [menu, setMenu] = useState(false);
   return (
     <>
-      <nav className="flex py-12 px-8 md:px-4 items-center justify-between font-light text-white">
+      <nav className="flex py-8 px-8 md:px-4 items-center justify-between font-light text-white shadow-md">
         {/* Logo Button */}
         <Link href="/">
           <button draggable>

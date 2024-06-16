@@ -66,3 +66,40 @@ section#hero {
 .icon {
   @apply size-10 bg-gray-300 p-2 rounded-md duration-200 hover:bg-gray-400 active:bg-gray-500;
 }
+
+.input {
+  @apply grow p-2 border-b-2 font-light outline-none border-gray-300 placeholder:text-gray-300 text-gray-500;
+}
+
+.input-partial-border {
+  position: relative;
+  display: inline-block;
+}
+
+.input-partial-border input {
+  border: none;
+  outline: none;
+  padding: 0 0.5rem;
+  width: 100%; /* Ensure the input takes the full width of the container */
+}
+
+.input-partial-border::before,
+.input-partial-border::after {
+  background-color: rgb(209 213 219 / 1);
+  content: "";
+  position: absolute;
+  height: 2px; /* Adjust this to your desired border thickness */
+}
+
+.input-partial-border::before {
+  bottom: 0;
+  left: 100%;
+  width: 2px; /* Adjust the width as needed */
+  height: 20px;
+}
+
+.input-partial-border::after {
+  bottom: 0;
+  left: 0;
+  width: 100%; /* Adjust the width as needed */
+}
