@@ -13,7 +13,7 @@ export default function Home() {
           <Navbar />
         </div>
       </div>
-      <h1>Sucess</h1>
+      <h1>Success</h1>
     </>
   );
 }

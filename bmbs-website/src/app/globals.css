@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color: black;
+}
+
 section#hero {
   background-image: url("/images/bar-blurred.png");
   background-repeat: no-repeat;
@@ -9,6 +13,15 @@ section#hero {
   background-position: center;
   height: 100;
   backdrop-filter: blur(10px);
+}
+
+section#about-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("/images/BMBS-grid.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100;
 }
 
 /* Hamburger Menu */

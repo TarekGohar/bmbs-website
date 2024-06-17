@@ -2,8 +2,10 @@
 
 import PhoneInput from "@/components/phone-input";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function Form() {
+  const router = useRouter();
   async function handleSubmit(event: any) {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -24,7 +26,7 @@ export default function Form() {
     const result = await response.json();
     if (result.success) {
       console.log(result);
-      <Link href="/book-now/success" />;
+      router.push("/book-now/success");
     }
   }
 

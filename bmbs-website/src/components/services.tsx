@@ -4,7 +4,7 @@ export default function Services() {
   return (
     <section id="services" className="px-8 mb-24">
       <div className="container mx-auto max-w-6xl px-6 py-12 mt-10 flex flex-col items-center justify-center">
-        <div className=" font-bold text-6xl">Services</div>
+        <div className="font-bold text-6xl text-pink-600">Services</div>
       </div>
 
       <div className="mb-12 flex flex-col lg:flex-row items-center lg:items-stretch space-y-10 justify-between lg:space-y-0 lg:space-x-12 max-w-6xl mx-auto">
