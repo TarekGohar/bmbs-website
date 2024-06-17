@@ -34,7 +34,7 @@ export default function Navbar() {
           </div>
 
           <div className="group">
-            <Link href="/careers">Services</Link>
+            <Link href="/services">Services</Link>
             <div className="mx-2 group-hover:border-b group-hover:border-blue-50"></div>
           </div>
 
@@ -74,10 +74,10 @@ export default function Navbar() {
         <Link href="/about" className="hover:text-pink-500">
           About
         </Link>
-        <Link href="/careers" className="hover:text-pink-500">
+        <Link href="/services" className="hover:text-pink-500">
           Services
         </Link>
-        <Link href="#" className="hover:text-pink-500">
+        <Link href="/contact" className="hover:text-pink-500">
           Contact
         </Link>
       </div>
