@@ -116,3 +116,8 @@ section#about-hero {
   left: 0;
   width: 100%; /* Adjust the width as needed */
 }
+
+.arrow-div:hover .arrow {
+  fill: #db2777;
+  color: #db2777;
+}
