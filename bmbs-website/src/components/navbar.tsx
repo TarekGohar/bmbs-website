@@ -30,21 +30,24 @@ export default function Navbar() {
         <div className="hidden pl-10 h-10 font-normal md:flex md:space-x-4 lg:space-x-16 items-center">
           <div className="group">
             <Link href="/about">About</Link>
-            <div className="mx-2 group-hover:border-b group-hover:border-blue-50"></div>
+            <div className="mx-2 group-hover:border-b group-hover:border-white"></div>
           </div>
 
           <div className="group">
             <Link href="/services">Services</Link>
-            <div className="mx-2 group-hover:border-b group-hover:border-blue-50"></div>
+            <div className="mx-2 group-hover:border-b group-hover:border-white"></div>
           </div>
 
           <div className="group">
             <Link href="/contact">Contact</Link>
-            <div className="mx-2 group-hover:border-b group-hover:border-blue-50"></div>
+            <div className="mx-2 group-hover:border-b  group-hover:border-white"></div>
           </div>
           <div className="group">
-            <Link href="/book-now">
-              <button className="btn-white">Book Now</button>
+            <Link
+              href="/book-now"
+              className="p-4 bg-pink-600 rounded-lg font-medium duration-200 hover:bg-pink-700 active:bg-pink-800"
+            >
+              Book Now
             </Link>
           </div>
         </div>
@@ -69,7 +72,7 @@ export default function Navbar() {
         id="menu"
         className={`${
           menu ? "flex" : "hidden" // opens menu or hides it on click of hamburger button
-        } absolute top-0 bottom-0 left-0 flex-col self-end w-full min-h-screen py-1 pt-40 pl-12 space-y-3 text-lg text-black uppercase opacity-90 bg-white`}
+        } absolute top-0 bottom-0 left-0 flex-col self-end w-full min-h-screen py-1 pt-40 pl-12 space-y-3 text-lg text-white  opacity-90 bg-black`}
       >
         <Link href="/about" className="hover:text-pink-500">
           About
