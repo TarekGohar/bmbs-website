@@ -37,7 +37,7 @@ export default function About() {
           <span className="font-bold text-[5rem] pr-1">WHAT</span>is Brahm Mauer
           Bartending Service?
         </h2>
-        <p className="font-normal leading-5 px-20 text-white">
+        <p className="font-medium leading-6 px-20 text-white">
           <span className="">Brahm Mauer&apos;s</span> journey began in the
           restaurant and bar scene. After successfully completing every position
           in restaurants, he set his sights on the event industry. Realizing
@@ -54,13 +54,19 @@ export default function About() {
           BMBS is exclusive in some of the city&apos;s hottest venues and the
           preferred vendor to the rest of them.
         </p>
-        <img src="" alt="" />
+        <Image
+          width={1000}
+          height={1000}
+          src="/images/brahm.jpg"
+          alt="portrait of owner Brahm Mauer"
+          className="mt-16 w-3/4 rounded"
+        />
 
         <h2 className="w-[32rem] my-24 mx-4 flex items-center font-bold text-pink-600 text-3xl">
           <span className="font-bold text-[5rem] pr-1">LEADER</span>in
           Montréal&apos;s Service Industries
         </h2>
-        <p className="font-normal leading-5 px-20 text-white">
+        <p className="font-medium leading-6 px-20 text-white">
           Brahm Mauer and his team are firm believers that with the right team &
           support staff anything and everything is possible! We are more than
           just a bar service, we are the definition of hospitality.
@@ -71,7 +77,7 @@ export default function About() {
           -&nbsp;
           <strong>Richard Branson</strong>
         </p>
-        <p className="font-normal leading-5 px-20 text-white">
+        <p className="font-medium leading-6 px-20 text-white">
           Our service staff are the backbone of our business and the ambassadors
           of our brand. They are passionate, well trained, and always ensure
           that everyone around them are having the best time possible. BMBS has
@@ -80,7 +86,7 @@ export default function About() {
           agencies, which means their staff differ from event to event. This
           eliminates the synergy and loyalties with their service team.
         </p>
-        <p className="mt-4 font-normal leading-5 px-20 text-white">
+        <p className="mt-8 font-medium leading-6 px-20 text-white">
           The BMBS experience cannot be spoken about without mentioning their
           market fresh Mixology program. Their in-house mixology team creates
           seasonal menus for our guests to choose from. They also provide their
