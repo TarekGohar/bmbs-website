@@ -81,7 +81,7 @@ section#about-hero {
 }
 
 .input {
-  @apply grow p-2 border-b-2 font-light outline-none border-gray-300 placeholder:text-gray-300 text-gray-500;
+  @apply grow p-2 border-b-2 placeholder:font-light outline-none bg-neutral-600 border-neutral-700 placeholder:text-gray-400 font-medium text-gray-100;
 }
 
 .input-partial-border {

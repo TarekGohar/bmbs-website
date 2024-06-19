@@ -13,7 +13,10 @@ export default function Home() {
           <Navbar />
         </div>
       </div>
-      <Form />
+      <section id="form" className="bg-neutral-900 py-32">
+        <Form />
+      </section>
+      <Footer />
     </>
   );
 }

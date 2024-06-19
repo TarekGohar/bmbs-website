@@ -71,7 +71,7 @@ export default function About() {
           support staff anything and everything is possible! We are more than
           just a bar service, we are the definition of hospitality.
         </p>
-        <p className="my-8 italic w-4/5 mx-auto text-white">
+        <p className="my-8 px-12 italic w-4/5 mx-auto text-white">
           &ldquo;Clients do not come first. Employees come first. If you take
           care of your employees, they will take care of the clients&rdquo;
           -&nbsp;
