@@ -8,11 +8,6 @@ import BackButton from "@/components/back-btn";
 export default function Home() {
   return (
     <div className="">
-      <div className="bg-black">
-        <div className="container mx-auto bg-black">
-          <Navbar />
-        </div>
-      </div>
       <div className="mt-10 max-w-[80rem] container mx-auto">
         <BackButton linkTo="/services" backText="Services" />
       </div>

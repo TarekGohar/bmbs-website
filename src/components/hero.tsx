@@ -1,8 +1,8 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 
 export default function Hero() {
-  const t = useTranslations("HomePage");
+  const t = useTranslations("Hero");
   return (
     <section id="hero">
       <div className="container mx-auto max-w-6xl pb-64 pt-64 px-6 py-12 flex flex-col items-center justify-center">

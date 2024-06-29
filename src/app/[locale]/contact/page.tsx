@@ -7,11 +7,6 @@ import Footer from "@/components/footer";
 export default function Home() {
   return (
     <section id="contact">
-      <div className="bg-black">
-        <div className="container mx-auto bg-black">
-          <Navbar />
-        </div>
-      </div>
       <div className="bg-neutral-900 hover py-32 px-4 h-[80vh] flex items-center justify-center">
         <div className="container mx-auto">
           <h1 className="text-6xl text-white mx-auto w-fit font-bold">

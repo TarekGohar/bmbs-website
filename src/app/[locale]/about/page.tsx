@@ -5,13 +5,6 @@ import Footer from "@/components/footer";
 export default function About() {
   return (
     <div>
-      {/* Navbar */}
-      <div>
-        <div className="container mx-auto">
-          <Navbar />
-        </div>
-      </div>
-
       {/* Hero Section */}
       <section
         id="about-hero"

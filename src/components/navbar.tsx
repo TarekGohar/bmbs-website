@@ -1,8 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Script from "next/script";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { useState } from "react";
 
 // Implement responsive navbar with hamburger button
@@ -11,7 +10,7 @@ export default function Navbar() {
   const [menu, setMenu] = useState(false);
   return (
     <>
-      <nav className="flex py-8 px-8 md:px-4 items-center justify-between font-light text-white shadow-md">
+      <nav className="container mx-auto flex py-8 px-8 md:px-4 items-center justify-between font-light text-white shadow-md">
         {/* Logo Button */}
         <Link href="/">
           <button draggable>
