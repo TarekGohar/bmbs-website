@@ -4,7 +4,7 @@ import Footer from "@/components/footer";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "BMBS Homepage",
+  title: "Homepage",
   description: "The homepage of the Brahm Mauer Bartending Service website",
 };
 
