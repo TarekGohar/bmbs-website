@@ -1,7 +1,9 @@
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 export default function Footer() {
+  const t = useTranslations("Navbar");
   return (
     <section id="footer">
       <div className="flex flex-col items-center justify-center bg-black">
@@ -17,15 +19,15 @@ export default function Footer() {
         {/* Footer Menu */}
         <ul className="flex space-x-10 text-white font-thin">
           <div className="group">
-            <Link href="/about">About</Link>
+            <Link href="/about">{t("about")}</Link>
             <div className="mx-2 group-hover:border-b-[0.75px] group-hover:border-blue-50"></div>
           </div>
           <div className="group">
-            <Link href="/services">Services</Link>
+            <Link href="/services">{t("services")}</Link>
             <div className="mx-2 group-hover:border-b-[0.75px] group-hover:border-blue-50"></div>
           </div>
           <div className="group">
-            <Link href="/contact">Contact</Link>
+            <Link href="/contact">{t("contact")}</Link>
             <div className="mx-2 group-hover:border-b-[0.75px] group-hover:border-blue-50"></div>
           </div>
         </ul>
