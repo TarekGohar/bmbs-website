@@ -18,18 +18,32 @@ export default function Footer() {
 
         {/* Footer Menu */}
         <ul className="flex space-x-10 text-white font-thin">
-          <div className="group">
-            <Link href="/about">{t("about")}</Link>
-            <div className="mx-2 group-hover:border-b-[0.75px] group-hover:border-blue-50"></div>
-          </div>
-          <div className="group">
-            <Link href="/services">{t("services")}</Link>
-            <div className="mx-2 group-hover:border-b-[0.75px] group-hover:border-blue-50"></div>
-          </div>
-          <div className="group">
-            <Link href="/contact">{t("contact")}</Link>
-            <div className="mx-2 group-hover:border-b-[0.75px] group-hover:border-blue-50"></div>
-          </div>
+          <li>
+            <Link
+              href="/about"
+              className="border-b-[0.75px] border-b-transparent hover:border-b-white"
+            >
+              {t("about")}
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              href="/services"
+              className="border-b-[0.75px] border-b-transparent hover:border-b-white"
+            >
+              {t("services")}
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              href="/contact"
+              className="border-b-[0.75px] border-b-transparent hover:border-b-white"
+            >
+              {t("contact")}
+            </Link>
+          </li>
         </ul>
 
         {/* Socials */}

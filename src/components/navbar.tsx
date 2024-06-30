@@ -65,19 +65,18 @@ export default function Navbar() {
         </div>
 
         {/* Hamburger button */}
-        <div className="md:hidden">
-          <button
-            id="menu-btn"
-            className={`${
-              menu ? "open" : "none" // enables/disables styling for hamburger button
-            } z-40 block hamburger md:hidden focus:outline-none`}
-            onClick={() => setMenu((prev) => !prev)}
-          >
-            <span className="hamburger-top"></span>
-            <span className="hamburger-middle"></span>
-            <span className="hamburger-bottom"></span>
-          </button>
-        </div>
+        <button
+          aria-label="Open mobile menu"
+          id="menu-btn"
+          className={`${
+            menu ? "open" : "none" // enables/disables styling for hamburger button
+          } z-40 block hamburger md:hidden focus:outline-none`}
+          onClick={() => setMenu((prev) => !prev)}
+        >
+          <span className="hamburger-top"></span>
+          <span className="hamburger-middle"></span>
+          <span className="hamburger-bottom"></span>
+        </button>
       </nav>
 
       {/* Mobile Menu */}
