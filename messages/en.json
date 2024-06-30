@@ -1,6 +1,67 @@
 {
   "Hero": {
     "title": "Brahm Mauer Bartending Service",
+    "subtitle": "Weddings. Festivals. Corporate Events.",
     "book-now": "Book Now"
+  },
+  "Navbar": {
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact",
+    "book-now": "Book Now",
+    "locale": "fr"
+  },
+  "Services": {
+    "heading": "Services",
+    "read-more": "Read More",
+    "corporate": {
+      "title": "Corporate",
+      "description": "Combining a bespoke bar service with a highly trained professional staff, Brahm Mauer Bar Services ensures that the event is a success in both the eyes of the client as well as their guests.",
+      "long-description": "Servicing Montréal and its surrounding areas Brahm Mauer Bar Services offers turnkey bar solutions. Combining a bespoke bar service with a highly trained and professional staff, Brahm Mauer Bar Services ensures that the event is a success in both the eyes of the client as well as their guests for your next Corporate Event."
+    },
+    "festivals": {
+      "title": "Festivals",
+      "description": "We elevate the VIP experience at Montréal's most renowned festivals. From the coldest festival in the world to the main stage at Osheaga, there is no festival too big or too small for Brahm Mauer and his team.",
+      "long-description": "We elevate the VIP experience at Montréal’s most renowned festivals. From the coldest festival in the world to the main stage at Osheaga, there is no festival too big or too small for Brahm Mauer and his team. Increasing sales, productivity, efficiencies, and the overall customer experience, BMBS has successfully secured annual contracts with Osheaga, Ile Soniq, Lasso, Piknic Electronic & Igloofest. See you in the VIP!"
+    },
+    "weddings": {
+      "title": "Weddings",
+      "description": "Recognized for making wedding dreams unforgettable realities. Our skilled mixologists will delight your guests with enticing cocktails and unparalleled service.",
+      "long-description": "BMBS is recognized for making wedding dreams unforgettable realities. Our skilled mixologists will delight your guests with enticing cocktails, incredible vibes, and unparalleled service. To ensure your big day is exactly as you imagined it, our wedding team will work closely with you and your planner to build a custom-tailored menu that will exceed all expectations. From our unique ice programs to our market-fresh ingredients, your wedding is sure to be a magical experience for all. <br></br><br></br>Our bars are also complete with stunning visuals which are fully customizable to match your desired style. If you want to go the extra mile to entertain and fascinate your guests, leave it up to us to enchant them at the bar."
+    }
+  },
+  "About": {
+    "first-heading": "<span>WHAT</span>is Brahm Mauer Bartending Service?",
+    "first-paragraph": "Brahm Mauer's journey began in the restaurant and bar scene. After successfully completing every position in restaurants, he set his sights on the event industry. Realizing that the city needed something fresh and new, he decided to start Brahm Mauer Bar Services. Fast forward to today with over 25 years of experience and extensive training Brahm Mauer and his team have become Montréal's premiere event company; servicing private, corporate, fundraisers & festivals. <br></br><br></br>In providing a perfect service from the initial contact with our clients until the last drink is served, we've been able to grow from a couple of events a year into the monopoly that is BMBS today. BMBS is exclusive in some of the city's hottest venues and the preferred vendor to the rest of them.",
+    "second-heading": "<span>LEADER</span>in Montréal's Service Industries",
+    "second-paragraph": "Brahm Mauer and his team are firm believers that with the right team & support staff anything and everything is possible! We are more than just a bar service, we are the definition of hospitality.",
+    "third-paragraph": "\"Clients do not come first. Employees come first. If you take care of your employees, they will take care of the clients\" - <strong>Richard Branson</strong>",
+    "fourth-paragraph": "Our service staff are the backbone of our business and the ambassadors of our brand. They are passionate, well trained, and always ensure that everyone around them are having the best time possible. BMBS has an extremely low staff turnover rate which gives us the edge over the competition. Other bar service and catering companies rely on staffing agencies, which means their staff differ from event to event. This eliminates the synergy and loyalties with their service team.",
+    "fifth-paragraph": "The BMBS experience cannot be spoken about without mentioning their market fresh Mixology program. Their in-house mixology team creates seasonal menus for our guests to choose from. They also provide their homemade purées to Montreal festivals, including Beach Club & Piknic Electronic. Using only the freshest ingredients and staying ahead of the trends, Brahm Mauer brings mixology to the next level.",
+    "book-now": "Book Now"
+  },
+  "Contact": {
+    "call": "Call Us",
+    "email": "Email Us"
+  },
+  "Booking": {
+    "title": "Booking Submitted!",
+    "subtitle": "We will get in touch soon.",
+    "main-title": "Booking Details",
+    "info": "Personal Information",
+    "first-name": "First Name",
+    "last-name": "Last Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "phone-type": {
+      "home": "Home",
+      "mobile": "Mobile",
+      "work": "Work"
+    },
+    "details": "Event Details",
+    "location": "Location (Optional",
+    "capacity": "Capacity (Optional)",
+    "additional-info": "Additional Information (Optional)",
+    "submit": "Submit Form"
   }
 }

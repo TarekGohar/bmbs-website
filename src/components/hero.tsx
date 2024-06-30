@@ -9,16 +9,12 @@ export default function Hero() {
         <div className="max-w-lg text-6xl font-sans p-6 pr-20 text-slate-200 uppercase border-4 md:max-w-2xl md:p-12 md:mx-0 md:text-8xl">
           {t("title")}
         </div>
-        <div className="text-white text-2xl uppercase font-sans text-center mt-12">
-          <p>
-            Weddings. Festivals.
-            <br className="md:hidden" />
-            &nbsp;Corporate Events.
-          </p>
+        <div className="w-fit px-24 text-white text-2xl uppercase font-sans text-center mt-12">
+          <p>{t("subtitle")}</p>
         </div>
         <div className="mt-12">
           <Link href="/book-now" className="btn-white">
-            Book Now
+            {t("book-now")}
           </Link>
         </div>
       </div>

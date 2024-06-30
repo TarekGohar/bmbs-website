@@ -1,9 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
+import { useTranslations } from "next-intl";
 
 const PhoneInput: React.FC = () => {
   const [phone, setPhone] = useState("");
+  const t = useTranslations("Booking");
 
   const phoneFormat = (value: string) => {
     // Define your phone number formatting logic here
@@ -25,7 +27,7 @@ const PhoneInput: React.FC = () => {
     <input
       type="tel"
       name="phone"
-      placeholder="Phone Number"
+      placeholder={t("phone")}
       className="input"
       value={phone}
       onInput={handleInput}

@@ -1,5 +1,67 @@
 {
   "Hero": {
-    "title": "Service de traiteur Brahm Mauer"
+    "title": "Service de traiteur Brahm Mauer",
+    "subtitle": "Mariages. Festivals. Entreprises.",
+    "book-now": "Réserver"
+  },
+  "Navbar": {
+    "about": "À propos",
+    "services": "Services",
+    "contact": "Contact",
+    "book-now": "Réserver",
+    "locale": "en"
+  },
+  "Services": {
+    "heading": "Services",
+    "read-more": "En savoir plus",
+    "corporate": {
+      "title": "Entreprises",
+      "description": "Combinant un service de bar sur mesure avec un personnel professionnel hautement qualifié, Brahm Mauer Bar Services garantit que l'évènement est un succès tant aux yeux du client que de ses invités.",
+      "long-description": "Service Montréal et ses environs, Brahm Mauer Bar Services propose des solutions de bar clé en main. Combinant un service de bar sur mesure avec un personnel hautement qualifié et professionnel, Brahm Mauer Bar Services garantit que l'évènement est un succès tant aux yeux du client que de ses invités pour votre prochain évènement d'entreprise."
+    },
+    "festivals": {
+      "title": "Festivals",
+      "description": "Nous élevons l'expérience VIP dans les festivals les plus renommés de Montréal. Du festival le plus froid au monde à la scène principale d'Osheaga, il n'y a pas de festival trop grand ou trop petit pour Brahm Mauer et son équipe.",
+      "long-description": "Nous élevons l’expérience VIP dans les festivals les plus renommés de Montréal. Du festival le plus froid du monde à la scène principale d'Osheaga, il n'y a pas de festival trop grand ou trop petit pour Brahm Mauer et son équipe. En augmentant les ventes, la productivité, l'efficacité et l'expérience client globale, BMBS a obtenu avec succès des contrats annuels avec Osheaga, Ile Soniq, Lasso, Piknic Electronic et Igloofest. Rendez-vous en VIP !"
+    },
+    "weddings": {
+      "title": "Mariages",
+      "description": "Reconnu pour faire des rêves de mariage des réalités inoubliables. Nos mixologues talentueux raviront vos invités avec des cocktails alléchants et un service inégalé.",
+      "long-description": "BMBS est reconnu pour faire des rêves de mariage des réalités inoubliables. Nos mixologues talentueux raviront vos invités avec des cocktails alléchants, des vibes incroyables et un service inégalé. Pour garantir que votre grand jour soit exactement comme vous l'avez imaginé, notre équipe de mariage travaillera en étroite collaboration avec vous et votre planificateur pour élaborer un menu sur mesure qui dépassera toutes les attentes. <br></br><br></br>Nos bars sont également dotés de visuels époustouflants entièrement personnalisables pour correspondre à votre style souhaité. Si vous voulez aller plus loin pour divertir et fasciner vos invités, laissez-nous les enchanter au bar."
+    }
+  },
+  "About": {
+    "first-heading": "<span>C'EST</span>quoi Brahm Mauer Bartending Service?",
+    "first-paragraph": "Le voyage de Brahm Mauer commence dans les restaurants et les bars. Après avoir occupé avec succès tous les postes en restauration, il jete son dévolu sur l'industrie de l'évènementiel. Réalisant que la ville avait besoin d’autre chose, plus frais et nouveau, il décide de lancer Brahm Mauer Bar Services. Avance rapide jusqu'à aujourd'hui : avec plus de 25 ans d'expérience et une formation approfondie, Brahm Mauer et son équipe deviennent la première entreprise d'évènements à Montréal ; au service des particuliers, des entreprises, collectes de fonds et des festivals. <br></br><br></br>En fournissant un service parfait depuis le premier contact avec nos clients jusqu'au dernier verre servi, nous avons pu passer de quelques évènements annuels au monopole qu'est BMBS aujourd'hui. BMBS est exclusif dans certains lieux les plus en vogue de la ville et le fournisseur préféré des autres.",
+    "second-heading": "<span>LEADER</span> de l'industrie des services de Montréal",
+    "second-paragraph": "Brahm Mauer et son équipe sont fermement convaincus qu’avec la bonne équipe et le personnel de soutien, tout est possible ! Nous sommes plus qu’un simple bar ; nous sommes la définition même de l’hospitalité.",
+    "third-paragraph": "\"Les clients ne passent pas en premier. Les employés passent en premier. Si vous prenez soin de vos employés, ils prendront soin des clients\" - <strong>Sir Richard Branson</strong>",
+    "fourth-paragraph": "Notre personnel de service est la colonne vertébrale de notre entreprise et les ambassadeurs de notre marque. Ils sont passionnés, bien formés et s'assurent toujours que tout le monde autour d'eux passe le meilleur moment possible. BMBS a un taux de rotation du personnel extrêmement faible, ce qui nous donne un avantage sur la concurrence. D'autres entreprises de services de bar et de restauration s'appuient sur des agences de recrutement, ce qui signifie que leur personnel diffère d'un événement à l’autre. Cela élimine la synergie et la loyauté avec leur équipe de service.",
+    "fifth-paragraph": "On ne peut pas parler de l'expérience BMBS sans mentionner leur programme de mixologie fraîche du marché. Leur équipe de mixologie interne crée des menus de saison parmi lesquels nos clients peuvent choisir. Ils fournissent également leurs purées fait maison aux festivals montréalais, dont Beach Club & Piknic Electronic. Utilisant uniquement des ingrédients les plus frais et restant à l'avant-garde des tendances, Brahm Mauer fait passer la mixologie au niveau supérieur.",
+    "book-now": "Réserver"
+  },
+  "Contact": {
+    "call": "Appelez-nous",
+    "email": "Écrivez-nous"
+  },
+  "Booking": {
+    "title": "Réservation effectuée!",
+    "subtitle": "Nous vous contacterons bientôt.",
+    "main-title": "Détails de la réservation",
+    "info": "Informations personnelles",
+    "first-name": "Prénom",
+    "last-name": "Nom",
+    "email": "Courriel",
+    "phone": "Numéro de téléphone",
+    "phone-type": {
+      "home": "Domicile",
+      "mobile": "Mobile",
+      "work": "Travail"
+    },
+    "details": "Détails de l'événement",
+    "location": "Lieu (optionnel)",
+    "capacity": "Capacité (optionnel)",
+    "additional-info": "Informations complémentaires (optionnel)",
+    "submit": "Soumettre le formulaire"
   }
 }

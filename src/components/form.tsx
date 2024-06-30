@@ -1,10 +1,14 @@
 "use client";
 
 import PhoneInput from "@/components/phone-input";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/i18n/navigation";
+import { usePathname } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 export default function Form() {
   const router = useRouter();
+  const pathname = usePathname();
+  const t = useTranslations("Booking");
   async function handleSubmit(event: any) {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -25,13 +29,13 @@ export default function Form() {
     const result = await response.json();
     if (result.success) {
       console.log(result);
-      router.push("/book-now/success");
+      router.push(`${pathname}/success`);
     }
   }
 
   return (
     <div className="container mx-auto px-5 max-w-2xl ">
-      <h1 className="text-white text-4xl font-extrabold">Booking Details</h1>
+      <h1 className="text-white text-4xl font-extrabold">{t("main-title")}</h1>
       <form
         action="https://api.web3forms.com/submit"
         method="POST"
@@ -46,21 +50,21 @@ export default function Form() {
 
         {/* Personal Information */}
         <h2 className="text-neutral-100 font-semibold text-2xl mt-4">
-          Personal Information
+          {t("info")}
         </h2>
         <div className="mt-4 flex flex-col space-y-5">
           <div className="flex justify-between space-x-5">
             <input
               type="text"
               name="firstname"
-              placeholder="First Name"
+              placeholder={t("first-name")}
               className="input"
               required
             />
             <input
               type="text"
               name="lastname"
-              placeholder="Last Name"
+              placeholder={t("last-name")}
               className="input"
               required
             />
@@ -68,7 +72,7 @@ export default function Form() {
           <input
             type="email"
             name="email"
-            placeholder="Email Address"
+            placeholder={t("email")}
             className="input"
             required
           />
@@ -80,34 +84,34 @@ export default function Form() {
               className="appearance-none input text-gray-300 rounded-none"
             >
               <option value="home" selected>
-                Home
+                {t("phone-type.home")}
               </option>
-              <option value="mobile">Mobile</option>
-              <option value="work">Work</option>
+              <option value="mobile">{t("phone-type.mobile")}</option>
+              <option value="work">{t("phone-type.work")}</option>
             </select>
           </div>
         </div>
 
         {/* Event Information */}
         <h2 className="text-neutral-100 font-semibold text-2xl mt-8">
-          Event Details
+          {t("details")}
         </h2>
         <div className="mt-4 flex flex-col space-y-5">
           <input
             type="text"
             name="location"
-            placeholder="Location"
+            placeholder={t("location")}
             className="input"
           />
           <input
             type="text"
             name="capacity"
-            placeholder="Capacity"
+            placeholder={t("capacity")}
             className="input"
           />
           <textarea
             name="message"
-            placeholder="Additional Information (Optional)"
+            placeholder={t("additional-info")}
             className="grow p-2 pb-6 border-b-2 font-medium placeholder:font-light outline-none bg-neutral-600 border-neutral-700 placeholder:text-gray-400 text-gray-100"
           />
         </div>
@@ -116,7 +120,7 @@ export default function Form() {
           className="mt-8 bg-pink-600 py-4 px-3 text-white font-medium hover:bg-pink-700 active:bg-pink-800 rounded w-full"
           type="submit"
         >
-          Submit Form
+          {t("submit")}
         </button>
       </form>
     </div>
