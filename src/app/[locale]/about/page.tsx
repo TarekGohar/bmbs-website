@@ -2,6 +2,12 @@ import Image from "next/image";
 import Footer from "@/components/footer";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About BMBS",
+  description: "Learn about Brahm Mauer Bartending Service",
+};
 
 export default function About() {
   const t = useTranslations("About");

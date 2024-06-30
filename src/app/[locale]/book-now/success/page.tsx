@@ -1,4 +1,11 @@
 import { useTranslations } from "next-intl";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Booking Success",
+  description: "Your booking was successful",
+};
+
 export default function Home() {
   const t = useTranslations("Booking");
   return (

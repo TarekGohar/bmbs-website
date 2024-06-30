@@ -2,6 +2,13 @@ import Image from "next/image";
 import Footer from "@/components/footer";
 import BackButton from "@/components/back-btn";
 import { useTranslations } from "next-intl";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Corporate Events",
+  description: "Brahm Mauer Bartending Service offers services for corporate events.",
+};
+
 
 export default function Home() {
   const t = useTranslations("Services");

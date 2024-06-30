@@ -7,11 +7,6 @@ import { getMessages } from "next-intl/server";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Brahm Mauer Bartending Service",
-
-};
-
 export default async function RootLayout({
   children,
   params: { locale },

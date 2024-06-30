@@ -1,6 +1,12 @@
 import { useTranslations } from "next-intl";
 import ContactCard from "@/components/contact-card";
 import Footer from "@/components/footer";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact Us",
+  description: "Contact Brahm Mauer Bartending Service for more information",
+};
 
 export default function Home() {
   const t = useTranslations("Contact");
