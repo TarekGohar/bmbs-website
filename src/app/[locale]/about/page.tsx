@@ -32,14 +32,14 @@ export default function About() {
         id="about"
         className="container mx-auto max-w-[52rem] mt-36 mb-24 flex flex-col items-center justify-center"
       >
-        <h2 className="w-[30.5rem] mb-24 mx-4 flex items-center font-bold text-pink-600 text-3xl">
+        <h2 className="w-min md:w-[28rem] mb-24 mx-4 flex-col items-center font-bold text-pink-600 text-3xl">
           {t.rich("first-heading", {
             span: (chunks) => (
               <span className="font-bold text-[5rem] pr-1">{chunks}</span>
             ),
           })}
         </h2>
-        <p className="font-medium leading-6 px-20 text-white">
+        <p className="font-medium leading-6 px-6 md:px-20 text-white">
           {t.rich("first-paragraph", { br: () => <br /> })}
         </p>
         <Image
@@ -47,28 +47,28 @@ export default function About() {
           height={1000}
           src="/images/brahm.jpg"
           alt="portrait of owner Brahm Mauer"
-          className="mt-16 w-3/4 rounded"
+          className="w-full mt-16 rounded"
         />
 
-        <h2 className="w-[32rem] my-24 mx-4 flex items-center font-bold text-pink-600 text-3xl">
+        <h2 className="w-min md:w-[28rem] mt-24 mb-16 mx-4 flex-col items-center font-bold text-pink-600 text-3xl">
           {t.rich("second-heading", {
             span: (chunks) => (
               <span className="font-bold text-[5rem] pr-1">{chunks}</span>
             ),
           })}
         </h2>
-        <p className="font-medium leading-6 px-20 text-white">
+        <p className="font-medium leading-6 px-6 md:px-20 text-white">
           {t("second-paragraph")}
         </p>
-        <p className="my-8 px-12 italic w-4/5 mx-auto text-white">
+        <p className="my-8 px-6 md:px-20 italic w-4/5 mx-auto text-white">
           {t.rich("third-paragraph", {
             strong: (chunks) => <strong>{chunks}</strong>,
           })}
         </p>
-        <p className="font-medium leading-6 px-20 text-white">
+        <p className="font-medium leading-6 px-6 md:px-20 text-white">
           {t("fourth-paragraph")}
         </p>
-        <p className="mt-8 font-medium leading-6 px-20 text-white">
+        <p className="mt-8 font-medium leading-6 px-6 md:px-20 text-white">
           {t("fifth-paragraph")}
         </p>
         <Link

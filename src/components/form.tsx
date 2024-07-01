@@ -34,7 +34,7 @@ export default function Form() {
   }
 
   return (
-    <div className="container mx-auto px-5 max-w-2xl ">
+    <div className="container mx-auto px-5 max-w-2xl box-border">
       <h1 className="text-white text-4xl font-extrabold">{t("main-title")}</h1>
       <form
         action="https://api.web3forms.com/submit"
@@ -53,19 +53,19 @@ export default function Form() {
           {t("info")}
         </h2>
         <div className="mt-4 flex flex-col space-y-5">
-          <div className="flex justify-between space-x-5">
+          <div className="flex items-stretch space-x-5">
             <input
               type="text"
               name="firstname"
               placeholder={t("first-name")}
-              className="input"
+              className="input w-full"
               required
             />
             <input
               type="text"
               name="lastname"
               placeholder={t("last-name")}
-              className="input"
+              className="input w-full"
               required
             />
           </div>
@@ -81,7 +81,7 @@ export default function Form() {
             <select
               id="underline_select"
               name="phonetype"
-              className="appearance-none input text-gray-300 rounded-none"
+              className="appearance-none input text-gray-300 rounded"
             >
               <option value="home" selected>
                 {t("phone-type.home")}

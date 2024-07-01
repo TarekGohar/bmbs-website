@@ -5,9 +5,10 @@ import { useTranslations } from "next-intl";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Weddings",
-  description: "Brahm Mauer Bartending Service offers services for weddings.",
+  title: "Wedd",
+  description: "Learn about Brahm Mauer Bartending Service",
 };
+
 
 export default function Home() {
   const t = useTranslations("Services");

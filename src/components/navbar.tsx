@@ -22,7 +22,7 @@ export default function Navbar() {
             alt="Logo"
             height={400}
             width={400}
-            className="object-contain w-60 hover:cursor-pointer"
+            className="object-contain w-40 md:w-60 hover:cursor-pointer"
           />
         </Link>
 
@@ -101,6 +101,13 @@ export default function Navbar() {
           className="w-fit p-4 bg-pink-600 rounded-lg font-medium duration-200 hover:bg-pink-700 active:bg-pink-800"
         >
           {t("book-now")}
+        </Link>
+        <Link
+          href={pathname}
+          locale={t("locale") as "en" | "fr" | undefined}
+          className="hover:text-pink-500 uppercase"
+        >
+          {t("locale")}
         </Link>
       </div>
     </>

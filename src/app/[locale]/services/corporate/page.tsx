@@ -6,15 +6,15 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Corporate Events",
-  description: "Brahm Mauer Bartending Service offers services for corporate events.",
+  description:
+    "Brahm Mauer Bartending Service offers services for corporate events.",
 };
-
 
 export default function Home() {
   const t = useTranslations("Services");
   return (
-    <div className="">
-      <div className="mt-10 max-w-[80rem] container mx-auto">
+    <div>
+      <div className="pt-10 max-w-[80rem] container mx-auto">
         <BackButton linkTo="/services" backText="Services" />
       </div>
 
