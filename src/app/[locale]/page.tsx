@@ -77,7 +77,7 @@ export default function Home() {
         </div>
       </div>
 
-      <Services />
+      {/* <Services /> */}
 
       <Footer />
     </>

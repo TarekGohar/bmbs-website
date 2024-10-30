@@ -9,12 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       animation: {
-        "infinite-scroll": "infinite-scroll 5s linear infinite",
+        "infinite-scroll": "infinite-scroll 45s linear infinite", // Adjust duration for smoothness
       },
       keyframes: {
         "infinite-scroll": {
           "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(calc(-50% - 20px))" },
+          "100%": { transform: "translateX(calc(-50%))" }, // Scroll half the width for seamless effect
         },
       },
       container: {

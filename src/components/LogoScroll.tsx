@@ -16,24 +16,47 @@ export default function LogoScroll() {
   ];
 
   return (
-    <div className="flex justify-center">
-      <div className="w-[80vw] overflow-hidden">
-        <ul className="flex items-center animate-infinite-scrol g">
-          {[...images, ...images].map((src, index) => (
-            <li
-              key={index}
-              className="min-w-72 bg-red-500 flex justify-center items-center"
-            >
-              <Image
-                src={src}
-                width={1000}
-                height={1000}
-                alt={`Scrolling Image ${index + 1}`}
-                className=""
-              />
-            </li>
-          ))}
-        </ul>
+    <div className="flex justify-center h-[36rem]">
+      <div className="w-[80vw] overflow-hidden flex items-center fade-effect">
+        <div className="flex items-center animate-infinite-scroll">
+          <ul className="flex items-center">
+            {images.map((src, index) => (
+              <li
+                key={index}
+                className="min-w-60 flex justify-center items-center mr-20 md:mr-44 lg:mr-64"
+              >
+                <Image
+                  src={src}
+                  width={200} // Adjust width and height for better responsiveness
+                  height={200}
+                  alt={`Scrolling Image ${index + 1}`}
+                  className=""
+                  priority={true}
+                  loading="eager"
+                />
+              </li>
+            ))}
+          </ul>
+          <ul className="flex items-center">
+            {images.map((src, index) => (
+              <li
+                key={index}
+                className="min-w-60 flex justify-center items-center mr-20 md:mr-44 lg:mr-64"
+                aria-hidden="true"
+              >
+                <Image
+                  src={src}
+                  width={200} // Adjust width and height for better responsiveness
+                  height={200}
+                  alt={`Scrolling Image ${index + 1}`}
+                  className="object-cover"
+                  priority={true}
+                  loading="eager"
+                />
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
