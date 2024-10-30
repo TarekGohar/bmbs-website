@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 export default function Services() {
   const t = useTranslations("Services");
   return (
-    <section id="services" className="px-8 pb-24 bg-neutral-900">
+    <section id="services" className="px-8 pb-24 bg-black">
       <div className="container mx-auto max-w-6xl px-6 py-12 flex flex-col items-center justify-center">
         <h1 className="w-fit font-extrabold text-6xl text-white px-4 my-12">
           {t("heading")}

@@ -1,22 +1,19 @@
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
+import Navbar from "./navbar";
 
 export default function Hero() {
   const t = useTranslations("Hero");
   return (
-    <section id="hero">
-      <div className="container mx-auto max-w-6xl pb-64 pt-64 px-6 py-12 flex flex-col items-center justify-center">
-        <div className="max-w-lg text-6xl font-sans p-5 text-slate-200 uppercase border-4 md:max-w-2xl md:p-12 md:mx-0 md:text-8xl">
+    <section
+      id="hero"
+      className="min-h-screen h-full flex flex-col mx-auto w-full"
+    >
+      <Navbar />
+      <div className="flex-grow container w-full flex items-center justify-left">
+        <h1 className="text-10xl font-made font-bold text-left w-12 p-5 text-neutral-200 uppercase md:p-12 md:mx-0 md:text-10xl leading-none tracking-wide">
           {t("title")}
-        </div>
-        <div className="w-fit px-24 text-white text-2xl uppercase font-sans text-center mt-12">
-          <p>{t("subtitle")}</p>
-        </div>
-        <div className="mt-12">
-          <Link href="/book-now" className="btn-white">
-            {t("book-now")}
-          </Link>
-        </div>
+        </h1>
       </div>
     </section>
   );

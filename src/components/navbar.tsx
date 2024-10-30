@@ -14,7 +14,7 @@ export default function Navbar() {
   const pathname = usePathname();
   return (
     <>
-      <nav className="container mx-auto flex px-4 py-8 items-center justify-between font-light text-white shadow-md unselectable">
+      <nav className="container mx-auto flex px-4 py-8 items-center justify-between font-light text-white unselectable">
         {/* Logo Button */}
         <Link href="/">
           <Image
@@ -26,39 +26,26 @@ export default function Navbar() {
           />
         </Link>
 
-        {/* Menu */}
-        <div className="hidden h-10 font-normal md:flex md:space-x-4 lg:space-x-12 items-center justify-end">
-          <Link
-            href="/about"
-            className="border-b-transparent border-b-[1.5px] duration-150 hover:border-b-white"
-          >
+        <div className="flex items-center gap-x-20">
+          <Link href="/about" className="navbar-link">
             {t("about")}
           </Link>
-
-          <Link
-            href="/services"
-            className="border-b-transparent border-b-[1.5px] duration-150 hover:border-b-white "
-          >
+          <Link href="/services" className="navbar-link">
             {t("services")}
           </Link>
-
-          <Link
-            href="/contact"
-            className="border-b-transparent border-b-[1.5px] duration-150 hover:border-b-white "
-          >
+          <Link href="/contact" className="navbar-link">
             {t("contact")}
           </Link>
-
           <Link
             href="/book-now"
-            className="p-4 bg-pink-600 rounded-lg font-medium duration-200 hover:bg-pink-700 active:bg-pink-800"
+            className="hover:text-neutral-400 focus:text-neutral-500 ease-in duration-150 tracking-[.125rem] border-b-[1px] border-white hover:border-neutral-400"
           >
             {t("book-now")}
           </Link>
           <Link
             href={pathname}
             locale={t("locale") as "en" | "fr" | undefined}
-            className="border-b-transparent border-b-[1.5px] uppercase duration-150 hover:border-b-white"
+            className="navbar-link uppercase"
           >
             {t("locale")}
           </Link>
