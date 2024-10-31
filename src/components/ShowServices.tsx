@@ -50,9 +50,7 @@ export default function Home() {
 
   return (
     <div className=" flex flex-col justify-center items-center text-center my-10 min-h-fit gap-y-6 px-4 md:px-10">
-      <h2 className="w-full text-white font-okine font-light text-3xl">
-        Our services:
-      </h2>
+      <h2 className="w-full text-white font-okine text-3xl">Our services:</h2>
 
       <div
         ref={wordContainerRef}
