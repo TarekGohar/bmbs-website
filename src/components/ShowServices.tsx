@@ -11,16 +11,10 @@ export default function Home() {
     festivals: false,
   });
 
-  const services = [
-    { name: "Weddings", image: "/images/weddings.jpg" },
-    { name: "Events", image: "/images/events.png" },
-    { name: "Festivals", image: "/images/festivals-2.png" },
-  ];
-
   const wordContainerRef = useRef(null);
 
   useEffect(() => {
-    const handleIntersection = (entries) => {
+    const handleIntersection = (entries: IntersectionObserverEntry[]) => {
       if (entries[0].isIntersecting) {
         // Trigger each word appearance with staggered delays
         setTimeout(
@@ -42,7 +36,7 @@ export default function Home() {
     };
 
     const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 0.5, // Adjust the threshold as needed
+      threshold: 0.1, // Adjust the threshold as needed
     });
 
     if (wordContainerRef.current) {
@@ -55,19 +49,19 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex flex-col justify-center items-center text-center my-32">
+    <div className=" flex flex-col justify-center items-center text-center my-10 min-h-fit gap-y-6 px-4 md:px-10">
       <h2 className="w-full text-white font-okine font-light text-3xl">
         Our services:
       </h2>
 
       <div
         ref={wordContainerRef}
-        className="text-center flex justify-center font-made items-center gap-x-10 text-4xl h-[50vh] tracking-widest px-4"
+        className="max-w-[110rem] text-center flex flex-col md:flex-row justify-center font-made items-center gap-y-4 md:gap-x-10 text-4xl tracking-widest"
       >
         {/* Events */}
         <Link
           href="/services/corporate"
-          className={`word font-bold text-white group relative ${
+          className={`word font-bold text-white group rounded-sm ${
             visibleWords.events ? "show" : ""
           }`}
         >
@@ -78,7 +72,7 @@ export default function Home() {
             height={1000}
             className="group-hover:grayscale transition duration-100"
           />
-          <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-50 opacity-1000 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+          <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 opacity-1000 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
             <span className="text-white text-4xl font-okine font-normal opacity-0 transition group-hover:opacity-100 duration-150">
               Corporate
             </span>
@@ -88,7 +82,7 @@ export default function Home() {
         {/* Festivals */}
         <Link
           href="/services/festivals"
-          className={`word font-bold text-white group relative ${
+          className={`word font-bold text-white group rounded-sm ${
             visibleWords.festivals ? "show" : ""
           }`}
         >
@@ -99,7 +93,7 @@ export default function Home() {
             height={1000}
             className="group-hover:grayscale transition duration-100"
           />
-          <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-50 opacity-1000 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+          <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 opacity-1000 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
             <span className="text-white text-4xl font-okine font-normal opacity-0 transition group-hover:opacity-100 duration-150">
               Festivals
             </span>
@@ -109,7 +103,7 @@ export default function Home() {
         {/* Weddings */}
         <Link
           href="/services/weddings"
-          className={`word font-bold text-white group relative overflow-hidden rounded-sm ${
+          className={`word font-bold text-white group rounded-sm ${
             visibleWords.weddings ? "show" : ""
           }`}
         >
@@ -120,7 +114,7 @@ export default function Home() {
             height={1000}
             className="group-hover:grayscale group-hover: transition ease-in group-hover:shadow-inner duration-200"
           />
-          <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-50 opacity-100 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+          <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 opacity-100 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
             <span className="text-white text-4xl font-okine font-normal opacity-0 transition group-hover:opacity-100 duration-150">
               Weddings
             </span>

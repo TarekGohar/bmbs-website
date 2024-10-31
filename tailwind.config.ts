@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       animation: {
-        "infinite-scroll": "infinite-scroll 45s linear infinite", // Adjust duration for smoothness
+        "infinite-scroll": "infinite-scroll 35s linear infinite", // Adjust duration for smoothness
       },
       keyframes: {
         "infinite-scroll": {
@@ -34,6 +34,7 @@ const config: Config = {
         okine: ["Okine", "sans-serif"],
       },
       fontSize: {
+        xs: ".75rem",
         "7xl": "5rem",
         "8xl": "6rem",
         "9xl": "7rem",

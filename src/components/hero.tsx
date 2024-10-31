@@ -7,11 +7,11 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen h-full flex flex-col mx-auto w-full"
+      className="min-h-screen h-full flex flex-col items-center mx-auto w-full overflow-hidden"
     >
       <Navbar />
-      <div className="flex-grow container w-full flex items-center justify-left">
-        <h1 className="text-10xl font-okine font-medium text-left w-[52rem] p-5 text-neutral-200 uppercase md:p-12 md:mx-0 md:text-10xl leading-none tracking-wide">
+      <div className="container flex-grow w-full flex items-center justify-left px-4">
+        <h1 className="text-6xl sm:text-8xl md:text-9xl lg:text-10xl font-okine font-medium text-left w-[52rem] text-neutral-100 uppercase md:p-12 md:mx-0 leading-none tracking-wide">
           {t("title")}
         </h1>
       </div>

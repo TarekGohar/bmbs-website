@@ -16,7 +16,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      <body className="">
+      <body className="font-okine">
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
