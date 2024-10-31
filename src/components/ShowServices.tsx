@@ -9,6 +9,7 @@ export default function Home() {
     weddings: false,
     events: false,
     festivals: false,
+    fundraisers: false,
   });
 
   const wordContainerRef = useRef(null);
@@ -26,8 +27,13 @@ export default function Home() {
           1000
         );
         setTimeout(
-          () => setVisibleWords((prev) => ({ ...prev, weddings: true })),
+          () => setVisibleWords((prev) => ({ ...prev, fundraisers: true })),
           1500
+        );
+
+        setTimeout(
+          () => setVisibleWords((prev) => ({ ...prev, weddings: true })),
+          2000
         );
 
         // Disconnect observer after the animation starts
@@ -54,7 +60,7 @@ export default function Home() {
 
       <div
         ref={wordContainerRef}
-        className="max-w-[110rem] text-center flex flex-col md:flex-row justify-center font-made items-center gap-y-4 md:gap-x-10 text-4xl tracking-widest"
+        className="max-w-[100rem] text-center grid md:grid-cols-2 font-made items-center gap-y-4 md:gap-x-10 text-4xl tracking-widest"
       >
         {/* Events */}
         <Link
@@ -94,6 +100,27 @@ export default function Home() {
           <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 opacity-1000 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
             <span className="text-white text-4xl font-okine font-normal opacity-0 transition group-hover:opacity-100 duration-150">
               Festivals
+            </span>
+          </div>
+        </Link>
+
+        {/* Fundraisers */}
+        <Link
+          href="/services/weddings"
+          className={`word font-bold text-white group rounded-sm ${
+            visibleWords.fundraisers ? "show" : ""
+          }`}
+        >
+          <Image
+            src={"/images/fundraisers.jpg"}
+            alt="fundraisers"
+            width={1000}
+            height={1000}
+            className="group-hover:grayscale group-hover: transition ease-in group-hover:shadow-inner duration-200"
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 opacity-100 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+            <span className="text-white text-4xl font-okine font-normal opacity-0 transition group-hover:opacity-100 duration-150">
+              Fundraisers
             </span>
           </div>
         </Link>

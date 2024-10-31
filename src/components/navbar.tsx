@@ -44,11 +44,25 @@ export default function Navbar() {
     );
     setTimeout(() => setVisibleWords((prev) => ({ ...prev, book: true })), 300);
     setTimeout(() => setVisibleWords((prev) => ({ ...prev, lang: true })), 400);
+
+    if (typeof window !== "undefined") {
+      // Disable body scroll when menu is open
+      if (menu) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "";
+      }
+
+      // Clean up when component is unmounted or menu changes
+      return () => {
+        document.body.style.overflow = "";
+      };
+    }
   }, [menu]);
 
   return (
     <>
-      <nav className="w-full px-4 mdpx-12 mx-auto flex py-8 items-center justify-between font-okine font-light text-white unselectable">
+      <nav className="absolute w-full z-20 px-4 mdpx-12 mx-auto flex py-6 items-center justify-between font-okine font-light text-white unselectable">
         <Link href="/">
           <Image
             src="/images/logo.png"
@@ -56,6 +70,7 @@ export default function Navbar() {
             height={400}
             width={400}
             className="object-contain w-40 md:w-60 hover:cursor-pointer"
+            onClick={() => setMenu(false)}
           />
         </Link>
 
@@ -104,47 +119,46 @@ export default function Navbar() {
         id="menu"
         className={`${
           menu ? "flex" : "hidden"
-        } absolute top-0 bottom-0 left-0 flex-col items-center self-end w-full min-h-screen py- pt-40 text-2xl text-white opacity-90 bg-black`}
+        } absolute top-0 bottom-0 left-0 flex-col z-10 items-center self-end w-full min-h-screen pt-40 text-xl text-white opacity-90 bg-black gap-y-6`}
         onClick={() => setMenu(false)}
       >
         <Link
           href="/about"
-          className={`navbar-link transition-opacity duration-500 word ${
-            visibleWords.about ? "show" : ""
-          }`}
+          className={`navbar-link word ${visibleWords.about ? "show" : ""}`}
+          onClick={() => setMenu(false)}
         >
           {t("about")}
         </Link>
         <Link
           href="/services"
-          className={`navbar-link transition-opacity duration-500 word ${
-            visibleWords.services ? "show" : ""
-          }`}
+          className={`navbar-link word ${visibleWords.services ? "show" : ""}`}
+          onClick={() => setMenu(false)}
         >
           {t("services")}
         </Link>
         <Link
           href="/contact"
-          className={`navbar-link transition-opacity duration-500 word ${
-            visibleWords.contact ? "show" : ""
-          }`}
+          className={`navbar-link word ${visibleWords.contact ? "show" : ""}`}
+          onClick={() => setMenu(false)}
         >
           {t("contact")}
         </Link>
         <Link
           href="/book-now"
-          className={`word text-white hover:text-neutral-200 focus:text-neutral-400 ease-in duration-150 tracking-[.125rem] border-b-[1px] border-white hover:border-neutral-400 transition-opacity ${
+          className={`word text-white hover:text-neutral-200 focus:text-neutral-400 ease-in duration-500 tracking-[.125rem] border-b-[1px] border-white hover:border-neutral-400 transition-all ${
             visibleWords.book ? "show" : ""
           }`}
+          onClick={() => setMenu(false)}
         >
           {t("book-now")}
         </Link>
         <Link
           href={pathname}
           locale={t("locale") as "en" | "fr" | undefined}
-          className={`navbar-link transition-opacity duration-500 word uppercase ${
+          className={`navbar-link word uppercase ${
             visibleWords.lang ? "show" : ""
           }`}
+          onClick={() => setMenu(false)}
         >
           {t("locale")}
         </Link>

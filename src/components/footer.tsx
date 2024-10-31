@@ -7,7 +7,7 @@ export default function Footer() {
 
   return (
     <section id="footer">
-      <div className="flex flex-col items-center justify-center bg-black">
+      <div className="flex flex-col items-center justify-center">
         {/* Logo */}
         <svg
           id="Layer_1"
@@ -15,7 +15,7 @@ export default function Footer() {
           xmlns="http://www.w3.org/2000/svg"
           version="1.1"
           viewBox="0 0 693.22 192.37"
-          className="text-white max-w-[48rem]"
+          className="text-white max-w-[42rem]"
           style={{ transform: "scale(0.5)", scale: 1 }}
         >
           <path
@@ -143,7 +143,7 @@ export default function Footer() {
         </div>
       </div>
       {/* Copyright */}
-      <div className="bg-black text-gray-500 text-center py-6 text-[10px] font-extralight">
+      <div className="bg-black text-gray-500 text-center pt-6 pb-2 text-[10px] font-extralight">
         <p>© 2024 by Brahm Mauer Bar Services.</p>
       </div>
     </section>

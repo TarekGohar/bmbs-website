@@ -17,7 +17,9 @@ export default function LogoScroll() {
 
   return (
     <div className="flex flex-col justify-center items-center h-[36rem] space-y-4 my-18">
-      <h2 className="text-white font-okine text-3xl">Our partners:</h2>
+      <h2 className="text-white font-okine font-light text-2xl">
+        Our partners
+      </h2>
       <div className="w-[80vw] h-fit overflow-hidden flex items-center fade-effect">
         <div className="flex items-center animate-infinite-scroll">
           <ul className="flex items-center">

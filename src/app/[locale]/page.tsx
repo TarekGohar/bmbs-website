@@ -34,8 +34,6 @@ export default function Home() {
           Contact Us
         </Link>
       </div>
-
-      <Footer />
     </>
   );
 }
