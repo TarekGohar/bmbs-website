@@ -15,7 +15,7 @@ export default function Footer() {
           xmlns="http://www.w3.org/2000/svg"
           version="1.1"
           viewBox="0 0 693.22 192.37"
-          className="text-white max-w-[42rem]"
+          className="text-white md:max-w-[32rem]"
           style={{ transform: "scale(0.5)", scale: 1 }}
         >
           <path
@@ -26,7 +26,7 @@ export default function Footer() {
         </svg>
 
         {/* Footer Menu */}
-        <ul className="flex space-x-10 text-white font-thin tracking-widest">
+        <ul className="flex space-x-10 text-white font-thin text-sm md:text-md tracking-widest">
           <li>
             <Link
               href="/about"
@@ -56,11 +56,11 @@ export default function Footer() {
         </ul>
 
         {/* Socials */}
-        <div className="flex justify-center space-x-10 text-white font-thin mt-12">
+        <div className="flex justify-center space-x-10 text-white font-thin mt-6">
           {/* Instagram */}
           <a
             href="https://www.instagram.com/brahmmauer/"
-            className="text-white w-6 h-6 md:w-10 md:h-10"
+            className="text-white w-6 h-6 md:w-8 md:h-8"
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <path
@@ -73,7 +73,7 @@ export default function Footer() {
           {/* Tiktok */}
           <a
             href="https://www.tiktok.com/@brahmmauer"
-            className="text-white w-6 h-6 md:w-10 md:h-10"
+            className="text-white w-6 h-6 md:w-8 md:h-8"
           >
             <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -86,7 +86,7 @@ export default function Footer() {
           {/* Phone */}
           <a
             href="tel:+15147572402"
-            className="text-white w-6 h-6 md:w-10 md:h-10"
+            className="text-white w-6 h-6 md:w-8 md:h-8"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -110,7 +110,7 @@ export default function Footer() {
           {/* Email */}
           <a
             href="mailto:info@brahmmauer.com"
-            className="text-white w-6 h-6 md:w-10 md:h-10"
+            className="text-white w-6 h-6 md:w-8 md:h-8"
           >
             <svg
               viewBox="0 0 24 24"
