@@ -124,11 +124,11 @@ export default function ServicePage({
             </h3>
           </Link>
 
-          <div className=" flex-col flex items-center justify-center px-6 lg:px-10 space-y-2">
+          <div className=" flex-col flex items-center justify-center px-6 lg:px-24 space-y-2">
             <h1 className="text-3xl md:text-5xl font-okine font-medium text-left text-white uppercase leading-none tracking-widest">
               {t(`${serviceTitle}.title`)}
             </h1>
-            <h1 className="py-4 text-white text-xl md:text-3xl font-okine font-normal text-left max-w-[100rem] md:leading-[3.5rem] tracking-normal">
+            <h1 className="py-4 text-white text-xl md:text-2xl font-okine font-normal text-left max-w-[100rem] md:leading-[3.5rem] tracking-normal">
               {t(`${serviceTitle}.long-description`)}
             </h1>
             <Link

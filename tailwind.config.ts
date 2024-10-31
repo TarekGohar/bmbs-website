@@ -8,6 +8,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      transitionDuration: {
+        "1500": "1500ms", // Custom duration for transitions
+      },
+      animationDuration: {
+        "1500": "1500ms", // Custom duration for animations
+      },
       animation: {
         "infinite-scroll": "infinite-scroll 35s linear infinite", // Adjust duration for smoothness
       },

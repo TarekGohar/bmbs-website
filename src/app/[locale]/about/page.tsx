@@ -1,29 +1,55 @@
+"use client";
+
 import Image from "next/image";
 import Footer from "@/components/footer";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "About BMBS",
-  description: "Learn about Brahm Mauer Bartending Service",
-};
+import { useEffect, useState } from "react";
 
 export default function About() {
   const t = useTranslations("About");
+
+  const [isLogoVisible, setIsLogoVisible] = useState(false);
+
+  useEffect(() => {
+    const logoTimeout = setTimeout(() => {
+      setIsLogoVisible(true);
+    }, 1000);
+
+    return () => clearTimeout(logoTimeout);
+  }, []);
+
   return (
-    <div>
+    <>
       {/* Hero Section */}
       <section
         id="about-hero"
-        className="flex items-center justify-center w-full h-[80vh]"
+        className="flex items-center justify-center h-screen w-screen bg-transition"
+        style={{
+          backgroundImage: `
+      linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.7) 0%,
+        rgba(0, 0, 0, 0.6) 20%,
+        rgba(0, 0, 0, 0.5) 50%,
+        rgba(0, 0, 0, 0.6) 80%,
+        rgba(0, 0, 0, 1) 100%
+      ),
+      url('/images/mila-1.jpg')
+    `,
+          backgroundSize: "cover",
+          backgroundPosition: "center center",
+          backgroundRepeat: "no-repeat",
+        }}
       >
         <Image
-          src="/images/logo-high.png"
-          alt="BMBS logo"
-          width={1000}
-          height={1000}
-          className="bmbs-logo"
+          src={"/images/Brahm.svg"}
+          width={1450}
+          height={1450}
+          alt="Brahm Logo"
+          className={`transition-opacity ease-in duration-1500 ${
+            isLogoVisible ? "opacity-100" : "opacity-0"
+          }`}
         />
       </section>
 
@@ -78,7 +104,6 @@ export default function About() {
           {t("book-now")}
         </Link>
       </section>
-      <Footer />
-    </div>
+    </>
   );
 }

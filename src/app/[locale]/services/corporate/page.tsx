@@ -5,7 +5,7 @@ export default function Corporate() {
     <ServicePage
       serviceTitle="corporate"
       serviceBefore="fundraisers"
-      serviceAfter="weddings"
+      serviceAfter="festivals"
       serviceImages={["/images/events-1.jpg"]}
     />
   );

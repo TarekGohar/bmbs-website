@@ -130,6 +130,24 @@ section#about-hero {
   height: 100;
 }
 
+section#contact {
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0.5) 20%,
+      rgba(0, 0, 0, 0.3) 70%,
+      rgba(0, 0, 0, 0.9) 90%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("/images/contact.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center; /* Aligns the background to the right */
+  height: 100%;
+  width: 100%;
+  filter: grayscale(100%); /* Makes the image black and white */
+}
+
 /* Hamburger Menu */
 .hamburger {
   cursor: pointer;
