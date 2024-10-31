@@ -89,16 +89,15 @@ section#hero {
   background: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.7) 0%,
-      /* Slightly dark at the very top */ rgba(0, 0, 0, 0.5) 20%,
-      /* Fade to transparent */ rgba(0, 0, 0, 0.3) 70%,
-      /* Transparent area */ rgba(0, 0, 0, 0.9) 90%,
-      /* Darker gradient towards the bottom */ rgba(0, 0, 0, 1) 100%
-        /* Fully black at the bottom */
+      rgba(0, 0, 0, 0.5) 20%,
+      rgba(0, 0, 0, 0.3) 70%,
+      rgba(0, 0, 0, 0.9) 90%,
+      rgba(0, 0, 0, 1) 100%
     ),
     url("/images/maxim-1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: right center; /* Aligns the background to the right */
   height: 100%;
   width: 100%;
   filter: grayscale(100%); /* Makes the image black and white */
