@@ -37,6 +37,48 @@
     font-weight: thin;
     font-style: normal;
   }
+
+  @font-face {
+    font-family: "Okine";
+    src: url("/fonts/okine-black.otf") format("opentype");
+    font-weight: 900; /* 'Black' corresponds to 900 */
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Okine";
+    src: url("/fonts/okine-bold.otf") format("opentype");
+    font-weight: 700; /* 'Bold' corresponds to 700 */
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Okine";
+    src: url("/fonts/okine-light.otf") format("opentype");
+    font-weight: 300; /* 'Light' corresponds to 300 */
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Okine";
+    src: url("/fonts/okine-regular.otf") format("opentype");
+    font-weight: 400; /* 'Regular' or 'Normal' corresponds to 400 */
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Okine";
+    src: url("/fonts/okine-thin.otf") format("opentype");
+    font-weight: 100; /* 'Thin' corresponds to 100 */
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Okine";
+    src: url("/fonts/okine-medium.otf") format("opentype");
+    font-weight: 500; /* 'Medium' corresponds to 500 */
+    font-style: normal;
+  }
 }
 
 body {

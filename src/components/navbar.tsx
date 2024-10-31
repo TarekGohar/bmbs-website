@@ -14,7 +14,7 @@ export default function Navbar() {
   const pathname = usePathname();
   return (
     <>
-      <nav className="w-full px-12 mx-auto flex px-4 py-8 items-center justify-between font-light text-white unselectable">
+      <nav className="w-full px-12 mx-auto flex py-8 items-center justify-between font-okine font-light text-white unselectable">
         {/* Logo Button */}
         <Link href="/">
           <Image
