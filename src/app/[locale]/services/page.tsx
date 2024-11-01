@@ -60,7 +60,7 @@ export default function Home() {
         <h2 className="w-full text-white font-okine font-normal text-2xl">
           Our Services
         </h2>
-        <p className="mt-1 mb-12 w-[40rem] text-white font-okine font-light text-left text-lg">
+        <p className="mt-1 mb-12 max-w-[40rem] text-white font-okine font-light text-left text-lg">
           Crafted cocktails, personalized service, and unforgettable experiences
           — let us bring the bar to you.
         </p>
