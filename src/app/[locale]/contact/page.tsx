@@ -17,7 +17,7 @@ export default function Home() {
     >
       <div className="w-full py-40 md:py-12 box-content px-4 flex items-center justify-center">
         <div className=" h-full mx-auto flex flex-col items-center justify-center">
-          <h2 className="w-fit text-white font-okine font-medium text-6xl tracking-wider uppercase">
+          <h2 className="w-fit text-white font-okine font-medium text-4xl tracking-wider uppercase">
             Contact
           </h2>
           <div className="flex flex-col items-center space-y-10 mx-auto justify-center md:space-y-0 md:flex-row md:space-x-24 mt-12">
@@ -43,8 +43,8 @@ export default function Home() {
                   d="M4.16367 5.8092c0.863717,0.275768 2.1483,-0.268205 1.63998,-0.776646l-0.802594 -0.802984c-0.122031,-0.122118 -0.319803,-0.107913 -0.439051,0.0112992l-0.460874 0.460728 0.0625433 1.1076z"
                 />
               </svg>
-              <h3 className="text-2xl">{t("call")}</h3>
-              <span className="text-2xl">514-757-2402</span>
+              <h3 className="text-xl">{t("call")}</h3>
+              <span className="text-xl">514-757-2402</span>
             </Link>
             <Link
               href="mailto:info@brahmmauer.com"
@@ -60,7 +60,7 @@ export default function Home() {
                   d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"
                 />
               </svg>
-              <h3 className="text-2xl">{t("email")}</h3>
+              <h3 className="text-xl">{t("email")}</h3>
               <span className="text-xl">info@brahmmauer.com</span>
             </Link>
           </div>

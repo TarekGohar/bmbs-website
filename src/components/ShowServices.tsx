@@ -55,14 +55,18 @@ export default function Home() {
   }, []);
 
   return (
-    <div className=" flex flex-col justify-center items-center text-center my-10 min-h-fit gap-y-6 px-4 md:px-10">
-      <h2 className="w-full text-white font-okine font-light text-2xl">
-        Our services:
+    <div className=" flex flex-col justify-center items-center text-center my-10 min-h-fit gap-y-0 px-4 md:px-10">
+      <h2 className="w-full text-white font-okine font-normal text-2xl">
+        Our Services
       </h2>
+      <p className="w-full text-white font-okine font-light text-lg">
+        Crafted cocktails, personalized service, and unforgettable
+        experiences—let us bring the bar to you.
+      </p>
 
       <div
         ref={wordContainerRef}
-        className="max-w-[100rem] text-center grid md:grid-cols-2 font-made items-center gap-y-4 md:gap-x-10 text-4xl tracking-widest"
+        className="mt-12 max-w-[82rem] text-center grid md:grid-cols-2 font-made items-center gap-y-0 md:gap-x-4 text-4xl tracking-widest"
       >
         {/* Events */}
         <Link

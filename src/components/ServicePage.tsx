@@ -55,7 +55,7 @@ export default function ServicePage({
               to bottom,
               rgba(0, 0, 0, 0.7) 0%,
               rgba(0, 0, 0, 0.7) 20%,
-              rgba(0, 0, 0, 0.6) 50%,
+              rgba(0, 0, 0, 0.7) 50%,
               rgba(0, 0, 0, 0.7) 80%,
               rgba(0, 0, 0, 1) 100%
             ),
@@ -80,7 +80,7 @@ export default function ServicePage({
               to bottom,
               rgba(0, 0, 0, 0.7) 0%,
               rgba(0, 0, 0, 0.7) 20%,
-              rgba(0, 0, 0, 0.6) 50%,
+              rgba(0, 0, 0, 0.7) 50%,
               rgba(0, 0, 0, 0.7) 80%,
               rgba(0, 0, 0, 1) 100%
             ),

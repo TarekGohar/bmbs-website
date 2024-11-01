@@ -57,20 +57,17 @@ export default function Home() {
   return (
     <div className="h-screen pt-40 flex flex-col justify-center items-center text-center my-10 min-h-fit gap-y-6 px-4 md:px-10">
       <div className="flex flex-col justify-center items-center">
-        <h2 className="w-full text-white font-okine font-medium text-6xl tracking-wider uppercase">
-          Services
+        <h2 className="w-full text-white font-okine font-normal text-2xl">
+          Our Services
         </h2>
-        <h2 className=" mt-10 mb-16 text-xl font-normal text-left text-neutral-100 max-w-[60rem] w-fit leading-9">
-          We offer a variety of services to elevate your event, including custom
-          cocktail creations, professional bartenders, mobile bar setups, and
-          tailored drink menus. Whether it’s a wedding, corporate event, or
-          private party, we ensure every drink is crafted to perfection and
-          every guest enjoys a memorable experience.
-        </h2>
+        <p className="mt-1 mb-12 w-[40rem] text-white font-okine font-light text-left text-lg">
+          Crafted cocktails, personalized service, and unforgettable experiences
+          — let us bring the bar to you.
+        </p>
 
         <div
           ref={wordContainerRef}
-          className="max-w-[100rem] text-center grid md:grid-cols-2 font-made items-center gap-y-4 md:gap-x-10 text-4xl tracking-widest"
+          className="max-w-[60rem] text-center grid md:grid-cols-2 font-made items-center md:gap-x-4 text-4xl tracking-widest"
         >
           {/* Events */}
           <Link
