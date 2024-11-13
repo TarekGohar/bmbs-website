@@ -4,18 +4,22 @@ import PhoneInput from "@/components/phone-input";
 import { useRouter } from "@/i18n/navigation";
 import { usePathname } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
+import { useState } from "react";
 import DropdownSelector from "./DropdownSelector";
+import LoadingSpinner from "./LoadingSpinner";
 
 interface FormProps {
   service: string;
 }
 
 export default function Form({ service }: FormProps) {
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
   const t = useTranslations("Booking");
   async function handleSubmit(event: any) {
     event.preventDefault();
+    setLoading(true);
     const formData = new FormData(event.target);
 
     formData.append("access_key", "8fb96e49-b2ea-414b-a6af-1eedf71a1277");
@@ -34,6 +38,7 @@ export default function Form({ service }: FormProps) {
     const result = await response.json();
     if (result.success) {
       console.log(result);
+      setLoading(false);
       router.push(`${pathname}/success`);
     }
   }
@@ -59,7 +64,6 @@ export default function Form({ service }: FormProps) {
       </h2>
       <div className="mt-2 flex flex-col space-y-3">
         <div>
-          <h2 className="text-white tracking-wider mb-1 ml-3">Service</h2>
           <DropdownSelector
             name="Service"
             placeholder={service ? service : "Brahm Mauer Bar Services"}
@@ -105,7 +109,7 @@ export default function Form({ service }: FormProps) {
           </h2>
           <div className="flex space-x-4">
             <PhoneInput />
-            <div className="w-32">
+            <div className="w-52">
               <DropdownSelector
                 name="phone-type"
                 placeholder={`${t("phone-type.home")}`}
@@ -131,7 +135,7 @@ export default function Form({ service }: FormProps) {
           </h2>
           <input
             type="text"
-            name="name"
+            name="Location"
             placeholder={t("location-placeholder")}
             className="input"
           />
@@ -142,7 +146,7 @@ export default function Form({ service }: FormProps) {
           </h2>
           <input
             type="text"
-            name="name"
+            name="Capacity"
             placeholder={t("capacity-placeholder")}
             className="input"
           />
@@ -152,7 +156,7 @@ export default function Form({ service }: FormProps) {
             {t("additional-info")}
           </h2>
           <textarea
-            name="message"
+            name="Message"
             placeholder={t("additional-info-placeholder")}
             className="input"
           />
@@ -160,10 +164,16 @@ export default function Form({ service }: FormProps) {
       </div>
 
       <button
-        className="mt-8 bg-neutral-100 py-4 px-3 text-black text-lg font-medium hover:bg-neutral-200 duration-150 rounded-xl w-full"
+        className="flex items-center justify-center mt-8 bg-neutral-100 py-4 px-3 text-black text-lg font-medium hover:bg-neutral-200 duration-150 rounded-xl w-full"
         type="submit"
       >
-        {t("submit")}
+        {!loading ? (
+          <div className="h-7">{t("submit")}</div>
+        ) : (
+          <div className="h-7">
+            <LoadingSpinner color="#fffff" />
+          </div>
+        )}
       </button>
     </form>
   );

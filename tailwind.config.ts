@@ -16,11 +16,21 @@ const config: Config = {
       },
       animation: {
         "infinite-scroll": "infinite-scroll 35s linear infinite", // Adjust duration for smoothness
+        spinClockwise: "spinClockwise 3s linear infinite",
+        spinCounterClockwise: "spinCounterClockwise 6s linear infinite",
       },
       keyframes: {
         "infinite-scroll": {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(calc(-50%))" }, // Scroll half the width for seamless effect
+        },
+        spinClockwise: {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
+        spinCounterClockwise: {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(-360deg)" },
         },
       },
       container: {
