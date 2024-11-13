@@ -43,7 +43,7 @@ export default function ServicePage({
   }, [currentImageIndex, images.length]);
 
   return (
-    <section className="mb-20 min-h-[60rem] md:min-h-[70rem] relative flex flex-col items-center justify-start md:justify-center overflow-hidden">
+    <section className="mb-20 min-h-[60rem] md:min-h-[70rem] xl:min-h-[75rem] 3xl:min-h-[110rem] relative flex flex-col items-center justify-start md:justify-center overflow-hidden">
       {/* TODO: Lower image res for faster loading */}
 
       <div className="min-h-full h-fit pt-40 md:pt-0 text-white items-center">
