@@ -78,7 +78,7 @@ export default function About() {
         </p>
 
         <div className="mt-12 space-y-6">
-          <h2 className="w-full font-bold text-4xl md:text-5xl uppercase text-left tracking-wider">
+          <h2 className="w-full font-bold text-3xl md:text-4xl uppercase text-left tracking-wider">
             Services
           </h2>
           <p className="mt-4 font-light text-xl tracking-wider leading-[1.95rem]">

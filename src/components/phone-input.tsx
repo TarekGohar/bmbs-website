@@ -27,7 +27,7 @@ const PhoneInput: React.FC = () => {
     <input
       type="tel"
       name="phone"
-      placeholder={t("phone")}
+      placeholder={t("phone-placeholder")}
       className="input"
       value={phone}
       onInput={handleInput}

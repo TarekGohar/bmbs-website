@@ -45,7 +45,7 @@
     "third-paragraph": "\"Les clients ne passent pas en premier. Les employés passent en premier. Si vous prenez soin de vos employés, ils prendront soin des clients\" - <strong>Sir Richard Branson</strong>",
     "fourth-paragraph": "Notre personnel de service est la colonne vertébrale de notre entreprise et les ambassadeurs de notre marque. Ils sont passionnés, bien formés et s'assurent toujours que tout le monde autour d'eux passe le meilleur moment possible. BMBS a un taux de rotation du personnel extrêmement faible, ce qui nous donne un avantage sur la concurrence. D'autres entreprises de services de bar et de restauration s'appuient sur des agences de recrutement, ce qui signifie que leur personnel diffère d'un événement à l’autre. Cela élimine la synergie et la loyauté avec leur équipe de service.",
     "fifth-paragraph": "On ne peut pas parler de l'expérience BMBS sans mentionner leur programme de mixologie fraîche du marché. Leur équipe de mixologie interne crée des menus de saison parmi lesquels nos clients peuvent choisir. Ils fournissent également leurs purées fait maison aux festivals montréalais, dont Beach Club & Piknic Electronic. Utilisant uniquement des ingrédients les plus frais et restant à l'avant-garde des tendances, Brahm Mauer fait passer la mixologie au niveau supérieur.",
-    
+
     "book-now": "Réserver"
   },
   "Mila": {
@@ -56,20 +56,26 @@
     "title": "Réservation effectuée!",
     "subtitle": "Nous vous contacterons bientôt.",
     "main-title": "Détails de la réservation",
+    "service-type": "Type de service",
     "info": "Informations personnelles",
-    "first-name": "Prénom",
-    "last-name": "Nom",
+    "name": "Nom",
+    "name-placeholder": "Entrez votre nom",
     "email": "Courriel",
+    "email-placeholder": "Entrez votre courriel",
     "phone": "Numéro de téléphone",
+    "phone-placeholder": "Entrez votre numéro de téléphone",
     "phone-type": {
       "home": "Domicile",
       "mobile": "Mobile",
       "work": "Travail"
     },
     "details": "Détails de l'événement",
-    "location": "Lieu (optionnel)",
-    "capacity": "Capacité (optionnel)",
-    "additional-info": "Informations complémentaires (optionnel)",
+    "location": "Lieu",
+    "location-placeholder": "Entrez le lieu de l'événement",
+    "capacity": "Capacité",
+    "capacity-placeholder": "Entrez la capacité de l'événement",
+    "additional-info": "Informations complémentaires",
+    "additional-info-placeholder": "Entrez des informations complémentaires",
     "submit": "Soumettre le formulaire"
   }
 }

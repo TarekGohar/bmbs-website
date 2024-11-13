@@ -55,20 +55,26 @@
     "title": "Booking Submitted!",
     "subtitle": "We will get in touch soon.",
     "main-title": "Booking Details",
+    "service-type": "Service Type",
     "info": "Personal Information",
-    "first-name": "First Name",
-    "last-name": "Last Name",
+    "name": "Name",
+    "name-placeholder": "Enter your name",
     "email": "Email Address",
+    "email-placeholder": "Enter your email",
     "phone": "Phone Number",
+    "phone-placeholder": "Enter your phone number",
     "phone-type": {
       "home": "Home",
       "mobile": "Mobile",
       "work": "Work"
     },
     "details": "Event Details",
-    "location": "Location (Optional",
-    "capacity": "Capacity (Optional)",
-    "additional-info": "Additional Information (Optional)",
+    "location": "Location",
+    "location-placeholder": "Enter the location",
+    "capacity": "Capacity",
+    "capacity-placeholder": "Enter the capacity",
+    "additional-info": "Additional Information",
+    "additional-info-placeholder": "Enter any additional information",
     "submit": "Submit Form"
   }
 }

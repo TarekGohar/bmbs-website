@@ -254,7 +254,7 @@ section#contact {
 }
 
 .input {
-  @apply grow p-2 border-b-2 placeholder:font-light outline-none bg-neutral-600 border-neutral-700 placeholder:text-gray-400 font-medium text-gray-100 rounded;
+  @apply w-full p-3 border-2 placeholder:font-light tracking-wider placeholder:tracking-wider outline-none bg-transparent border-neutral-700 placeholder:text-gray-400 font-medium text-gray-100 rounded-xl focus:border-white duration-150;
 }
 
 .navbar-link {

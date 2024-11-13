@@ -55,7 +55,7 @@ export default function About() {
       {/* About Section */}
       <section
         id="about"
-        className="max-w-[40rem] min-h-[60vh] mx-auto flex flex-col items-start justify-center text-white px-4 gap-y-8"
+        className="max-w-[48rem] min-h-[60vh] mx-auto flex flex-col items-start justify-center text-white px-4 gap-y-8"
       >
         <h2 className="w-96 md:w-full font-bold text-4xl md:text-5xl uppercase text-left tracking-wider">
           Espace Mila
@@ -65,7 +65,7 @@ export default function About() {
         </p>
 
         <Link
-          href="/book-now"
+          href="/book-now?service=Espace%20Mila"
           className="mt-14 mb-20 text-xl font-bold navbar-link w-full underline text-center flex items-center justify-center"
         >
           <h2 className="text-center">{t("book-now")}</h2>

@@ -4,8 +4,13 @@ import PhoneInput from "@/components/phone-input";
 import { useRouter } from "@/i18n/navigation";
 import { usePathname } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
+import DropdownSelector from "./DropdownSelector";
 
-export default function Form() {
+interface FormProps {
+  service: string;
+}
+
+export default function Form({ service }: FormProps) {
   const router = useRouter();
   const pathname = usePathname();
   const t = useTranslations("Booking");
@@ -37,86 +42,125 @@ export default function Form() {
     <form
       action="https://api.web3forms.com/submit"
       method="POST"
-      className="max-w-3xl h-fit bg-red-500"
+      className="max-w-2xl w-full h-fit px-2"
       onSubmit={handleSubmit}
     >
-      <h1 className="text-white text-4xl font-extrabold">{t("main-title")}</h1>
+      <h1 className="text-white text-4xl font-bold uppercase tracking-wider">
+        {t("main-title")}
+      </h1>
       <input
         type="hidden"
         name="access_key"
         value={process.env.WEB_API_ACCESS_KEY}
       />
 
+      <h2 className="text-white font-medium text-2xl mt-6 tracking-wider">
+        {t("service-type")}
+      </h2>
+      <div className="mt-2 flex flex-col space-y-3">
+        <div>
+          <h2 className="text-white tracking-wider mb-1 ml-3">Service</h2>
+          <DropdownSelector
+            name="Service"
+            placeholder={service ? service : "Brahm Mauer Bar Services"}
+            options={["Brahm Mauer Bar Services", "Espace Mila"]}
+          />
+        </div>
+      </div>
+
       {/* Personal Information */}
-      <h2 className="text-neutral-100 font-semibold text-2xl mt-4">
+      <h2 className="text-white font-medium text-2xl mt-6 tracking-wider">
         {t("info")}
       </h2>
-      <div className="mt-4 flex flex-col space-y-5">
-        <div className="flex items-stretch space-x-5">
+      <div className="mt-2 flex flex-col space-y-3">
+        <div>
+          <h2 className="text-white tracking-wider mb-1 ml-3">
+            {t("name")} <span className="text-red-600">*</span>
+          </h2>
           <input
             type="text"
-            name="firstname"
-            placeholder={t("first-name")}
-            className="input w-full"
-            required
-          />
-          <input
-            type="text"
-            name="lastname"
-            placeholder={t("last-name")}
-            className="input w-full"
+            name="name"
+            placeholder={t("name-placeholder")}
+            className="input"
             required
           />
         </div>
-        <input
-          type="email"
-          name="email"
-          placeholder={t("email")}
-          className="input"
-          required
-        />
-        <div className="flex space-x-4">
-          <PhoneInput />
-          <select
-            id="underline_select"
-            name="phonetype"
-            className="appearance-none input text-gray-300 rounded"
-          >
-            <option value="home" selected>
-              {t("phone-type.home")}
-            </option>
-            <option value="mobile">{t("phone-type.mobile")}</option>
-            <option value="work">{t("phone-type.work")}</option>
-          </select>
+
+        <div>
+          <h2 className="text-white tracking-wider mb-1 ml-3">
+            {t("email")} <span className="text-red-600">*</span>
+          </h2>
+          <input
+            type="email"
+            name="email"
+            placeholder={t("email-placeholder")}
+            className="input"
+            required
+          />
+        </div>
+
+        <div>
+          <h2 className="text-white tracking-wider mb-1 ml-3">
+            {t("phone")} <span className="text-red-600">*</span>
+          </h2>
+          <div className="flex space-x-4">
+            <PhoneInput />
+            <div className="w-32">
+              <DropdownSelector
+                name="phone-type"
+                placeholder={`${t("phone-type.home")}`}
+                options={[
+                  `${t("phone-type.home")}`,
+                  `${t("phone-type.work")}`,
+                  `${t("phone-type.mobile")}`,
+                ]}
+              />
+            </div>
+          </div>
         </div>
       </div>
 
       {/* Event Information */}
-      <h2 className="text-neutral-100 font-semibold text-2xl mt-8">
+      <h2 className="mt-6 text-white font-medium text-2xl tracking-wider">
         {t("details")}
       </h2>
-      <div className="mt-4 flex flex-col space-y-5">
-        <input
-          type="text"
-          name="location"
-          placeholder={t("location")}
-          className="input"
-        />
-        <input
-          type="text"
-          name="capacity"
-          placeholder={t("capacity")}
-          className="input"
-        />
-        <textarea
-          name="message"
-          placeholder={t("additional-info")}
-          className="grow p-2 pb-6 border-b-2 font-medium placeholder:font-light outline-none bg-neutral-600 border-neutral-700 placeholder:text-gray-400 text-gray-100"
-        />
+      <div className="mt-2 flex flex-col space-y-3">
+        <div>
+          <h2 className="text-white tracking-wider mb-1 ml-3">
+            {t("location")}
+          </h2>
+          <input
+            type="text"
+            name="name"
+            placeholder={t("location-placeholder")}
+            className="input"
+          />
+        </div>
+        <div>
+          <h2 className="text-white tracking-wider mb-1 ml-3">
+            {t("capacity")}
+          </h2>
+          <input
+            type="text"
+            name="name"
+            placeholder={t("capacity-placeholder")}
+            className="input"
+          />
+        </div>
+        <div>
+          <h2 className="text-white tracking-wider mb-1 ml-3">
+            {t("additional-info")}
+          </h2>
+          <textarea
+            name="message"
+            placeholder={t("additional-info-placeholder")}
+            className="input"
+          />
+        </div>
       </div>
 
       <button
-        className="mt-8 bg-pink-600 py-4 px-3 text-white font-medium hover:bg-pink-700 active:bg-pink-800 rounded w-full"
+        className="mt-8 bg-neutral-100 py-4 px-3 text-black text-lg font-medium hover:bg-neutral-200 duration-150 rounded-xl w-full"
         type="submit"
       >
         {t("submit")}

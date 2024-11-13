@@ -1,18 +1,24 @@
 import Form from "@/components/form";
 import { Metadata } from "next";
+import { useSearchParams } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "Book Now",
   description: "Book Brahm Mauer Bartending Service for your next event",
 };
 
-export default function Home() {
+export default function Home({
+  searchParams,
+}: {
+  searchParams: { [key: string]: string | undefined };
+}) {
+  const service = searchParams.service;
   return (
     <section
       id="form"
-      className="min-h-screen md:min-h-[50rem] h-fit pt-32 md:max-h-none flex items-center justify-center"
+      className="flex items-start justify-center min-h-[60rem] pt-40 mb-40"
     >
-      <Form />
+      <Form service={service || ""} />
     </section>
   );
 }
