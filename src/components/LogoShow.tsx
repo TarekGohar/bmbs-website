@@ -55,11 +55,11 @@ export default function LogoScroll() {
         {t("trusted")}
       </h2>
       <div className="flex justify-center">
-        <div className="mt-4 grid grid-cols-2 md:grid-cols-3 gap-x-20 lg:gap-x-40 gap-y-4 h-fit items-center">
+        <div className="mt-4 grid grid-cols-2 md:grid-cols-3 gap-x-28 lg:gap-x-40 gap-y-4 h-fit items-center">
           {indices.map((index, i) => (
             <div
               key={`${index}-${i}`} // Dynamic key to retrigger animation
-              className="w-40 h-40 md:w-48 md:h-48 fade-up flex items-center justify-center overflow-hidden"
+              className="w-28 h-28 md:w-48 md:h-48 fade-up flex items-center justify-center overflow-hidden"
             >
               <img
                 src={imageSubsets[i][index]}

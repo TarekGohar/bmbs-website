@@ -57,7 +57,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className=" flex flex-col justify-center items-center text-center my-10 min-h-fit px-4 md:px-10">
+    <div className=" flex flex-col justify-center items-center text-center min-h-fit px-4 md:px-10">
       {/* <h2 className="w-full text-white font-medium text-2xl">Our Services</h2>
       <p className="w-full text-white font-light text-xl tracking-wide">
         Crafted cocktails, personalized service, and unforgettable experiences —
