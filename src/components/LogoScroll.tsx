@@ -1,4 +1,3 @@
-// components/HorizontalScroll.js
 import Image from "next/image";
 
 export default function LogoScroll() {
@@ -12,14 +11,16 @@ export default function LogoScroll() {
     "/images/logos/picnik.png",
     "/images/logos/ilesoniq.png",
     "/images/logos/evenko.png",
+    "/images/logos/cedar.png",
+    "/images/logos/greygoose.png",
+    "/images/logos/saint-mary.png",
+    "/images/logos/jewish.png",
     // Add more image paths as needed
   ];
 
   return (
     <div className="flex flex-col justify-center items-center h-[36rem] space-y-2 my-18">
-      <h2 className="text-white font-okine font-normal text-2xl">
-        Trusted by the best
-      </h2>
+      <h2 className="text-white font-medium text-2xl">Trusted by the best</h2>
       <div className="w-[80vw] h-fit overflow-hidden flex items-center fade-effect">
         <div className="flex items-center animate-infinite-scroll">
           <ul className="flex items-center">

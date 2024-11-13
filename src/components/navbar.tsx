@@ -62,7 +62,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="absolute w-full z-20 px-4 mdpx-12 mx-auto flex py-6 items-center justify-between font-okine font-light text-white unselectable">
+      <nav className="absolute w-full z-20 px-6 md:px-8 mx-auto flex py-6 items-center justify-between text-white unselectable">
         <Link href="/">
           <Image
             src="/images/logo.png"
@@ -83,6 +83,9 @@ export default function Navbar() {
           </Link>
           <Link href="/contact" className="navbar-link">
             {t("contact")}
+          </Link>
+          <Link href="/services" className="navbar-link">
+            Espace Mila
           </Link>
           <Link
             href="/book-now"

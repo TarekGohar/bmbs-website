@@ -17,8 +17,8 @@ export default function Home() {
     >
       <div className="w-full py-40 md:py-12 box-content px-4 flex items-center justify-center">
         <div className=" h-full mx-auto flex flex-col items-center justify-center">
-          <h2 className="w-fit text-white font-okine font-medium text-4xl tracking-wider uppercase">
-            Contact
+          <h2 className="w-fit text-white font-bold text-6xl tracking-wider">
+            Contact Us
           </h2>
           <div className="flex flex-col items-center space-y-10 mx-auto justify-center md:space-y-0 md:flex-row md:space-x-24 mt-12">
             <Link

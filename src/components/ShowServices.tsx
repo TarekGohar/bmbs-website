@@ -55,35 +55,33 @@ export default function Home() {
   }, []);
 
   return (
-    <div className=" flex flex-col justify-center items-center text-center my-10 min-h-fit gap-y-0 px-4 md:px-10">
-      <h2 className="w-full text-white font-okine font-normal text-2xl">
-        Our Services
-      </h2>
-      <p className="w-full text-white font-okine font-light text-lg">
-        Crafted cocktails, personalized service, and unforgettable
-        experiences—let us bring the bar to you.
-      </p>
+    <div className=" flex flex-col justify-center items-center text-center my-10 min-h-fit px-4 md:px-10">
+      {/* <h2 className="w-full text-white font-medium text-2xl">Our Services</h2>
+      <p className="w-full text-white font-light text-xl tracking-wide">
+        Crafted cocktails, personalized service, and unforgettable experiences —
+        let us bring the bar to you.
+      </p> */}
 
       <div
         ref={wordContainerRef}
-        className="mt-12 max-w-[82rem] text-center grid md:grid-cols-2 font-made items-center gap-y-0 md:gap-x-4 text-4xl tracking-widest"
+        className="max-w-[82rem] text-center grid md:grid-cols-2 font-creato items-center gap-y-2 md:gap-x-2 text-4xl tracking-widest"
       >
         {/* Events */}
         <Link
           href="/services/corporate"
           className={`word font-bold text-white group rounded-sm ${
             visibleWords.events ? "show" : ""
-          }`}
+          } m-0 p-0 overflow-hidden`}
         >
           <Image
             src={"/images/events-1.jpg"}
             alt="events"
             width={1000}
             height={1000}
-            className="group-hover:grayscale transition duration-100"
+            className="group-hover:grayscale transition duration-300 brightness-75 object-cover"
           />
-          <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 opacity-1000 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
-            <span className="text-white text-4xl font-okine font-normal opacity-0 transition group-hover:opacity-100 duration-150">
+          <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-25 transition duration-300 flex items-center justify-center">
+            <span className="text-white text-4xl font-medium transition duration-150 leading-none">
               Corporate
             </span>
           </div>
@@ -94,17 +92,17 @@ export default function Home() {
           href="/services/festivals"
           className={`word font-bold text-white group rounded-sm ${
             visibleWords.festivals ? "show" : ""
-          }`}
+          } m-0 p-0`}
         >
           <Image
             src={"/images/festivals-2.jpg"}
             alt="festivals"
             width={1000}
             height={1000}
-            className="group-hover:grayscale transition duration-100"
+            className="group-hover:grayscale transition duration-300 brightness-75 object-cover"
           />
-          <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 opacity-1000 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
-            <span className="text-white text-4xl font-okine font-normal opacity-0 transition group-hover:opacity-100 duration-150">
+          <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-25 transition duration-300 flex items-center justify-center">
+            <span className="text-white text-4xl font-medium transition duration-150 leading-none">
               Festivals
             </span>
           </div>
@@ -112,7 +110,7 @@ export default function Home() {
 
         {/* Fundraisers */}
         <Link
-          href="/services/weddings"
+          href="/services/fundraisers"
           className={`word font-bold text-white group rounded-sm ${
             visibleWords.fundraisers ? "show" : ""
           }`}
@@ -122,10 +120,10 @@ export default function Home() {
             alt="fundraisers"
             width={1000}
             height={1000}
-            className="group-hover:grayscale group-hover: transition ease-in group-hover:shadow-inner duration-200"
+            className="group-hover:grayscale transition duration-300 brightness-75 object-cover"
           />
-          <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 opacity-100 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
-            <span className="text-white text-4xl font-okine font-normal opacity-0 transition group-hover:opacity-100 duration-150">
+          <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-25 transition duration-300 flex items-center justify-center">
+            <span className="text-white text-4xl font-medium transition duration-150 leading-none">
               Fundraisers
             </span>
           </div>
@@ -136,17 +134,17 @@ export default function Home() {
           href="/services/weddings"
           className={`word font-bold text-white group rounded-sm ${
             visibleWords.weddings ? "show" : ""
-          }`}
+          } m-0 p-0`}
         >
           <Image
             src={"/images/weddings.jpg"}
             alt="weddings"
             width={1000}
             height={1000}
-            className="group-hover:grayscale group-hover: transition ease-in group-hover:shadow-inner duration-200"
+            className="group-hover:grayscale transition duration-300 brightness-75 object-cover"
           />
-          <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 opacity-100 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
-            <span className="text-white text-4xl font-okine font-normal opacity-0 transition group-hover:opacity-100 duration-150">
+          <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-25 transition duration-300 flex items-center justify-center">
+            <span className="text-white text-4xl font-medium transition duration-150 leading-none z-20">
               Weddings
             </span>
           </div>

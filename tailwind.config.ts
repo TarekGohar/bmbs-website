@@ -38,6 +38,7 @@ const config: Config = {
       fontFamily: {
         made: ["Made", "sans-serif"],
         okine: ["Okine", "sans-serif"],
+        creato: ["Creato", "sans-serif"],
       },
       fontSize: {
         xs: ".75rem",

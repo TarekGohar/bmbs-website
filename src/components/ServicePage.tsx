@@ -37,13 +37,13 @@ export default function ServicePage({
       }, 1000); // Fade-out duration
 
       setPrevIndex(currentImageIndex); // Set the under image to the current image
-    }, 5000); // Switch images every 5 seconds
+    }, 2000); // Switch images every 5 seconds
 
     return () => clearInterval(intervalId); // Clean up on unmount
   }, [currentImageIndex, images.length]);
 
   return (
-    <section className="min-h-screen max-h-screen md:max-h-none relative flex flex-col items-center justify-center overflow-hidden">
+    <section className="min-h-fit md:min-h-[50rem] h-fit md:max-h-none relative flex flex-col items-center justify-center overflow-hidden">
       {/* TODO: Lower image res for faster loading */}
       {/* Background */}
       <div className="-z-10">
@@ -53,10 +53,8 @@ export default function ServicePage({
             backgroundImage: `
             linear-gradient(
               to bottom,
-              rgba(0, 0, 0, 0.7) 0%,
-              rgba(0, 0, 0, 0.7) 20%,
-              rgba(0, 0, 0, 0.7) 50%,
-              rgba(0, 0, 0, 0.7) 80%,
+              rgba(0, 0, 0, 0.4) 0%,
+              rgba(0, 0, 0, 0.4) 90%,
               rgba(0, 0, 0, 1) 100%
             ),
             url(${images[prevIndex]})
@@ -64,6 +62,7 @@ export default function ServicePage({
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
+            filter: "blur(4px)",
           }}
         ></div>
 
@@ -78,10 +77,8 @@ export default function ServicePage({
             backgroundImage: `
             linear-gradient(
               to bottom,
-              rgba(0, 0, 0, 0.7) 0%,
-              rgba(0, 0, 0, 0.7) 20%,
-              rgba(0, 0, 0, 0.7) 50%,
-              rgba(0, 0, 0, 0.7) 80%,
+              rgba(0, 0, 0, 0.4) 0%,
+              rgba(0, 0, 0, 0.4) 90%,
               rgba(0, 0, 0, 1) 100%
             ),
             url(${images[currentImageIndex]})
@@ -89,20 +86,21 @@ export default function ServicePage({
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
+            filter: "blur(4px)",
           }}
         ></div>
       </div>
 
-      <div className="grid grid-rows-3 h-screen text-white items-center">
+      <div className="md:grid md:grid-rows-3 mt-40 md:mt-0 md:min-h-[50rem] min-h-[70vh] md:h-screen text-white items-center">
         <div aria-hidden={true} className="opacity-0">
           Spacing cell
         </div>
 
-        <div className="w-screen flex items-center justify-between">
+        <div className="w-screen flex items-center justify-between z-50">
           {/* Left Arrow */}
           <Link
             href={`/services/${serviceBefore}`}
-            className="hidden lg:flex items-center group outline-none transition-opacity duration-300 ml-2"
+            className="hidden cursor-pointer lg:flex items-center group outline-none transition-opacity duration-300 ml-2"
           >
             <svg
               fill="currentColor"
@@ -119,21 +117,22 @@ export default function ServicePage({
         c4.561,0,9.065-2.072,12.012-6.001l112.5-150.004C237.252,168.664,237.252,161.33,233.252,155.997z"
               />
             </svg>
-            <h3 className="opacity-0 group-hover:opacity-80 text-white transition-opacity duration-300">
+            <h3 className="opacity-0 group-hover:opacity-80 text-white font-medium transition-opacity duration-300">
               {t(`${serviceBefore}.title`)}
             </h3>
           </Link>
 
-          <div className=" flex-col flex items-center justify-center px-6 lg:px-24 space-y-2">
-            <h1 className="text-3xl md:text-5xl font-okine font-medium text-left text-white uppercase leading-none tracking-widest">
+          {/* Main Content Area */}
+          <div className=" flex-col flex items-start justify-center px-6 lg:px-24 space-y-2">
+            <h1 className="text-5xl opacity-90 md:text-7xl font-bold text-left text-white uppercase leading-none tracking-wide">
               {t(`${serviceTitle}.title`)}
             </h1>
-            <h1 className="py-4 text-white text-xl md:text-2xl font-okine font-normal text-left max-w-[100rem] md:leading-[3.5rem] tracking-normal">
+            <p className="py-4 bg-white bg-opacity-0 text-white text-xl md:text-2xl font-light text-left max-w-[100rem] leading-[2.5rem] md:leading-[3.5rem] tracking-wide">
               {t(`${serviceTitle}.long-description`)}
-            </h1>
+            </p>
             <Link
               href={"/book-now"}
-              className="pt-8 text-white text-lg md:text-xl hover:text-neutral-400 focus:text-neutral-500 ease-in duration-150 tracking-[.125rem] border-b-[1px] hover:border-neutral-400"
+              className="pt-8 text-white text-xl font-medium md:text-2xl hover:text-neutral-400 focus:text-neutral-500 ease-in duration-150 tracking-[.125rem] border-b-[2px] hover:border-neutral-400"
             >
               {useTranslations("Hero")("book-now")}
             </Link>
@@ -142,9 +141,9 @@ export default function ServicePage({
           {/* Right Arrow */}
           <Link
             href={`/services/${serviceAfter}`}
-            className=" items-center group outline-none transition-opacity duration-300 hidden lg:flex mr-2"
+            className="cursor-pointer items-center group outline-none transition-opacity duration-300 hidden lg:flex mr-2"
           >
-            <h3 className="opacity-0 group-hover:opacity-80 text-white transition-opacity duration-300">
+            <h3 className="opacity-0 group-hover:opacity-80 text-white font-medium transition-opacity duration-300">
               {t(`${serviceAfter}.title`)}
             </h3>
             <svg
@@ -164,56 +163,58 @@ export default function ServicePage({
             </svg>
           </Link>
         </div>
-        <div className="mb-32 flex justify-between items-end h-full">
-          {/* Left Arrow */}
-          <Link
-            href={`/services/${serviceBefore}"}`}
-            className="flex lg:hidden items-center group outline-none transition-opacity duration-300"
+      </div>
+
+      {/* Mobile Left Right Buttons */}
+      <div className="w-screen mt-20 flex justify-between items-end h-full">
+        {/* Left Arrow */}
+        <Link
+          href={`/services/${serviceBefore}`}
+          className="flex lg:hidden items-center group outline-none transition-opacity duration-300"
+        >
+          <svg
+            fill="currentColor"
+            height="24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 330.002 330.002"
+            className="fill-white opacity-20 group-hover:opacity-80 w-8 h-8 transition-all duration-300"
+            style={{ transform: "rotate(180deg)", scale: 1 }}
           >
-            <svg
-              fill="currentColor"
-              height="24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 330.002 330.002"
-              className="fill-white opacity-20 group-hover:opacity-80 w-8 h-8 transition-all duration-300"
-              style={{ transform: "rotate(180deg)", scale: 1 }}
-            >
-              <path
-                d="M233.252,155.997L120.752,6.001c-4.972-6.628-14.372-7.97-21-3c-6.628,4.971-7.971,14.373-3,21
+            <path
+              d="M233.252,155.997L120.752,6.001c-4.972-6.628-14.372-7.97-21-3c-6.628,4.971-7.971,14.373-3,21
         l105.75,140.997L96.752,306.001c-4.971,6.627-3.627,16.03,3,21c2.698,2.024,5.856,3.001,8.988,3.001
         c4.561,0,9.065-2.072,12.012-6.001l112.5-150.004C237.252,168.664,237.252,161.33,233.252,155.997z"
-              />
-            </svg>
-            <h3 className="opacity-20 group-hover:opacity-80 text-white transition-opacity duration-300 ml-2">
-              {t(`${serviceBefore}.title`)}
-            </h3>
-          </Link>
-          {/* Right Arrow */}
-          <Link
-            href={`/services/${serviceAfter}`}
-            className="flex lg:hidden items-center group outline-none transition-opacity duration-300"
+            />
+          </svg>
+          <h3 className="opacity-20 group-hover:opacity-80 text-white transition-opacity duration-300 ml-2">
+            {t(`${serviceBefore}.title`)}
+          </h3>
+        </Link>
+        {/* Right Arrow */}
+        <Link
+          href={`/services/${serviceAfter}`}
+          className="flex lg:hidden items-center group outline-none transition-opacity duration-300"
+        >
+          <h3 className="opacity-20 group-hover:opacity-80 text-white transition-opacity duration-300 ml-2">
+            {t(`${serviceAfter}.title`)}
+          </h3>
+          <svg
+            fill="currentColor"
+            height="24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 330.002 330.002"
+            className="fill-white opacity-20 group-hover:opacity-80 w-8 h-8 transition-all duration-300"
+            style={{ scale: 1 }}
           >
-            <h3 className="opacity-20 group-hover:opacity-80 text-white transition-opacity duration-300 ml-2">
-              {t(`${serviceAfter}.title`)}
-            </h3>
-            <svg
-              fill="currentColor"
-              height="24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 330.002 330.002"
-              className="fill-white opacity-20 group-hover:opacity-80 w-8 h-8 transition-all duration-300"
-              style={{ scale: 1 }}
-            >
-              <path
-                d="M233.252,155.997L120.752,6.001c-4.972-6.628-14.372-7.97-21-3c-6.628,4.971-7.971,14.373-3,21
+            <path
+              d="M233.252,155.997L120.752,6.001c-4.972-6.628-14.372-7.97-21-3c-6.628,4.971-7.971,14.373-3,21
         l105.75,140.997L96.752,306.001c-4.971,6.627-3.627,16.03,3,21c2.698,2.024,5.856,3.001,8.988,3.001
         c4.561,0,9.065-2.072,12.012-6.001l112.5-150.004C237.252,168.664,237.252,161.33,233.252,155.997z"
-              />
-            </svg>
-          </Link>
-        </div>
+            />
+          </svg>
+        </Link>
       </div>
     </section>
   );

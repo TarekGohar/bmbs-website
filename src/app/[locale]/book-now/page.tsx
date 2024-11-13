@@ -1,4 +1,3 @@
-import Footer from "@/components/footer";
 import Form from "@/components/form";
 import { Metadata } from "next";
 
@@ -7,14 +6,13 @@ export const metadata: Metadata = {
   description: "Book Brahm Mauer Bartending Service for your next event",
 };
 
-
 export default function Home() {
   return (
-    <>
-      <section id="form" className="bg-neutral-900 py-32">
-        <Form />
-      </section>
-      <Footer />
-    </>
+    <section
+      id="form"
+      className="min-h-screen md:min-h-[50rem] h-fit pt-32 md:max-h-none flex items-center justify-center"
+    >
+      <Form />
+    </section>
   );
 }

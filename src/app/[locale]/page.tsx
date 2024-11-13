@@ -1,5 +1,5 @@
 import Hero from "@/components/hero";
-import Footer from "@/components/footer";
+import LogoShow from "@/components/LogoShow";
 // import { Metadata } from "next";
 import ShowServices from "@/components/ShowServices";
 import LogoScroll from "@/components/LogoScroll";
@@ -15,23 +15,19 @@ export default function Home() {
     <>
       <Hero />
 
-      <LogoScroll />
+      <LogoShow />
 
       <ShowServices />
 
-      <div className="w-full flex flex-col items-center justify-center my-44 space-y-4">
+      <div className="w-full flex flex-col items-center justify-center my-48 space-y-4">
+        <p className="text-white font-white text-xl tracking-widest">
+          Interested in working with us?
+        </p>
         <Link
-          href="book-now"
-          className="navbar-link text-white w-fit font-normal text-2xl"
+          href="/book-now"
+          className="navbar-link text-white w-fit font-bold text-2xl underline-offset-[8px] underline up"
         >
           Book Now
-        </Link>
-        <span className="text-white font-thin">or</span>
-        <Link
-          href="contact"
-          className="navbar-link text-white w-fit font-normal text-2xl"
-        >
-          Contact Us
         </Link>
       </div>
     </>

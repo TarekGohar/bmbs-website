@@ -79,6 +79,55 @@
     font-weight: 500; /* 'Medium' corresponds to 500 */
     font-style: normal;
   }
+
+  @font-face {
+    font-family: "Creato";
+    src: url("/fonts/CreatoDisplay-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Creato";
+    src: url("/fonts/CreatoDisplay-Bold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Creato";
+    src: url("/fonts/CreatoDisplay-Black.otf") format("opentype");
+    font-weight: 800;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Creato";
+    src: url("/fonts/CreatoDisplay-ExtraBold.otf") format("opentype");
+    font-weight: 900;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Creato";
+    src: url("/fonts/CreatoDisplay-Light.otf") format("opentype");
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Creato";
+    src: url("/fonts/CreatoDisplay-Medium.otf") format("opentype");
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Creato";
+    src: url("/fonts/CreatoDisplay-thin.otf") format("opentype");
+    font-weight: 200;
+    font-style: normal;
+  }
 }
 
 body {
@@ -231,7 +280,6 @@ section#contact {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s ease, transform 0.6s ease;
-  margin-bottom: 1rem; /* Optional spacing */
 }
 
 .navlink {
