@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 
 export default function LogoScroll() {
+  const t = useTranslations("Hero");
   const images = [
     "/images/logos/k4k.png",
     "/images/logos/maxim.png",
@@ -50,7 +52,7 @@ export default function LogoScroll() {
   return (
     <div className="mt-24 mb-48">
       <h2 className="text-white font-medium text-2xl text-center uppercase">
-        Trusted by the best
+        {t("trusted")}
       </h2>
       <div className="flex justify-center">
         <div className="mt-4 grid grid-cols-2 md:grid-cols-3 gap-x-20 lg:gap-x-40 gap-y-4 h-fit items-center">

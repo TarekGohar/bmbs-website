@@ -43,59 +43,10 @@ export default function ServicePage({
   }, [currentImageIndex, images.length]);
 
   return (
-    <section className="min-h-fit md:min-h-[50rem] h-fit md:max-h-none relative flex flex-col items-center justify-center overflow-hidden">
+    <section className="mb-20 min-h-[60rem] md:min-h-[70rem] relative flex flex-col items-center justify-start md:justify-center overflow-hidden">
       {/* TODO: Lower image res for faster loading */}
-      {/* Background */}
-      <div className="-z-10">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `
-            linear-gradient(
-              to bottom,
-              rgba(0, 0, 0, 0.4) 0%,
-              rgba(0, 0, 0, 0.4) 90%,
-              rgba(0, 0, 0, 1) 100%
-            ),
-            url(${images[prevIndex]})
-          `,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-            filter: "blur(4px)",
-          }}
-        ></div>
 
-        {/* Current Image */}
-        <div
-          className={`absolute inset-0 ${
-            isFading
-              ? "opacity-0"
-              : "opacity-100 transition-opacity duration-1000"
-          }`}
-          style={{
-            backgroundImage: `
-            linear-gradient(
-              to bottom,
-              rgba(0, 0, 0, 0.4) 0%,
-              rgba(0, 0, 0, 0.4) 90%,
-              rgba(0, 0, 0, 1) 100%
-            ),
-            url(${images[currentImageIndex]})
-          `,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-            filter: "blur(4px)",
-          }}
-        ></div>
-      </div>
-
-      <div className="md:grid md:grid-rows-3 mt-40 md:mt-0 md:min-h-[50rem] min-h-[70vh] md:h-screen text-white items-center">
-        <div aria-hidden={true} className="opacity-0">
-          Spacing cell
-        </div>
-
+      <div className="min-h-full h-fit pt-40 md:pt-0 text-white items-center">
         <div className="w-screen flex items-center justify-between z-50">
           {/* Left Arrow */}
           <Link
@@ -117,7 +68,7 @@ export default function ServicePage({
         c4.561,0,9.065-2.072,12.012-6.001l112.5-150.004C237.252,168.664,237.252,161.33,233.252,155.997z"
               />
             </svg>
-            <h3 className="opacity-0 group-hover:opacity-80 text-white font-medium transition-opacity duration-300">
+            <h3 className="opacity-0 w-20 group-hover:opacity-80 text-white font-medium transition-opacity duration-300">
               {t(`${serviceBefore}.title`)}
             </h3>
           </Link>
@@ -143,7 +94,7 @@ export default function ServicePage({
             href={`/services/${serviceAfter}`}
             className="cursor-pointer items-center group outline-none transition-opacity duration-300 hidden lg:flex mr-2"
           >
-            <h3 className="opacity-0 group-hover:opacity-80 text-white font-medium transition-opacity duration-300">
+            <h3 className="opacity-0 group-hover:opacity-80 w-20 text-white font-medium transition-opacity duration-300">
               {t(`${serviceAfter}.title`)}
             </h3>
             <svg
@@ -215,6 +166,52 @@ export default function ServicePage({
             />
           </svg>
         </Link>
+      </div>
+
+      {/* Background */}
+      <div className="-z-10">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `
+            linear-gradient(
+              to bottom,
+              rgba(0, 0, 0, 0.4) 0%,
+              rgba(0, 0, 0, 0.4) 90%,
+              rgba(0, 0, 0, 1) 100%
+            ),
+            url(${images[prevIndex]})
+          `,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            filter: "blur(4px)",
+          }}
+        ></div>
+
+        {/* Current Image */}
+        <div
+          className={`absolute inset-0 ${
+            isFading
+              ? "opacity-0"
+              : "opacity-100 transition-opacity duration-1000"
+          }`}
+          style={{
+            backgroundImage: `
+            linear-gradient(
+              to bottom,
+              rgba(0, 0, 0, 0.4) 0%,
+              rgba(0, 0, 0, 0.4) 90%,
+              rgba(0, 0, 0, 1) 100%
+            ),
+            url(${images[currentImageIndex]})
+          `,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            filter: "blur(4px)",
+          }}
+        ></div>
       </div>
     </section>
   );

@@ -14,7 +14,7 @@ export default function Navbar() {
   const [visibleWords, setVisibleWords] = useState({
     about: false,
     services: false,
-    contact: false,
+    mila: false,
     book: false,
     lang: false,
   });
@@ -25,7 +25,7 @@ export default function Navbar() {
       setVisibleWords({
         about: false,
         services: false,
-        contact: false,
+        mila: false,
         book: false,
         lang: false,
       });
@@ -34,12 +34,9 @@ export default function Navbar() {
 
     // Staggered visibility effect when menu opens
     setTimeout(() => setVisibleWords((prev) => ({ ...prev, about: true })), 0);
+    setTimeout(() => setVisibleWords((prev) => ({ ...prev, mila: true })), 100);
     setTimeout(
       () => setVisibleWords((prev) => ({ ...prev, services: true })),
-      100
-    );
-    setTimeout(
-      () => setVisibleWords((prev) => ({ ...prev, contact: true })),
       200
     );
     setTimeout(() => setVisibleWords((prev) => ({ ...prev, book: true })), 300);
@@ -78,18 +75,16 @@ export default function Navbar() {
           <Link href="/about" className="navbar-link">
             {t("about")}
           </Link>
+          <Link href="/espace-mila" className="navbar-link">
+            {t("mila")}
+          </Link>
           <Link href="/services" className="navbar-link">
             {t("services")}
           </Link>
-          <Link href="/contact" className="navbar-link">
-            {t("contact")}
-          </Link>
-          <Link href="/services" className="navbar-link">
-            Espace Mila
-          </Link>
+
           <Link
             href="/book-now"
-            className="hover:text-neutral-400 focus:text-neutral-500 ease-in duration-150 tracking-[.125rem] border-b-[1px] border-white hover:border-neutral-400"
+            className="hover:text-neutral-300 focus:text-neutral-400 font-medium ease-in duration-150 tracking-[.125rem] underline underline-offset-8"
           >
             {t("book-now")}
           </Link>
@@ -133,19 +128,20 @@ export default function Navbar() {
           {t("about")}
         </Link>
         <Link
+          href="/espace-mila"
+          className={`navbar-link word ${visibleWords.mila ? "show" : ""}`}
+          onClick={() => setMenu(false)}
+        >
+          {t("mila")}
+        </Link>
+        <Link
           href="/services"
           className={`navbar-link word ${visibleWords.services ? "show" : ""}`}
           onClick={() => setMenu(false)}
         >
           {t("services")}
         </Link>
-        <Link
-          href="/contact"
-          className={`navbar-link word ${visibleWords.contact ? "show" : ""}`}
-          onClick={() => setMenu(false)}
-        >
-          {t("contact")}
-        </Link>
+
         <Link
           href="/book-now"
           className={`word text-white hover:text-neutral-200 focus:text-neutral-400 ease-in duration-500 tracking-[.125rem] border-b-[1px] border-white hover:border-neutral-400 transition-all ${

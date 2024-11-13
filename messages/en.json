@@ -2,12 +2,14 @@
   "Hero": {
     "title": "Brahm Mauer Bar Services",
     "subtitle": "Weddings. Festivals. Corporate Events.",
-    "book-now": "Book Now"
+    "trusted": "Trusted by the best",
+    "book-now": "Book Now",
+    "book-now-subheading": "Interesting in working with us?"
   },
   "Navbar": {
     "about": "About",
     "services": "Services",
-    "contact": "Contact",
+    "mila": "Espace Mila",
     "book-now": "Book Now",
     "locale": "fr"
   },
@@ -38,16 +40,16 @@
   "About": {
     "first-heading": "<span>WHAT</span>is Brahm Mauer Bartending Services?",
     "first-paragraph": "Brahm Mauer's journey began in the restaurant and bar scene. After successfully completing every position in restaurants, he set his sights on the event industry. Realizing that the city needed something fresh and new, he decided to start Brahm Mauer Bar Services. Fast forward to today with over 25 years of experience and extensive training Brahm Mauer and his team have become Montréal's premiere event company; servicing private, corporate, fundraisers & festivals. In providing a perfect service from the initial contact with our clients until the last drink is served, we've been able to grow from a couple of events a year into the monopoly that is BMBS today. BMBS is exclusive in some of the city's hottest venues and the preferred vendor to the rest of them.",
-    "second-heading": "<span>LEADER</span>in Montréal's Service Industries",
+    "second-heading": "Leader in Montréal's Service Industries",
     "second-paragraph": "Brahm Mauer and his team are firm believers that with the right team & support staff anything and everything is possible! We are more than just a bar service, we are the definition of hospitality.",
     "third-paragraph": "\"Clients do not come first. Employees come first. If you take care of your employees, they will take care of the clients\" - <strong>Richard Branson</strong>",
     "fourth-paragraph": "Our service staff are the backbone of our business and the ambassadors of our brand. They are passionate, well trained, and always ensure that everyone around them are having the best time possible. BMBS has an extremely low staff turnover rate which gives us the edge over the competition. Other bar service and catering companies rely on staffing agencies, which means their staff differ from event to event. This eliminates the synergy and loyalties with their service team.",
     "fifth-paragraph": "The BMBS experience cannot be spoken about without mentioning their market fresh Mixology program. Their in-house mixology team creates seasonal menus for our guests to choose from. They also provide their homemade purées to Montreal festivals, including Beach Club & Piknic Electronic. Using only the freshest ingredients and staying ahead of the trends, Brahm Mauer brings mixology to the next level.",
     "book-now": "Book Now"
   },
-  "Contact": {
-    "call": "Call Us",
-    "email": "Email Us"
+  "Mila": {
+    "description": "Nestled in the heart of Old Montreal, our intimate venue offers the perfect setting for all types of special events. Whether you're hosting a private celebration, corporate gathering, or intimate soirée, our space provides a charming and elegant atmosphere. Enhance your experience with exquisite cuisine from Beatrice Catering and expertly crafted cocktails from Brahm Mauer Bar Services. Let us help you create unforgettable moments in a setting that’s as unique as your event.",
+    "book-now": "Book Now"
   },
   "Booking": {
     "title": "Booking Submitted!",

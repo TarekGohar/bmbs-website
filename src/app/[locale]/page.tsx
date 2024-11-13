@@ -2,8 +2,8 @@ import Hero from "@/components/hero";
 import LogoShow from "@/components/LogoShow";
 // import { Metadata } from "next";
 import ShowServices from "@/components/ShowServices";
-import LogoScroll from "@/components/LogoScroll";
 import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 // export const metadata: Metadata = {
 //   title: "Homepage",
@@ -11,6 +11,7 @@ import { Link } from "@/i18n/navigation";
 // };
 
 export default function Home() {
+  const t = useTranslations("Hero");
   return (
     <>
       <Hero />
@@ -21,13 +22,13 @@ export default function Home() {
 
       <div className="w-full flex flex-col items-center justify-center my-48 space-y-4">
         <p className="text-white font-white text-xl tracking-widest">
-          Interested in working with us?
+          {t("book-now-subheading")}
         </p>
         <Link
           href="/book-now"
           className="navbar-link text-white w-fit font-bold text-2xl underline-offset-[8px] underline up"
         >
-          Book Now
+          {t("book-now")}
         </Link>
       </div>
     </>

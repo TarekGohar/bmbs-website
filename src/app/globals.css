@@ -258,7 +258,7 @@ section#contact {
 }
 
 .navbar-link {
-  @apply text-white hover:text-neutral-400 focus:text-neutral-500 ease-in duration-150 tracking-[.125rem] border-b-[1px] border-transparent hover:border-neutral-400;
+  @apply text-white hover:text-neutral-300 focus:text-neutral-400 ease-in duration-150 tracking-[.125rem] hover:underline underline-offset-8 transition-all;
 }
 
 .arrow-div:hover .arrow {

@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 
 export default function About() {
   const t = useTranslations("About");
+  const ts = useTranslations("Services");
 
   const [isLogoVisible, setIsLogoVisible] = useState(false);
 
@@ -56,52 +57,53 @@ export default function About() {
       {/* About Section */}
       <section
         id="about"
-        className="container mx-auto max-w-[52rem] mt-36 mb-24 flex flex-col items-center justify-center"
+        className="max-w-[48rem] mx-auto flex flex-col items-start justify-center text-white px-4 gap-y-8"
       >
-        <h2 className="w-min md:w-[28rem] mb-24 mx-4 flex-col items-center font-bold text-pink-600 text-3xl">
-          {t.rich("first-heading", {
-            span: (chunks) => (
-              <span className="font-bold text-[5rem] pr-1">{chunks}</span>
-            ),
-          })}
+        <h2 className="w-full font-bold text-4xl md:text-5xl uppercase text-left tracking-wider">
+          {t("second-heading")}
         </h2>
-        <p className="font-medium leading-6 px-6 md:px-20 text-white">
-          {t.rich("first-paragraph", { br: () => <br /> })}
-        </p>
-        <Image
-          width={1000}
-          height={1000}
-          src="/images/brahm.jpg"
-          alt="portrait of owner Brahm Mauer"
-          className="w-full mt-16 rounded"
-        />
-
-        <h2 className="w-min md:w-[28rem] mt-24 mb-16 mx-4 flex-col items-center font-bold text-pink-600 text-3xl">
-          {t.rich("second-heading", {
-            span: (chunks) => (
-              <span className="font-bold text-[5rem] pr-1">{chunks}</span>
-            ),
-          })}
-        </h2>
-        <p className="font-medium leading-6 px-6 md:px-20 text-white">
+        <p className="mt-4 font-light text-xl tracking-wider leading-[1.95rem]">
           {t("second-paragraph")}
         </p>
-        <p className="my-8 px-6 md:px-20 italic w-4/5 mx-auto text-white">
+        <p className="my-4 text-xl tracking-wide italic w-4/5 mx-auto text-white">
           {t.rich("third-paragraph", {
             strong: (chunks) => <strong>{chunks}</strong>,
           })}
         </p>
-        <p className="font-medium leading-6 px-6 md:px-20 text-white">
+        <p className="font-light text-xl tracking-wider leading-[1.95rem]">
           {t("fourth-paragraph")}
         </p>
-        <p className="mt-8 font-medium leading-6 px-6 md:px-20 text-white">
+        <p className="font-light text-xl tracking-wider leading-[1.95rem]">
           {t("fifth-paragraph")}
         </p>
+
+        <div className="mt-12 space-y-6">
+          <h2 className="w-full font-bold text-4xl md:text-5xl uppercase text-left tracking-wider">
+            Services
+          </h2>
+          <p className="mt-4 font-light text-xl tracking-wider leading-[1.95rem]">
+            <span className="font-medium">{ts("corporate.title")}:</span>{" "}
+            {ts("corporate.description")}
+          </p>
+          <p className="mt-4 font-light text-xl tracking-wider leading-[1.95rem]">
+            <span className="font-medium">{ts("festivals.title")}:</span>{" "}
+            {ts("festivals.description")}
+          </p>
+          <p className="mt-4 font-light text-xl tracking-wider leading-[1.95rem]">
+            <span className="font-medium">{ts("fundraisers.title")}:</span>{" "}
+            {ts("fundraisers.description")}
+          </p>
+          <p className="mt-4 font-light text-xl tracking-wider leading-[1.95rem]">
+            <span className="font-medium">{ts("weddings.title")}:</span>{" "}
+            {ts("weddings.description")}
+          </p>
+        </div>
+
         <Link
           href="/book-now"
-          className="mt-10 py-4 px-8 text-white bg-pink-600 rounded-lg font-medium duration-200 hover:bg-pink-700 active:bg-pink-800"
+          className="mt-14 text-xl mb-20 font-bold navbar-link w-full underline text-center flex items-center justify-center"
         >
-          {t("book-now")}
+          <h2 className="text-center">{t("book-now")}</h2>
         </Link>
       </section>
     </>

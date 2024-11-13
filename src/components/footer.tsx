@@ -35,7 +35,14 @@ export default function Footer() {
               {t("about")}
             </Link>
           </li>
-
+          <li>
+            <Link
+              href="/espace-mila"
+              className="border-b-[1px] border-b-transparent hover:border-b-white focus:text-neutral-500 ease-in duration-150  border-transparent hover:border-neutral-400 "
+            >
+              {t("mila")}
+            </Link>
+          </li>
           <li>
             <Link
               href="/services"
@@ -44,13 +51,12 @@ export default function Footer() {
               {t("services")}
             </Link>
           </li>
-
           <li>
             <Link
-              href="/contact"
+              href="/book-now"
               className="border-b-[1px] border-b-transparent hover:border-b-white focus:text-neutral-500 ease-in duration-150  border-transparent hover:border-neutral-400 "
             >
-              {t("contact")}
+              {t("book-now")}
             </Link>
           </li>
         </ul>

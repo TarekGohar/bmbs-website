@@ -3,8 +3,10 @@
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 export default function Home() {
+  const t = useTranslations("Services");
   const [visibleWords, setVisibleWords] = useState({
     weddings: false,
     events: false,
@@ -82,7 +84,7 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-25 transition duration-300 flex items-center justify-center">
             <span className="text-white text-4xl font-medium transition duration-150 leading-none">
-              Corporate
+              {t("corporate.title")}
             </span>
           </div>
         </Link>
@@ -103,7 +105,7 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-25 transition duration-300 flex items-center justify-center">
             <span className="text-white text-4xl font-medium transition duration-150 leading-none">
-              Festivals
+              {t("festivals.title")}
             </span>
           </div>
         </Link>
@@ -124,7 +126,7 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-25 transition duration-300 flex items-center justify-center">
             <span className="text-white text-4xl font-medium transition duration-150 leading-none">
-              Fundraisers
+              {t("fundraisers.title")}
             </span>
           </div>
         </Link>
@@ -145,7 +147,7 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-25 transition duration-300 flex items-center justify-center">
             <span className="text-white text-4xl font-medium transition duration-150 leading-none z-20">
-              Weddings
+              {t("weddings.title")}
             </span>
           </div>
         </Link>
