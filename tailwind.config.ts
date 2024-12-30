@@ -9,6 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       screens: {
+        xxs: "430px", // Extra extra small screens
         xs: "480px", // Extra small screens
         sm: "640px", // Small screens (default)
         md: "768px", // Medium screens (default)
@@ -60,6 +61,8 @@ const config: Config = {
         made: ["Made", "sans-serif"],
         okine: ["Okine", "sans-serif"],
         creato: ["Creato", "sans-serif"],
+        manrope: ["Manrope", "sans-serif"],
+        carving: ["Carving", "sans-serif"],
       },
       fontSize: {
         xs: ".75rem",

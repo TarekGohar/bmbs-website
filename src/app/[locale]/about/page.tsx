@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import Footer from "@/components/footer";
+import Footer from "@/components/footer-2";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
+import { Link } from "@/i18n/routing";
 import { useEffect, useState } from "react";
 
 export default function About() {
@@ -24,31 +24,15 @@ export default function About() {
     <>
       {/* Hero Section */}
       <section
-        id="about-hero"
-        className="flex items-center justify-center h-screen w-screen bg-transition"
-        style={{
-          backgroundImage: `
-      linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.7) 0%,
-        rgba(0, 0, 0, 0.6) 20%,
-        rgba(0, 0, 0, 0.5) 50%,
-        rgba(0, 0, 0, 0.6) 80%,
-        rgba(0, 0, 0, 1) 100%
-      ),
-      url('/images/mila-1.jpg')
-    `,
-          backgroundSize: "cover",
-          backgroundPosition: "center center",
-          backgroundRepeat: "no-repeat",
-        }}
+        id=""
+        className="flex items-center justify-center h-[30rem] w-screen bg-transition"
       >
         <Image
           src={"/images/Brahm.svg"}
-          width={1450}
-          height={1450}
+          width={1000}
+          height={1000}
           alt="Brahm Logo"
-          className={`transition-opacity ease-in duration-1500 ${
+          className={`w-40 transition-opacity ease-in duration-1500 ${
             isLogoVisible ? "opacity-100" : "opacity-0"
           }`}
         />

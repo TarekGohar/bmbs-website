@@ -11,7 +11,10 @@
     "services": "Services",
     "mila": "Espace Mila",
     "book-now": "Book Now",
-    "locale": "fr"
+    "locale": "fr",
+    "hours": "Hours",
+    "date": "Monday - Friday",
+    "time": "9:00 AM - 5:00 PM"
   },
   "Services": {
     "heading": "Services",

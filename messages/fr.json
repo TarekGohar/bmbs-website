@@ -11,7 +11,10 @@
     "services": "Services",
     "mila": "Espace Mila",
     "book-now": "Réserver",
-    "locale": "en"
+    "locale": "en",
+    "hours": "Heures",
+    "date": "Lunda - Vendredi",
+    "time": "9:00 - 17:00"
   },
   "Services": {
     "heading": "Services",

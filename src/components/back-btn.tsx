@@ -1,4 +1,4 @@
-import { Link } from "@/i18n/navigation";
+import { Link } from "@/i18n/routing";
 
 interface BackButtonProps {
   backText: string;

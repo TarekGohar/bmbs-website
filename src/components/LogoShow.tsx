@@ -50,16 +50,16 @@ export default function LogoScroll() {
   }, []);
 
   return (
-    <div className="mt-24 mb-48">
+    <section className="h-[50rem] md:h-[70rem] w-screen flex flex-col items-center justify-center">
       <h2 className="text-white font-medium text-2xl text-center uppercase">
         {t("trusted")}
       </h2>
       <div className="flex justify-center">
-        <div className="mt-4 grid grid-cols-2 md:grid-cols-3 gap-x-28 lg:gap-x-40 gap-y-4 h-fit items-center">
+        <div className="mt-4 grid grid-cols-2 md:grid-cols-3 gap-x-16 xxs:gap-x-20 md:gap-x- lg:gap-x-40 gap-y-4 h-fit items-center">
           {indices.map((index, i) => (
             <div
               key={`${index}-${i}`} // Dynamic key to retrigger animation
-              className="w-28 h-28 md:w-48 md:h-48 fade-up flex items-center justify-center overflow-hidden"
+              className="w-32 h-32 md:w-48 md:h-48 fade-up flex items-center justify-center overflow-hidden"
             >
               <img
                 src={imageSubsets[i][index]}
@@ -72,7 +72,6 @@ export default function LogoScroll() {
           ))}
         </div>
       </div>
-
       <style jsx>{`
         .fade-up {
           opacity: 0;
@@ -87,6 +86,6 @@ export default function LogoScroll() {
           }
         }
       `}</style>
-    </div>
+    </section>
   );
 }

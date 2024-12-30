@@ -2,13 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @font-face {
-  font-family: "Aeronaut";
-  src: url("/fonts/aeronaut.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-} */
-
 @layer base {
   @font-face {
     font-family: "Made";
@@ -128,6 +121,107 @@
     font-weight: 200;
     font-style: normal;
   }
+
+  @font-face {
+    font-family: "Manrope";
+    src: url("/fonts/manrope/thin.otf") format("opentype");
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Manrope";
+    src: url("/fonts/manrope/light.otf") format("opentype");
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Manrope";
+    src: url("/fonts/manrope/regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Manrope";
+    src: url("/fonts/manrope/medium.otf") format("opentype");
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Manrope";
+    src: url("/fonts/manrope/semibold.otf") format("opentype");
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Manrope";
+    src: url("/fonts/manrope/bold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Carving";
+    src: url("/fonts/carving/Thin.otf") format("opentype");
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Carving";
+    src: url("/fonts/carving/ExtraLight.otf") format("opentype");
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Carving";
+    src: url("/fonts/carving/Light.otf") format("opentype");
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Carving";
+    src: url("/fonts/carving/Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Carving";
+    src: url("/fonts/carving/Medium.otf") format("opentype");
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Carving";
+    src: url("/fonts/carving/SemiBold.otf") format("opentype");
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Carving";
+    src: url("/fonts/carving/Bold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Carving";
+    src: url("/fonts/carving/Black.otf") format("opentype");
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  
+  
 }
 
 body {
@@ -147,9 +241,8 @@ section#hero {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right center; /* Aligns the background to the right */
-  height: 100%;
   width: 100%;
-  filter: grayscale(100%); /* Makes the image black and white */
+  filter: grayscale(20%); /* Makes the image black and white */
 }
 
 section#festivals {
@@ -196,6 +289,70 @@ section#contact {
   width: 100%;
   filter: grayscale(100%); /* Makes the image black and white */
 }
+
+.collection-background {
+  background: url("/images/fundraisers.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center; /* Aligns the background to the center */
+  height: 100%;
+  width: 100%;
+  filter: grayscale(20%);
+}
+
+.collection-panel {
+  position: relative;
+  overflow: hidden; /* Prevents pseudo-element from overflowing */
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: end;
+}
+
+.collection-panel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
+  z-index: -1; /* Ensures it stays behind the content */
+  transform: scale(1.1); /* Prevents edge clipping */
+}
+
+.buy-background {
+  background:
+    url("/images/mila-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center; /* Centers the image */
+  height: 100%;
+  width: 100%;
+  filter: grayscale(20%);
+}
+
+.buy-panel {
+  position: relative;
+  overflow: hidden; /* Prevents pseudo-element from overflowing */
+}
+
+.buy-panel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  z-index: -1; /* Ensures it stays behind the content */
+  transform: scale(1.1); /* Prevents edge clipping */
+}
+
 
 /* Hamburger Menu */
 .hamburger {
@@ -258,7 +415,7 @@ section#contact {
 }
 
 .navbar-link {
-  @apply text-white hover:text-neutral-300 focus:text-neutral-400 ease-in duration-150 tracking-[.125rem] hover:underline underline-offset-8 transition-all;
+  @apply duration-150 text-lg tracking-wide;
 }
 
 .arrow-div:hover .arrow {
@@ -279,7 +436,12 @@ section#contact {
 .word {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition: opacity 0.6s ease, transform 0.6s ease, color 0.15s ease;
+}
+
+.word.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .navlink {
@@ -287,11 +449,6 @@ section#contact {
   transform: translateY(20px);
   transition: opacity 0.4s ease, transform 0.4s ease;
   margin-bottom: 1rem; /* Optional spacing */
-}
-
-.word.show {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .fade-effect {
@@ -328,3 +485,4 @@ section#contact {
     transform: rotate(-360deg);
   }
 }
+
