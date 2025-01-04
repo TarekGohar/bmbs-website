@@ -50,8 +50,8 @@ export default function LogoScroll() {
   }, []);
 
   return (
-    <section className="h-[50rem] md:h-[70rem] w-screen flex flex-col items-center justify-center">
-      <h2 className="text-white font-medium text-2xl text-center uppercase">
+    <div className="w-full flex flex-col items-center justify-center">
+      <h2 className="text-white font-medium text-4xl text-center uppercase">
         {t("trusted")}
       </h2>
       <div className="flex justify-center">
@@ -86,6 +86,6 @@ export default function LogoScroll() {
           }
         }
       `}</style>
-    </section>
+    </div>
   );
 }

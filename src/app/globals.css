@@ -128,35 +128,35 @@
     font-weight: 100;
     font-style: normal;
   }
-  
+
   @font-face {
     font-family: "Manrope";
     src: url("/fonts/manrope/light.otf") format("opentype");
     font-weight: 300;
     font-style: normal;
   }
-  
+
   @font-face {
     font-family: "Manrope";
     src: url("/fonts/manrope/regular.otf") format("opentype");
     font-weight: 400;
     font-style: normal;
   }
-  
+
   @font-face {
     font-family: "Manrope";
     src: url("/fonts/manrope/medium.otf") format("opentype");
     font-weight: 500;
     font-style: normal;
   }
-  
+
   @font-face {
     font-family: "Manrope";
     src: url("/fonts/manrope/semibold.otf") format("opentype");
     font-weight: 600;
     font-style: normal;
   }
-  
+
   @font-face {
     font-family: "Manrope";
     src: url("/fonts/manrope/bold.otf") format("opentype");
@@ -170,58 +170,55 @@
     font-weight: 100;
     font-style: normal;
   }
-  
+
   @font-face {
     font-family: "Carving";
     src: url("/fonts/carving/ExtraLight.otf") format("opentype");
     font-weight: 200;
     font-style: normal;
   }
-  
+
   @font-face {
     font-family: "Carving";
     src: url("/fonts/carving/Light.otf") format("opentype");
     font-weight: 300;
     font-style: normal;
   }
-  
+
   @font-face {
     font-family: "Carving";
     src: url("/fonts/carving/Regular.otf") format("opentype");
     font-weight: 400;
     font-style: normal;
   }
-  
+
   @font-face {
     font-family: "Carving";
     src: url("/fonts/carving/Medium.otf") format("opentype");
     font-weight: 500;
     font-style: normal;
   }
-  
+
   @font-face {
     font-family: "Carving";
     src: url("/fonts/carving/SemiBold.otf") format("opentype");
     font-weight: 600;
     font-style: normal;
   }
-  
+
   @font-face {
     font-family: "Carving";
     src: url("/fonts/carving/Bold.otf") format("opentype");
     font-weight: 700;
     font-style: normal;
   }
-  
+
   @font-face {
     font-family: "Carving";
     src: url("/fonts/carving/Black.otf") format("opentype");
     font-weight: 900;
     font-style: normal;
   }
-  
-  
-  
 }
 
 body {
@@ -263,14 +260,37 @@ section#festivals {
   filter: grayscale(100%); /* Makes the image black and white */
 }
 
-section#about-hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("/images/osheaga-1.jpg");
+section#about-staff {
+  background: url("/images/patron-2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  height: 100;
+  background-position: center center; /* Aligns the background to the right */
+  height: 100%;
+  width: 100%;
+  filter: grayscale(100%); /* Makes the image black and white */
 }
+
+.quote-bg {
+  position: relative;
+  background: none; /* Remove the background image from the main element */
+  height: 100%;
+  width: 100%;
+}
+
+.quote-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("/images/contact.jpg") no-repeat center center;
+
+  background-size: cover;
+  filter: blur(4px) grayscale(100%); /* Apply blur directly to the background image */
+  z-index: -1; /* Place the blurred background behind the content */
+}
+
 
 section#contact {
   background: linear-gradient(
@@ -316,16 +336,15 @@ section#contact {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
-  -webkit-backdrop-filter: blur(30px);
-  backdrop-filter: blur(30px);
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   z-index: -1; /* Ensures it stays behind the content */
   transform: scale(1.1); /* Prevents edge clipping */
 }
 
 .buy-background {
-  background:
-    url("/images/mila-1.jpg");
+  background: url("/images/mila-1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center; /* Centers the image */
@@ -347,12 +366,11 @@ section#contact {
   width: 100%;
   height: 100%;
   background: rgba(255, 255, 255, 0.2);
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   z-index: -1; /* Ensures it stays behind the content */
   transform: scale(1.1); /* Prevents edge clipping */
 }
-
 
 /* Hamburger Menu */
 .hamburger {
@@ -485,4 +503,3 @@ section#contact {
     transform: rotate(-360deg);
   }
 }
-
