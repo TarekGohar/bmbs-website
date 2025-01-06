@@ -8,20 +8,12 @@ import { promisify } from "util";
 import sizeOf from "image-size";
 
 interface ServiceProps {
-  serviceImages: string[];
   serviceTitle: string;
-  serviceBefore: string;
-  serviceAfter: string;
 }
 
 const sizeOfAsync = promisify(sizeOf);
 
-export default async function ServicePage({
-  serviceImages,
-  serviceTitle,
-  serviceBefore,
-  serviceAfter,
-}: ServiceProps) {
+export default async function ServicePage({ serviceTitle }: ServiceProps) {
   const t = await getTranslations(`Services.${serviceTitle}`);
   const ts = await getTranslations("Hero");
   const images = await fetchImages();
@@ -87,8 +79,8 @@ export default async function ServicePage({
               key={index}
               src={src}
               alt={`${serviceTitle} ${index + 1}`}
-              width={isHorizontal ? width : 1000} // Adjust width for better grid layout
-              height={isHorizontal ? height : 2000} // Adjust height for better grid layout
+              width={isHorizontal ? width : 400} // Adjust width for better grid layout
+              height={isHorizontal ? height : 800} // Adjust height for better grid layout
               className={`object-cover h-full w-full ${
                 isHorizontal ? "col-span-1 md:col-span-2" : "col-span-1"
               }`}
