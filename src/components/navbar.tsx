@@ -5,11 +5,11 @@ import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { revalidatePath } from "next/cache";
 
-interface navbarProps {
-  light: boolean;
-}
+// interface navbarProps {
+//   light: boolean;
+// }
 
-export default function Navbar({ light }: navbarProps) {
+export default function Navbar() {
   const [menu, setMenu] = useState(false);
   const [hover, setHover] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -67,13 +67,11 @@ export default function Navbar({ light }: navbarProps) {
     }
   }, [menu]);
 
-  const light_color = light
-    ? `text-white hover:text-main group-hover:text-main`
-    : `text-main hover:text-neutral-400 group-hover:text-neutral-400`;
+  const light_color = `text-white hover:text-main group-hover:text-main`;
+  // : `text-main hover:text-neutral-400 group-hover:text-neutral-400`;
 
-  const light_color_bg = light
-    ? `bg-white group-hover:bg-main`
-    : `bg-main group-hover:bg-neutral-50`;
+  const light_color_bg = `bg-white group-hover:bg-main`;
+  // : `bg-main group-hover:bg-neutral-50`;
 
   return (
     <>
