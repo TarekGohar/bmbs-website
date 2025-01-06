@@ -6,6 +6,7 @@ import fs from "fs";
 import path from "path";
 import { promisify } from "util";
 import sizeOf from "image-size";
+import { GetStaticProps } from "next";
 
 interface ServiceProps {
   serviceTitle: string;
@@ -14,9 +15,21 @@ interface ServiceProps {
 
 async function fetchImages(serviceTitle: string) {
   const imagesDir = path.join(process.cwd(), `public/images/${serviceTitle}`);
-  const files = fs
-    .readdirSync(imagesDir)
-    .filter((file) => /\.(png|jpe?g|gif|webp)$/.test(file));
+  // const files = fs
+  //   .readdirSync(imagesDir)
+  //   .filter((file) => /\.(png|jpe?g|gif|webp)$/.test(file));
+
+  const files = [
+    "festivals-1.jpg",
+    "festivals-2.jpg",
+    "festivals-3.jpg",
+    "festivals-4.jpg",
+    "festivals-5.jpg",
+    "festivals-6.jpg",
+    "festivals-7.jpg",
+    "festivals-8.jpg",
+    "osheaga-1.jpg",
+  ];
 
   const metadata = await Promise.all(
     files.map(async (file) => {
@@ -34,6 +47,17 @@ async function fetchImages(serviceTitle: string) {
   );
 
   return metadata;
+}
+
+export async function getStaticProps({ params }) {
+  const serviceTitle = params.serviceTitle;
+
+  const t = await getTranslations(`Services.${serviceTitle}`);
+  const ts = await getTranslations("Hero");
+
+  return {
+    props: { serviceTitle, t, ts },
+  };
 }
 
 const sizeOfAsync = promisify(sizeOf);
