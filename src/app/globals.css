@@ -261,7 +261,7 @@ section#festivals {
 }
 
 section#about-staff {
-  background: url("/images/patron-2.jpg");
+  background: url("/images/corporate/patron-2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center; /* Aligns the background to the right */
@@ -276,21 +276,6 @@ section#about-staff {
   height: 100%;
   width: 100%;
 }
-
-.quote-bg::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url("/images/contact.jpg") no-repeat center center;
-
-  background-size: cover;
-  filter: blur(4px) grayscale(100%); /* Apply blur directly to the background image */
-  z-index: -1; /* Place the blurred background behind the content */
-}
-
 
 section#contact {
   background: linear-gradient(
@@ -311,7 +296,7 @@ section#contact {
 }
 
 .collection-background {
-  background: url("/images/fundraisers.jpg");
+  background: url("/images/fundraisers/fundraisers.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center; /* Aligns the background to the center */
@@ -344,7 +329,7 @@ section#contact {
 }
 
 .buy-background {
-  background: url("/images/mila-1.jpg");
+  background: url("/images/mila/mila-1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center; /* Centers the image */

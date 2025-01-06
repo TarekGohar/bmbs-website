@@ -16,6 +16,7 @@ export default function Form({ service }: FormProps) {
   const router = useRouter();
   const pathname = usePathname();
   const t = useTranslations("Booking");
+  console.log("service", service);
   async function handleSubmit(event: any) {
     event.preventDefault();
     setLoading(true);

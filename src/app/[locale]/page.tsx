@@ -46,7 +46,7 @@ export default function Home() {
       {/* Services */}
       <section
         id="collections"
-        className="my-[10rem] h-[28rem] md:h-[34rem] lg:h-[44rem] xl:h-[50rem] flex items-center justify-center px-2"
+        className="md:my-[10rem] h-[28rem] md:h-[34rem] lg:h-[44rem] xl:h-[50rem] flex items-center justify-center px-2"
       >
         {/* Panels */}
         <div className="collection-background max-w-[120rem] p-1 flex flex-col items-start justify-end xl:justify-center w-full h-fit gap-x-2">
@@ -131,7 +131,7 @@ export default function Home() {
 
       {/* Mila */}
       <section
-        id="where-to-buy"
+        id="mila"
         className="mb-[8rem] mt-[6rem] h-[28rem] md:h-[45rem] flex items-center justify-center px-2"
       >
         {/* Panels */}

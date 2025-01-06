@@ -1,17 +1,15 @@
 import Form from "@/components/form";
 import { Metadata } from "next";
-import { useSearchParams } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "Book Now",
   description: "Book Brahm Mauer Bartending Service for your next event",
 };
 
-export default function Home({
-  searchParams,
-}: {
-  searchParams: { [key: string]: string | undefined };
+export default async function Home(props: {
+  searchParams: Promise<{ [key: string]: string | undefined }>;
 }) {
+  const searchParams = await props.searchParams;
   const service = searchParams.service;
   return (
     <section

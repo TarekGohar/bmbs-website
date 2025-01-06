@@ -20,6 +20,7 @@ export default function Navbar({ light }: navbarProps) {
 
   const [visibleWords, setVisibleWords] = useState({
     about: false,
+    mila: false,
     collections: false,
     contact: false,
     lang: false,
@@ -30,6 +31,7 @@ export default function Navbar({ light }: navbarProps) {
       // Reset visibility when menu is closed
       setVisibleWords({
         about: false,
+        mila: false,
         collections: false,
         contact: false,
         lang: false,
@@ -39,15 +41,16 @@ export default function Navbar({ light }: navbarProps) {
 
     // Staggered visibility effect when menu opens
     setTimeout(() => setVisibleWords((prev) => ({ ...prev, about: true })), 0);
+    setTimeout(() => setVisibleWords((prev) => ({ ...prev, mila: true })), 100);
     setTimeout(
       () => setVisibleWords((prev) => ({ ...prev, collections: true })),
-      100
+      200
     );
     setTimeout(
       () => setVisibleWords((prev) => ({ ...prev, contact: true })),
-      200
+      300
     );
-    setTimeout(() => setVisibleWords((prev) => ({ ...prev, lang: true })), 300);
+    setTimeout(() => setVisibleWords((prev) => ({ ...prev, lang: true })), 400);
 
     if (typeof window !== "undefined") {
       // Disable body scroll when menu is open
@@ -161,7 +164,7 @@ export default function Navbar({ light }: navbarProps) {
             {t("about")}
           </Link>
 
-          <Link href="/about" className={`navbar-link ${light_color}`}>
+          <Link href="/espace-mila" className={`navbar-link ${light_color}`}>
             {t("mila")}
           </Link>
 
@@ -179,7 +182,7 @@ export default function Navbar({ light }: navbarProps) {
               }}
             >
               <Link
-                href="/collections"
+                href="/services"
                 className={` relative navbar-link ${light_color}`}
               >
                 Services
@@ -215,7 +218,7 @@ export default function Navbar({ light }: navbarProps) {
                 }}
               >
                 <li>
-                  <Link href={"/collections/corporate"} className={light_color}>
+                  <Link href={"/services/corporate"} className={light_color}>
                     Corporate
                   </Link>
                 </li>
@@ -292,7 +295,13 @@ export default function Navbar({ light }: navbarProps) {
         >
           {t("about")}
         </Link>
-        <Link href="/about" className={`navbar-link ${light_color}`}>
+        <Link
+          href="/espace-mila"
+          className={`navbar-link word ${light_color} ${
+            visibleWords.mila ? "show" : ""
+          }`}
+          onClick={() => setMenu(false)}
+        >
           {t("mila")}
         </Link>
         <div>
@@ -310,7 +319,7 @@ export default function Navbar({ light }: navbarProps) {
             }}
           >
             <Link
-              href="/collections"
+              href="/services"
               className={`relative navbar-link ${light_color}`}
             >
               Services
@@ -327,7 +336,7 @@ export default function Navbar({ light }: navbarProps) {
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth="2"
+                strokeWidth="3"
                 d="M19 9l-7 7-7-7"
               />
             </svg>
@@ -335,7 +344,7 @@ export default function Navbar({ light }: navbarProps) {
 
           {hover ? (
             <ul
-              className="absolute right-0 mr-[9rem] -mt-[1.65rem] z-20 pb-2 flex-col space-y-6 text-right pr-10"
+              className="absolute right-0 mr-[7rem] -mt-[1.8rem] z-20 pb-2 flex-col space-y-6 text-right pr-10"
               onTouchStart={() => {
                 setHover(true);
                 setIsOpen(true);
@@ -350,13 +359,13 @@ export default function Navbar({ light }: navbarProps) {
               }}
             >
               <li>
-                <Link href={"/collections/corporate"} className={light_color}>
+                <Link href={"/services/corporate"} className={light_color}>
                   Corporate
                 </Link>
               </li>
               <li>
                 <Link href={"/services/festivals"} className={light_color}>
-                  Fetsival
+                  Festivals
                 </Link>
               </li>
               <li>
