@@ -2,11 +2,9 @@ import Navbar from "@/components/navbar";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import Image from "next/image";
-import fs from "fs";
 import path from "path";
 import { promisify } from "util";
 import sizeOf from "image-size";
-import { GetStaticProps } from "next";
 
 interface ServiceProps {
   serviceTitle: string;
