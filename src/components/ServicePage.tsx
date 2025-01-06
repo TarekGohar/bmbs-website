@@ -2,68 +2,114 @@ import Navbar from "@/components/navbar";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import Image from "next/image";
-import path from "path";
+// import path from "path";
 import { promisify } from "util";
 import sizeOf from "image-size";
 
 interface ServiceProps {
   serviceTitle: string;
-  serviceImages: string[];
 }
 
-async function fetchImages(serviceTitle: string) {
-  const imagesDir = path.join(process.cwd(), `public/images/${serviceTitle}`);
-  // const files = fs
-  //   .readdirSync(imagesDir)
-  //   .filter((file) => /\.(png|jpe?g|gif|webp)$/.test(file));
+// async function fetchImages(serviceTitle: string) {
+//   const imagesDir = path.join(process.cwd(), `public/images/${serviceTitle}`);
+//   console.log("imagesDir", imagesDir);
+//   // const files = fs
+//   //   .readdirSync(imagesDir)
+//   //   .filter((file) => /\.(png|jpe?g|gif|webp)$/.test(file));
 
-  const files = [
-    "festivals-1.jpg",
-    "festivals-2.jpg",
-    "festivals-3.jpg",
-    "festivals-4.jpg",
-    "festivals-5.jpg",
-    "festivals-6.jpg",
-    "festivals-7.jpg",
-    "festivals-8.jpg",
-    "osheaga-1.jpg",
-  ];
+//   const files = [
+//     "festivals-1.jpg",
+//     "festivals-2.jpg",
+//     "festivals-3.jpg",
+//     "festivals-4.jpg",
+//     "festivals-5.jpg",
+//     "festivals-6.jpg",
+//     "festivals-7.jpg",
+//     "festivals-8.jpg",
+//     "osheaga-1.jpg",
+//   ];
 
-  const metadata = await Promise.all(
-    files.map(async (file) => {
-      const dimensions = await sizeOfAsync(path.join(imagesDir, file));
-      if (!dimensions) {
-        throw new Error(`Could not get dimensions for image: ${file}`);
-      }
-      return {
-        src: `/images/${serviceTitle}/${file}`,
-        width: dimensions.width!,
-        height: dimensions.height!,
-        isHorizontal: dimensions.width! > dimensions.height!,
-      };
-    })
-  );
+//   const metadata = await Promise.all(
+//     files.map(async (file) => {
+//       const dimensions = await sizeOfAsync(path.join(imagesDir, file));
+//       if (!dimensions) {
+//         throw new Error(`Could not get dimensions for image: ${file}`);
+//       }
+//       return {
+//         src: `/images/${serviceTitle}/${file}`,
+//         width: dimensions.width!,
+//         height: dimensions.height!,
+//         isHorizontal: dimensions.width! > dimensions.height!,
+//       };
+//     })
+//   );
 
-  return metadata;
-}
+//   console.log("metadata", metadata);
 
-export async function getStaticProps({ params }) {
-  const serviceTitle = params.serviceTitle;
+//   return metadata;
+// }
 
-  const t = await getTranslations(`Services.${serviceTitle}`);
-  const ts = await getTranslations("Hero");
-
-  return {
-    props: { serviceTitle, t, ts },
-  };
-}
-
-const sizeOfAsync = promisify(sizeOf);
+// const sizeOfAsync = promisify(sizeOf);
 
 export default async function ServicePage({ serviceTitle }: ServiceProps) {
   const t = await getTranslations(`Services.${serviceTitle}`);
   const ts = await getTranslations("Hero");
-  const images = await fetchImages(serviceTitle);
+  const images = [
+    {
+      src: "/images/festivals/festivals-1.jpg",
+      width: 4608,
+      height: 3072,
+      isHorizontal: true,
+    },
+    {
+      src: "/images/festivals/festivals-2.jpg",
+      width: 3068,
+      height: 2301,
+      isHorizontal: true,
+    },
+    {
+      src: "/images/festivals/festivals-3.jpg",
+      width: 4032,
+      height: 3024,
+      isHorizontal: true,
+    },
+    {
+      src: "/images/festivals/festivals-4.jpg",
+      width: 3802,
+      height: 2852,
+      isHorizontal: true,
+    },
+    {
+      src: "/images/festivals/festivals-5.jpg",
+      width: 6230,
+      height: 4672,
+      isHorizontal: true,
+    },
+    {
+      src: "/images/festivals/festivals-6.jpg",
+      width: 6230,
+      height: 4672,
+      isHorizontal: true,
+    },
+    {
+      src: "/images/festivals/festivals-7.jpg",
+      width: 6230,
+      height: 4672,
+      isHorizontal: true,
+    },
+    {
+      src: "/images/festivals/festivals-8.jpg",
+      width: 4672,
+      height: 3504,
+      isHorizontal: true,
+    },
+    {
+      src: "/images/festivals/osheaga-1.jpg",
+      width: 7008,
+      height: 4672,
+      isHorizontal: true,
+    },
+  ];
 
   return (
     <>
