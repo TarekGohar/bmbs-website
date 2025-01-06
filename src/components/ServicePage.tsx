@@ -9,6 +9,31 @@ import sizeOf from "image-size";
 
 interface ServiceProps {
   serviceTitle: string;
+  serviceImages: string[];
+}
+
+async function fetchImages(serviceTitle: string) {
+  const imagesDir = path.join(process.cwd(), `public/images/${serviceTitle}`);
+  const files = fs
+    .readdirSync(imagesDir)
+    .filter((file) => /\.(png|jpe?g|gif|webp)$/.test(file));
+
+  const metadata = await Promise.all(
+    files.map(async (file) => {
+      const dimensions = await sizeOfAsync(path.join(imagesDir, file));
+      if (!dimensions) {
+        throw new Error(`Could not get dimensions for image: ${file}`);
+      }
+      return {
+        src: `/images/${serviceTitle}/${file}`,
+        width: dimensions.width!,
+        height: dimensions.height!,
+        isHorizontal: dimensions.width! > dimensions.height!,
+      };
+    })
+  );
+
+  return metadata;
 }
 
 const sizeOfAsync = promisify(sizeOf);
@@ -16,31 +41,7 @@ const sizeOfAsync = promisify(sizeOf);
 export default async function ServicePage({ serviceTitle }: ServiceProps) {
   const t = await getTranslations(`Services.${serviceTitle}`);
   const ts = await getTranslations("Hero");
-  const images = await fetchImages();
-
-  async function fetchImages() {
-    const imagesDir = path.join(process.cwd(), `public/images/${serviceTitle}`);
-    const files = fs
-      .readdirSync(imagesDir)
-      .filter((file) => /\.(png|jpe?g|gif|webp)$/.test(file));
-
-    const metadata = await Promise.all(
-      files.map(async (file) => {
-        const dimensions = await sizeOfAsync(path.join(imagesDir, file));
-        if (!dimensions) {
-          throw new Error(`Could not get dimensions for image: ${file}`);
-        }
-        return {
-          src: `/images/${serviceTitle}/${file}`,
-          width: dimensions.width!,
-          height: dimensions.height!,
-          isHorizontal: dimensions.width! > dimensions.height!,
-        };
-      })
-    );
-
-    return metadata;
-  }
+  const images = await fetchImages(serviceTitle);
 
   return (
     <>
