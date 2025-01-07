@@ -80,7 +80,7 @@ export default function Footer() {
               <Link href="/services/corporate">Corporate</Link>
               <Link href="/services/fundraisers">Fundraisers</Link>
               <Link href="/services/festivals">Festivals</Link>
-              <Link href="/services/weddings">Weddings</Link>
+              <Link href="/services/private">Private</Link>
             </div>
           </li>
         </ul>

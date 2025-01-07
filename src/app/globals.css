@@ -221,6 +221,18 @@
   }
 }
 
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+      display: none;
+  }
+ /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+  }
+}
+
 body {
   background-color: black;
 }
@@ -296,10 +308,10 @@ section#contact {
 }
 
 .collection-background {
-  background: url("/images/fundraisers/fundraisers.jpg");
+  background: url("/images/corporate/services.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center; /* Aligns the background to the center */
+  background-position: center -800; /* Aligns the background to the center */
   height: 100%;
   width: 100%;
   filter: grayscale(20%);

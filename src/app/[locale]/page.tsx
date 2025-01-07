@@ -14,7 +14,6 @@ export default function Home() {
   const t = useTranslations("Hero");
   return (
     <>
-      <Navbar />
       {/* Hero */}
       <section
         id="hero"
@@ -50,7 +49,7 @@ export default function Home() {
       >
         {/* Panels */}
         <div className="collection-background max-w-[120rem] p-1 flex flex-col items-start justify-end xl:justify-center w-full h-fit gap-x-2">
-          <div className="collection-panel h-fit w-full lg:w-[20rem] lg:h-full gap-y-1 p-2 lg:p-4">
+          <div className="collection-panel h-fit w-full lg:w-[17rem] lg:h-full gap-y-1 p-2 lg:p-4">
             <h1 className="text-4xl lg:text-6xl text-white font-medium ">
               Services
             </h1>

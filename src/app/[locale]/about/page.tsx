@@ -11,11 +11,6 @@ export default function About() {
 
   return (
     <>
-      {/* <div className="fixed top-0 left-0 w-full z-10">
-        <Navbar />
-      </div> */}
-      <Navbar />
-
       {/* Header Section */}
       <section className="text-white max-w-[100rem] mx-auto">
         <div className="px-4 flex items-center justify-starts h-[25rem] md:h-[30rem]">
@@ -43,9 +38,7 @@ export default function About() {
           <p className="md:w-[40%] font-light text-2xl leading-[2rem]">
             Based in Montreal, we specialize in providing top-tier bartending
             services for a wide range of events. Whether you're hosting a
-            corporate gathering, a wedding, a private party, a fundraiser, or a
-            festival, our team is dedicated to creating unforgettable
-            experiences tailored to your needs.
+            corporate gathering, a
           </p>
         </div>
       </section>
@@ -90,22 +83,22 @@ export default function About() {
       </section>
 
       {/* Services */}
-      <section className="my-[10rem] h-fit">
+      <section className=" mb-20 h-fit">
         <h2 className="text-white text-5xl font-medium max-w-[100rem] mx-auto px-4">
           Our Services
         </h2>
-        <div className="flex space-x-2 max-w-[100rem] mx-auto px-4 mt-10 overflow-x-auto">
+        <div className="flex space-x-2 max-w-[100rem] mx-auto px-4 mt-10 overflow-x-auto no-scrollbar">
           <Link
             href="/services/corporate"
-            className="relative min-w-[20rem] md:min-w-[30rem] h-[35rem] md:h-[42rem] group cursor-pointer"
+            className="relative min-w-[20rem] md:min-w-[30rem] h-[35rem] md:h-[42rem] group cursor-pointer grayscale"
           >
             <Image
-              src="/images/corporate/patron-1.jpg"
+              src="/images/corporate/corporate-1.jpg"
               alt="corporate event"
               width={1920}
               height={1080}
-              className="w-full h-full object-cover"
-              style={{ filter: "brightness(80%)" }}
+              className="w-full h-full object-cover "
+              style={{ filter: "brightness(85%)" }}
             />
             <h2 className="absolute bottom-[3rem] left-0 w-full text-white font-medium text-4xl text-center p-2 opacity-60 group-hover:opacity-100 duration-200 transition-opacity">
               Corporate
@@ -121,7 +114,7 @@ export default function About() {
               width={1920}
               height={1080}
               className="w-full h-full object-cover"
-              style={{ filter: "brightness(65%)" }}
+              style={{ filter: "brightness(70%)" }}
             />
             <h2 className="absolute bottom-[3rem] left-0 w-full text-white font-medium text-4xl text-center p-2 opacity-60 group-hover:opacity-100 duration-200 transition-opacity">
               Festivals
@@ -138,7 +131,7 @@ export default function About() {
               width={1920}
               height={1080}
               className="w-full h-full object-cover"
-              style={{ filter: "brightness(70%)" }}
+              style={{ filter: "brightness(80%)" }}
             />
             <h2 className="absolute bottom-[3rem] left-0 w-full text-white font-medium text-4xl text-center p-2 opacity-60 group-hover:opacity-100 duration-200 transition-opacity">
               Fundraisers
@@ -146,19 +139,19 @@ export default function About() {
           </Link>
 
           <Link
-            href="/services/weddings"
+            href="/services/private"
             className="relative min-w-[20rem] md:min-w-[30rem] h-[35rem] md:h-[42rem] group cursor-pointer grayscale"
           >
             <Image
-              src="/images/weddings/weddings.jpg"
-              alt="wedding event"
+              src="/images/private/private-0.jpg"
+              alt="private event"
               width={1920}
               height={1080}
               className="w-full h-full object-cover"
               style={{ filter: "brightness(80%)" }}
             />
             <h2 className="absolute bottom-[3rem] left-0 w-full text-white font-medium text-4xl text-center p-2 opacity-60 group-hover:opacity-100 duration-200 transition-opacity">
-              Weddings
+              Private
             </h2>
           </Link>
         </div>

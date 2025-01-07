@@ -1,47 +1,15 @@
-import Navbar from "@/components/navbar";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import Image from "next/image";
-import fs from "fs";
-import path from "path";
-import { promisify } from "util";
-import sizeOf from "image-size";
-
-const sizeOfAsync = promisify(sizeOf);
-
-async function fetchMilaImages() {
-  const imagesDir = path.join(process.cwd(), "public/images/mila");
-  const files = fs
-    .readdirSync(imagesDir)
-    .filter((file) => /\.(png|jpe?g|gif|webp)$/.test(file));
-
-  const metadata = await Promise.all(
-    files.map(async (file) => {
-      const dimensions = await sizeOfAsync(path.join(imagesDir, file));
-      if (!dimensions) {
-        throw new Error(`Could not get dimensions for image: ${file}`);
-      }
-      return {
-        src: `/images/mila/${file}`,
-        width: dimensions.width!,
-        height: dimensions.height!,
-        isHorizontal: dimensions.width! > dimensions.height!,
-      };
-    })
-  );
-
-  return metadata;
-}
+import milaMetadata from "./metadata";
 
 export default async function EspaceMila() {
   const t = await getTranslations("Mila");
   const ts = await getTranslations("Hero");
-  const images = await fetchMilaImages();
+  const images = milaMetadata;
 
   return (
     <>
-      <Navbar />
-
       {/* Header Section */}
       <section className="text-white max-w-[100rem] mx-auto">
         <div className="px-4 flex items-center justify-starts h-[25rem] md:h-[30rem]">
@@ -49,9 +17,6 @@ export default async function EspaceMila() {
             Espace Mila
           </h1>
         </div>
-        {/* <h2 className="w-full font-bold text-4xl md:text-5xl uppercase text-left tracking-wider">
-              {t("second-heading")}
-            </h2> */}
       </section>
 
       {/* First Paragraphs */}
@@ -69,7 +34,7 @@ export default async function EspaceMila() {
       </section>
 
       {/* Mila Images */}
-      <section className="mb-16 mx-auto py-0 px-2 md:px-2">
+      <section className="mt-28 mx-auto py-0 px-2 md:px-2">
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-2 md:gap-2">
           {images.map(({ src, width, height, isHorizontal }, index) => (
             <Image

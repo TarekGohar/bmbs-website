@@ -1,120 +1,28 @@
-import Navbar from "@/components/navbar";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import Image from "next/image";
-// import path from "path";
-import { promisify } from "util";
-import sizeOf from "image-size";
 
 interface ServiceProps {
   serviceTitle: string;
+  imageMetadata: {
+    src: string; // The path to the image
+    width: number; // The width of the image in pixels
+    height: number; // The height of the image in pixels
+    isHorizontal: boolean; // Indicates whether the image is in horizontal orientation
+  }[];
 }
 
-// async function fetchImages(serviceTitle: string) {
-//   const imagesDir = path.join(process.cwd(), `public/images/${serviceTitle}`);
-//   console.log("imagesDir", imagesDir);
-//   // const files = fs
-//   //   .readdirSync(imagesDir)
-//   //   .filter((file) => /\.(png|jpe?g|gif|webp)$/.test(file));
-
-//   const files = [
-//     "festivals-1.jpg",
-//     "festivals-2.jpg",
-//     "festivals-3.jpg",
-//     "festivals-4.jpg",
-//     "festivals-5.jpg",
-//     "festivals-6.jpg",
-//     "festivals-7.jpg",
-//     "festivals-8.jpg",
-//     "osheaga-1.jpg",
-//   ];
-
-//   const metadata = await Promise.all(
-//     files.map(async (file) => {
-//       const dimensions = await sizeOfAsync(path.join(imagesDir, file));
-//       if (!dimensions) {
-//         throw new Error(`Could not get dimensions for image: ${file}`);
-//       }
-//       return {
-//         src: `/images/${serviceTitle}/${file}`,
-//         width: dimensions.width!,
-//         height: dimensions.height!,
-//         isHorizontal: dimensions.width! > dimensions.height!,
-//       };
-//     })
-//   );
-
-//   console.log("metadata", metadata);
-
-//   return metadata;
-// }
-
-// const sizeOfAsync = promisify(sizeOf);
-
-export default async function ServicePage({ serviceTitle }: ServiceProps) {
+export default async function ServicePage({
+  serviceTitle,
+  imageMetadata,
+}: ServiceProps) {
   const t = await getTranslations(`Services.${serviceTitle}`);
   const ts = await getTranslations("Hero");
-  const images = [
-    {
-      src: "/images/festivals/festivals-1.jpg",
-      width: 4608,
-      height: 3072,
-      isHorizontal: true,
-    },
-    {
-      src: "/images/festivals/festivals-2.jpg",
-      width: 3068,
-      height: 2301,
-      isHorizontal: true,
-    },
-    {
-      src: "/images/festivals/festivals-3.jpg",
-      width: 4032,
-      height: 3024,
-      isHorizontal: true,
-    },
-    {
-      src: "/images/festivals/festivals-4.jpg",
-      width: 3802,
-      height: 2852,
-      isHorizontal: true,
-    },
-    {
-      src: "/images/festivals/festivals-5.jpg",
-      width: 6230,
-      height: 4672,
-      isHorizontal: true,
-    },
-    {
-      src: "/images/festivals/festivals-6.jpg",
-      width: 6230,
-      height: 4672,
-      isHorizontal: true,
-    },
-    {
-      src: "/images/festivals/festivals-7.jpg",
-      width: 6230,
-      height: 4672,
-      isHorizontal: true,
-    },
-    {
-      src: "/images/festivals/festivals-8.jpg",
-      width: 4672,
-      height: 3504,
-      isHorizontal: true,
-    },
-    {
-      src: "/images/festivals/osheaga-1.jpg",
-      width: 7008,
-      height: 4672,
-      isHorizontal: true,
-    },
-  ];
+  // const images = await fetchImages(serviceTitle);
+  const images = imageMetadata;
 
   return (
     <>
-      <Navbar />
-
       {/* Header Section */}
       <section className="text-white max-w-[100rem] mx-auto">
         <div className="px-4 flex items-center justify-starts h-[25rem] md:h-[30rem]">
@@ -122,20 +30,17 @@ export default async function ServicePage({ serviceTitle }: ServiceProps) {
             {t("title")}
           </h1>
         </div>
-        {/* <h2 className="w-full font-bold text-4xl md:text-5xl uppercase text-left tracking-wider">
-              {t("second-heading")}
-            </h2> */}
       </section>
 
       {/* First Paragraphs */}
       <section className="max-w-[100rem] text-white mx-auto mb-[12rem]">
         <div className="flex flex-col md:flex-row px-4 space-y-20 md:space-y-0 md:gap-x-28">
           <p className="md:w-[60%] text-4xl font-medium md:text-5xl md:leading-[3rem]">
-            Raise a glass to love with our custom-crafted cocktails!
+            {t("description")}
           </p>
 
           <p className="md:w-[40%] font-light text-2xl leading-[2rem]">
-            {t("description")}
+            {t("long-description")}
           </p>
         </div>
       </section>

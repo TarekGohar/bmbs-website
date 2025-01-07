@@ -222,17 +222,17 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link href={"/services/festivals"} className={light_color}>
-                    Festivals
+                    Festival
                   </Link>
                 </li>
                 <li>
                   <Link href={"/services/fundraisers"} className={light_color}>
-                    Fundraisers
+                    Fundraiser
                   </Link>
                 </li>
                 <li>
-                  <Link href={"/services/weddings"} className={light_color}>
-                    Weddings
+                  <Link href={"/services/private"} className={light_color}>
+                    Private
                   </Link>
                 </li>
               </ul>
@@ -363,17 +363,17 @@ export default function Navbar() {
               </li>
               <li>
                 <Link href={"/services/festivals"} className={light_color}>
-                  Festivals
+                  Festival
                 </Link>
               </li>
               <li>
                 <Link href={"/services/fundraisers"} className={light_color}>
-                  Fundraisers
+                  Fundraiser
                 </Link>
               </li>
               <li>
-                <Link href={"/services/weddings"} className={light_color}>
-                  Weddings
+                <Link href={"/services/private"} className={light_color}>
+                  Private
                 </Link>
               </li>
             </ul>
