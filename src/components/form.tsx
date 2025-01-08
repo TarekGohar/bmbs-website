@@ -47,21 +47,16 @@ export default function Form({ service }: FormProps) {
     <form
       action="https://api.web3forms.com/submit"
       method="POST"
-      className="max-w-2xl w-full h-fit px-2"
+      className="w-full h-fit"
       onSubmit={handleSubmit}
     >
-      <h1 className="text-white text-4xl font-bold uppercase tracking-wider">
-        {t("main-title")}
-      </h1>
       <input
         type="hidden"
         name="access_key"
         value={process.env.WEB_API_ACCESS_KEY}
       />
 
-      <h2 className="text-white font-medium text-2xl mt-6 tracking-wider">
-        {t("service-type")}
-      </h2>
+      <h2 className="text-white font-medium text-4xl">{t("service-type")}</h2>
       <div className="mt-2 flex flex-col space-y-3">
         <div>
           <DropdownSelector
@@ -73,12 +68,10 @@ export default function Form({ service }: FormProps) {
       </div>
 
       {/* Personal Information */}
-      <h2 className="text-white font-medium text-2xl mt-6 tracking-wider">
-        {t("info")}
-      </h2>
-      <div className="mt-2 flex flex-col space-y-3">
+      <h2 className="text-white font-medium text-4xl mt-6">{t("info")}</h2>
+      <div className="mt-4 flex flex-col space-y-3">
         <div>
-          <h2 className="text-white tracking-wider mb-1 ml-3">
+          <h2 className="text-white  mb-1 ml-3">
             {t("name")} <span className="text-red-600">*</span>
           </h2>
           <input
@@ -91,7 +84,7 @@ export default function Form({ service }: FormProps) {
         </div>
 
         <div>
-          <h2 className="text-white tracking-wider mb-1 ml-3">
+          <h2 className="text-white  mb-1 ml-3">
             {t("email")} <span className="text-red-600">*</span>
           </h2>
           <input
@@ -104,7 +97,7 @@ export default function Form({ service }: FormProps) {
         </div>
 
         <div>
-          <h2 className="text-white tracking-wider mb-1 ml-3">
+          <h2 className="text-white  mb-1 ml-3">
             {t("phone")} <span className="text-red-600">*</span>
           </h2>
           <div className="flex space-x-4">
@@ -125,14 +118,10 @@ export default function Form({ service }: FormProps) {
       </div>
 
       {/* Event Information */}
-      <h2 className="mt-6 text-white font-medium text-2xl tracking-wider">
-        {t("details")}
-      </h2>
-      <div className="mt-2 flex flex-col space-y-3">
+      <h2 className="mt-6 text-white font-medium text-4xl">{t("details")}</h2>
+      <div className="mt-4 flex flex-col space-y-3">
         <div>
-          <h2 className="text-white tracking-wider mb-1 ml-3">
-            {t("location")}
-          </h2>
+          <h2 className="text-white  mb-1 ml-3">{t("location")}</h2>
           <input
             type="text"
             name="Location"
@@ -141,9 +130,7 @@ export default function Form({ service }: FormProps) {
           />
         </div>
         <div>
-          <h2 className="text-white tracking-wider mb-1 ml-3">
-            {t("capacity")}
-          </h2>
+          <h2 className="text-white  mb-1 ml-3">{t("capacity")}</h2>
           <input
             type="text"
             name="Capacity"
@@ -152,9 +139,7 @@ export default function Form({ service }: FormProps) {
           />
         </div>
         <div>
-          <h2 className="text-white tracking-wider mb-1 ml-3">
-            {t("additional-info")}
-          </h2>
+          <h2 className="text-white  mb-1 ml-3">{t("additional-info")}</h2>
           <textarea
             name="Message"
             placeholder={t("additional-info-placeholder")}
@@ -164,7 +149,7 @@ export default function Form({ service }: FormProps) {
       </div>
 
       <button
-        className="flex items-center justify-center mt-8 bg-neutral-100 py-4 px-3 text-black text-lg font-medium hover:bg-neutral-200 duration-150 rounded-xl w-full"
+        className="border-b-2 flex items-center justify-center mt-8 py-4 px-3 text-white text-lg font-medium hover:bg-neutral-900 duration-150 w-full"
         type="submit"
       >
         {!loading ? (

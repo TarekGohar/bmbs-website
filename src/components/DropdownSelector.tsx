@@ -47,7 +47,7 @@ export default function DropdownSelector({
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)} // Toggle dropdown open/closed
-        className={`w-full px-4 py-3 bg-black border-2 rounded-xl font-medium duration-200 ${
+        className={`w-full px-4 py-3 bg-black border-b-2 font-medium duration-200 ${
           isOpen ? "border-white" : "border-neutral-700"
         }`}
       >
@@ -76,7 +76,7 @@ export default function DropdownSelector({
       {isOpen && (
         <div
           className={
-            `absolute mt-2 z-10 w-full bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden overflow-y-auto` +
+            `absolute mt-2 z-10 w-full bg-black border-b-2 border-gray-200 shadow-lg overflow-hidden overflow-y-auto` +
             (options.length > 4 ? " h-44" : "")
           }
         >
@@ -91,7 +91,7 @@ export default function DropdownSelector({
                 }
                 setIsOpen(false); // Close the dropdown after selection
               }}
-              className={`block w-full px-4 py-3 text-left text-montrium-700 hover:bg-neutral-100 active:bg-neutral-200 transition ease-in duration-150`}
+              className={`block w-full px-4 py-3 text-left text-white hover:bg-neutral-900 active:bg-neutral-200 transition ease-in duration-150`}
             >
               {option}
             </button>

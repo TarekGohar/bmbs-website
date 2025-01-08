@@ -1,6 +1,5 @@
 import LogoShow from "@/components/LogoShow";
 // import { Metadata } from "next";
-import Navbar from "@/components/navbar";
 import EventRotator from "@/components/EventRotator";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
@@ -38,7 +37,7 @@ export default function Home() {
       </section>
 
       {/* Event Rotator */}
-      <section className="h-[30rem] md:h-[40rem] px-6 lg:px-10 flex items-center justify-center">
+      <section className="h-[40rem] px-6 lg:px-10 flex items-center justify-center">
         <EventRotator />
       </section>
 
@@ -51,11 +50,11 @@ export default function Home() {
         <div className="collection-background max-w-[120rem] p-1 flex flex-col items-start justify-end xl:justify-center w-full h-fit gap-x-2">
           <div className="collection-panel h-fit w-full lg:w-[17rem] lg:h-full gap-y-1 p-2 lg:p-4">
             <h1 className="text-4xl lg:text-6xl text-white font-medium ">
-              Services
+              {t("service.title")}
             </h1>
             <div className="text-md lg:text-xl">
               <p className="font-light leading-[1.5rem] text-white opacity-95">
-                Explore our range of bar services.
+                {t("service.subtitle")}
               </p>
               <Link
                 href="/collections"
@@ -76,7 +75,7 @@ export default function Home() {
                   <path d="M9 6l6 6l-6 6" />
                 </svg>
 
-                <span>View</span>
+                <span>{t("service.view")}</span>
               </Link>
             </div>
           </div>
@@ -84,7 +83,7 @@ export default function Home() {
       </section>
 
       {/* About */}
-      <section className="h-[40rem] lg:h-[44rem] flex items-center justify-center">
+      <section className="h-[48rem] lg:h-[44rem] flex items-center justify-center">
         <div className="max-w-[120rem] flex flex-col lg:flex-row items-center px-4 space-y-8 lg:space-x-8">
           {/* <h1 className="w-full text-5xl sm:text-6xl lg:leading-[6.5rem] lg:text-8xl font-medium text-white">
             We make every toast unforgettable
@@ -92,9 +91,7 @@ export default function Home() {
 
           <div className="w-full lg:w-[70%] space-y-3 lg:space-y-8">
             <h2 className="text-4xl lg:text-6xl text-white font-medium">
-              With over twenty-five years of experience and a passion for
-              bringing people together, we turn any event into a vibrant,
-              fun-filled gathering.
+              {t("about.main-text")}
               {/* From expertly crafted drinks to seamless service, we’re here to
               elevate your party and keep the energy flowing. */}
             </h2>
@@ -117,14 +114,14 @@ export default function Home() {
                 <path d="M9 6l6 6l-6 6" />
               </svg>
 
-              <span>Learn more about us</span>
+              <span>{t("about.subtitle")}</span>
             </Link>
           </div>
         </div>
       </section>
 
       {/* Trusted */}
-      <section className="h-[56rem] flex items-center justify-center">
+      <section className="h-[40rem] flex items-center justify-center">
         <LogoShow />
       </section>
 
@@ -141,8 +138,7 @@ export default function Home() {
             </h1>
             <div className="space-y-[0.2rem] text-md lg:text-xl">
               <p className="font-light leading-[1.5rem] text-white">
-                Discover our versatile new event space, designed to elevate
-                gatherings of all kinds.
+                {t("mila.subtitle")}
               </p>
               <Link
                 href="/collections"
@@ -163,7 +159,7 @@ export default function Home() {
                   <path d="M9 6l6 6l-6 6" />
                 </svg>
 
-                <span>Learn more</span>
+                <span>{t("mila.learn")}</span>
               </Link>
             </div>
           </div>
@@ -172,7 +168,7 @@ export default function Home() {
 
       {/* Book Now */}
       <section>
-        <div className="h-[30rem] w-full flex flex-col items-center justify-center space-y-2 text-2xl tracking-wide">
+        <div className="h-[26rem] w-full flex flex-col items-center justify-center space-y-2 text-2xl tracking-wide">
           <p className="text-white ">{t("book-now-subheading")}</p>
           <Link href="/book-now" className="text-white w-fit font-semibold">
             {t("book-now")}

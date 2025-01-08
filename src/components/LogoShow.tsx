@@ -51,7 +51,7 @@ export default function LogoScroll() {
 
   return (
     <div className="w-full flex flex-col items-center justify-center">
-      <h2 className="text-white font-medium text-4xl text-center uppercase">
+      <h2 className="text-white font-medium text-xl md:text-3xl text-center uppercase">
         {t("trusted")}
       </h2>
       <div className="flex justify-center">

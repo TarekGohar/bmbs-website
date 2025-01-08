@@ -1,29 +1,24 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 
-const events = [
-  "wedding.",
-  "corporate event.",
-  "private party.",
-  "festival.",
-  "fundraiser.",
-  "birthday.",
-  "anniversary.",
-  "holiday party.",
-  "graduation.",
-  "gala dinner.",
-];
-
-const events2 = [
-  "corporate event",
-  "corporate event",
-  "corporate event",
-  "corporate event",
-];
-
-const EventRotator: React.FC = () => {
+export default function EventRotator() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const t = useTranslations("Hero.rotator");
+
+  const events = [
+    t("wedding"),
+    t("corporate"),
+    t("private"),
+    t("festival"),
+    t("fundraiser"),
+    t("birthday"),
+    t("anniversary"),
+    t("holiday"),
+    t("graduation"),
+    t("gala dinner"),
+  ];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -36,7 +31,7 @@ const EventRotator: React.FC = () => {
     <div className="text-white flex flex-col items-start justify-center lg:space-y-4">
       {/* Static Text */}
       <span className="text-4xl lg:text-6xl font-medium h-fit">
-        We’ll take care of the drinks for your next
+        {t("title")}
       </span>
       {/* <span className="text-4xl lg:text-6xl font-medium h-fit">graduation</span> */}
 
@@ -59,6 +54,4 @@ const EventRotator: React.FC = () => {
       </div>
     </div>
   );
-};
-
-export default EventRotator;
+}

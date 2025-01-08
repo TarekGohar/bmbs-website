@@ -53,7 +53,7 @@ export default function page() {
             className="relative min-w-[20rem] md:min-w-[30rem] h-[35rem] md:h-[42rem] group cursor-pointer grayscale"
           >
             <Image
-              src="/images/fundraisers/fundraisers-1.png"
+              src="/images/fundraisers/fundraisers-1.jpg"
               alt="corporate event"
               width={1920}
               height={1080}

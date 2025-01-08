@@ -1,5 +1,6 @@
 import Form from "@/components/form";
 import { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Book Now",
@@ -11,6 +12,7 @@ export default async function Home(props: {
 }) {
   const searchParams = await props.searchParams;
   const service = searchParams.service;
+
   return (
     <>
       {/* Header Section */}
@@ -21,11 +23,23 @@ export default async function Home(props: {
           </h1>
         </div>
       </section>
+
+      {/* Form Section */}
       <section
         id="form"
-        className="flex items-start justify-center min-h-[60rem] pt-40 mb-40"
+        className="px-4 max-w-[100rem] mx-auto mb-20 flex flex-col md:flex-row items-center gap-x-4"
       >
-        <Form service={service || ""} />
+        <div className="w-full">
+          <Form service={service || ""} />
+        </div>
+
+        <Image
+          src="/images/corporate/patron-1.jpg"
+          width={1000}
+          height={1000}
+          alt="Brahm Mauer Bartending"
+          className="hidden md:block md:w-[40%] h-[57rem] object-cover"
+        />
       </section>
     </>
   );

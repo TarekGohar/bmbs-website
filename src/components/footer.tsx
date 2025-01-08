@@ -25,9 +25,9 @@ export default function Footer() {
         </svg>
 
         {/* Footer Menu */}
-        <ul className="mt-20 md:px-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-20 md:gap-x-2 md:gap-y-12 text-white font-thin text-xs sm:text-sm md:text-md tracking-widest">
+        <ul className="mt-20 px-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-20 md:gap-x-10 gap-y-12 md:gap-y-12 text-white font-thin text-xs sm:text-sm md:text-md tracking-widest">
           {/* Contact */}
-          <li className="flex justify-start md:justify-center">
+          <li className="flex justify-start lg:justify-center">
             <div className="flex flex-col gap-y-4">
               <h3 className="font-semibold uppercase">Contact</h3>
 
@@ -42,7 +42,7 @@ export default function Footer() {
           </li>
 
           {/* Hours */}
-          <li className="flex justify-start md:justify-center">
+          <li className="flex justify-start lg:justify-center">
             <div className="flex flex-col gap-y-4">
               <h3 className="font-semibold uppercase">{t("hours")}</h3>
               <div className="flex flex-col gap-y-1">
@@ -53,22 +53,22 @@ export default function Footer() {
           </li>
 
           {/* About */}
-          <li className="w-fit md:px-0 md:w-full text-center font-semibold uppercase">
+          <li className="w-fit md:px-0 md:w-full text-left lg:text-center font-semibold uppercase">
             <Link href="/about">{t("about")}</Link>
           </li>
 
           {/* Mila */}
-          <li className="w-fit md:px-0 md:w-full text-center font-semibold uppercase">
+          <li className="w-fit md:px-0 md:w-full text-left lg:text-center font-semibold uppercase">
             <Link href="/book-now">Espace Mila</Link>
           </li>
 
           {/* Book-Now */}
-          <li className="w-fit md:px-0 md:w-full text-center font-semibold uppercase">
+          <li className="w-fit md:px-0 md:w-full text-left lg:text-center font-semibold uppercase">
             <Link href="/book-now">Book Now</Link>
           </li>
 
           {/* Services */}
-          <li className="row-start-3 md:col-start-1 lg:col-start-5 lg:row-start-1 flex justify-start md:justify-center text-left">
+          <li className="row-start-3 md:col-start-1 lg:col-start-5 lg:row-start-1 flex justify-start lg:justify-center text-left">
             {/* Collections List */}
             <div className="flex flex-col text-left gap-y-2 ">
               <Link

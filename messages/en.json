@@ -3,6 +3,32 @@
     "title": "Brahm Mauer Bar Services",
     "subtitle": "Weddings. Festivals. Corporate Events.",
     "trusted": "Trusted by the best",
+    "rotator": {
+      "title": "We’ll take care of the drinks for your next",
+      "wedding": "wedding.",
+      "corporate": "corporate event.",
+      "private": "private party.",
+      "festival": "festival.",
+      "fundraiser": "fundraiser.",
+      "birthday": "birthday.",
+      "anniversary": "anniversary.",
+      "holiday": "holiday party.",
+      "graduation": "graduation.",
+      "gala dinner": "gala dinner."
+    },
+    "service": {
+      "title": "Services",
+      "subtitle": "Explore our range of bar services.",
+      "view": "View Services"
+    },
+    "about": {
+      "main-text": "With over twenty-five years of experience and a passion for bringing people together, we turn any event into a vibrant, fun-filled gathering.",
+      "subtitle": "Learn more about us"
+    },
+    "mila": {
+      "subtitle": "Discover our versatile new event space, designed to elevate gatherings of all kinds.",
+      "learn": "Learn More"
+    },
     "book-now": "Book Now",
     "book-now-subheading": "Interesting in working with us?"
   },
