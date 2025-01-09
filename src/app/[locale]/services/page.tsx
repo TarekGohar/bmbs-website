@@ -1,6 +1,6 @@
 import { Link } from "@/i18n/routing";
 import Image from "next/image";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 export async function generateMetadata({
   params,
@@ -16,7 +16,14 @@ export async function generateMetadata({
   };
 }
 
-export default function page() {
+export default function page({
+  params: { locale },
+}: {
+  params: { locale: string };
+}) {
+  // Set the request locale for static rendering
+  setRequestLocale(locale);
+
   return (
     <>
       {/* Header Section */}

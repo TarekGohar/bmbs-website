@@ -5,6 +5,9 @@ import type { Metadata } from "next";
 import React from "react";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
+import { notFound } from "next/navigation";
+import { routing } from "@/i18n/routing";
+import { setRequestLocale } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: {
@@ -22,17 +25,21 @@ export default async function RootLayout({
 }) {
   const { locale } = await params;
 
+  if (!routing.locales.includes(locale as any)) {
+    // console.error(`Invalid locale: ${locale}`);
+    notFound();
+  }
+
+  // Set the request locale for static rendering
+  setRequestLocale(locale);
+
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
-      <body className="font-carving">
-        <NextIntlClientProvider messages={messages}>
-          <Navbar />
-          {children}
-          <Footer />
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <NextIntlClientProvider messages={messages}>
+      <Navbar />
+      {children}
+      <Footer />
+    </NextIntlClientProvider>
   );
 }

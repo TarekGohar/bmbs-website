@@ -5,10 +5,6 @@ import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { revalidatePath } from "next/cache";
 
-// interface navbarProps {
-//   light: boolean;
-// }
-
 export default function Navbar() {
   const [menu, setMenu] = useState(false);
   const [hover, setHover] = useState(false);
@@ -181,7 +177,7 @@ export default function Navbar() {
             >
               <Link
                 href="/services"
-                className={` relative navbar-link ${light_color}`}
+                className={`relative navbar-link ${light_color}`}
               >
                 Services
               </Link>

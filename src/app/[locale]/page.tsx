@@ -1,8 +1,11 @@
 import LogoShow from "@/components/LogoShow";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import EventRotator from "@/components/EventRotator";
 import { Link } from "@/i18n/routing";
-import { useTranslations } from "next-intl";
+
+export async function generateStaticParams() {
+  return [{ locale: "en" }, { locale: "fr" }];
+}
 
 export async function generateMetadata({
   params,
@@ -18,8 +21,13 @@ export async function generateMetadata({
   };
 }
 
-export default function Home() {
-  const t = useTranslations("Hero");
+export default async function Home({ params }: { params: { locale: string } }) {
+  const { locale } = await params;
+  // Set the request locale for static rendering
+  setRequestLocale(locale);
+
+  const t = await getTranslations("Hero");
+
   return (
     <>
       {/* Hero */}
