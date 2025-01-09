@@ -426,7 +426,7 @@ section#contact {
 }
 
 .input {
-  @apply w-full p-3 border-b-2 placeholder:font-light outline-none bg-transparent border-neutral-700 placeholder:text-gray-400 font-medium text-gray-100 focus:border-white duration-150;
+  @apply rounded-none w-full p-3 border-b-2 placeholder:font-light outline-none bg-transparent border-neutral-700 placeholder:text-gray-400 font-medium text-gray-100 focus:border-white duration-150;
 }
 
 .navbar-link {
