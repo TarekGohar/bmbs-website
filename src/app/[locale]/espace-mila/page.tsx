@@ -1,4 +1,4 @@
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import Image from "next/image";
 import milaMetadata from "./metadata";
@@ -17,7 +17,14 @@ export async function generateMetadata({
   };
 }
 
-export default async function EspaceMila() {
+export default async function EspaceMila({
+  params,
+}: {
+  params: { locale: string };
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   const t = await getTranslations("Mila");
   const ts = await getTranslations("Hero");
   const images = milaMetadata;
@@ -69,7 +76,7 @@ export default async function EspaceMila() {
         <div className="h-[30rem] w-full flex flex-col items-center justify-center space-y-2 text-2xl tracking-wide">
           <p className="text-white ">{ts("book-now-subheading")}</p>
           <Link
-            href="/book-now?mila"
+            href="/book-now?service=mila"
             className="text-white w-fit font-semibold"
           >
             {ts("book-now")}

@@ -16,11 +16,8 @@ export async function generateMetadata({
   };
 }
 
-export default function page({
-  params: { locale },
-}: {
-  params: { locale: string };
-}) {
+export default async function page({ params }: { params: { locale: string } }) {
+  const { locale } = await params;
   // Set the request locale for static rendering
   setRequestLocale(locale);
 
@@ -39,7 +36,7 @@ export default function page({
         <div className="flex space-x-2 max-w-[100rem] mx-auto px-4 mt-10 overflow-x-auto no-scrollbar">
           <Link
             href="/services/corporate"
-            className="relative min-w-[20rem] md:min-w-[30rem] h-[35rem] md:h-[42rem] group cursor-pointer grayscale"
+            className="relative min-w-[20rem] md:min-w-[30rem] h-[35rem] md:h-[42rem] group cursor-pointer "
           >
             <Image
               src="/images/corporate/corporate-1.jpg"
@@ -55,7 +52,7 @@ export default function page({
           </Link>
           <Link
             href="/services/festivals"
-            className="relative min-w-[20rem] md:min-w-[30rem] h-[35rem] md:h-[42rem] group cursor-pointer grayscale"
+            className="relative min-w-[20rem] md:min-w-[30rem] h-[35rem] md:h-[42rem] group cursor-pointer "
           >
             <Image
               src="/images/festivals/festivals-3.jpg"
@@ -72,7 +69,7 @@ export default function page({
 
           <Link
             href="/services/fundraisers"
-            className="relative min-w-[20rem] md:min-w-[30rem] h-[35rem] md:h-[42rem] group cursor-pointer grayscale"
+            className="relative min-w-[20rem] md:min-w-[30rem] h-[35rem] md:h-[42rem] group cursor-pointer "
           >
             <Image
               src="/images/fundraisers/fundraisers-1.jpg"
@@ -89,7 +86,7 @@ export default function page({
 
           <Link
             href="/services/private"
-            className="relative min-w-[20rem] md:min-w-[30rem] h-[35rem] md:h-[42rem] group cursor-pointer grayscale"
+            className="relative min-w-[20rem] md:min-w-[30rem] h-[35rem] md:h-[42rem] group cursor-pointer "
           >
             <Image
               src="/images/private/private-0.jpg"

@@ -1,6 +1,6 @@
 import privateMetadata from "./metadata";
 import ServicePage from "@/components/ServicePage";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 export async function generateMetadata({
   params,
@@ -16,6 +16,8 @@ export async function generateMetadata({
   };
 }
 
-export default function Home() {
+export default async function Home({ params }: { params: { locale: string } }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return <ServicePage serviceTitle="private" imageMetadata={privateMetadata} />;
 }
