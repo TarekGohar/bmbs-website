@@ -1,5 +1,20 @@
 import { Link } from "@/i18n/routing";
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: string };
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Metadata" });
+
+  return {
+    title: `${t("services-title")}`,
+    description: t("services-description"),
+  };
+}
 
 export default function page() {
   return (

@@ -1,9 +1,17 @@
 import "../globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
+import type { Metadata } from "next";
 import React from "react";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
+
+export const metadata: Metadata = {
+  title: {
+    default: "Brahm Mauer Bar Services",
+    template: "%s - Brahm Mauer Bar Services",
+  },
+};
 
 export default async function RootLayout({
   params,

@@ -3,6 +3,20 @@ import { Link } from "@/i18n/routing";
 import Image from "next/image";
 import milaMetadata from "./metadata";
 
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: string };
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Metadata" });
+
+  return {
+    title: `${t("mila-title")}`,
+    description: t("mila-description"),
+  };
+}
+
 export default async function EspaceMila() {
   const t = await getTranslations("Mila");
   const ts = await getTranslations("Hero");
@@ -23,8 +37,7 @@ export default async function EspaceMila() {
       <section className="max-w-[100rem] text-white mx-auto md:mb-[12rem]">
         <div className="flex flex-col md:flex-row px-4 space-y-20 md:space-y-0 md:gap-x-28">
           <p className="md:w-[60%] text-4xl font-medium md:text-5xl md:leading-[3rem]">
-            Experience our new event space—modern, versatile, and perfect for
-            any occasion. The perfect spot to gather, celebrate, and enjoy.
+            {t("first-paragraph")}
           </p>
 
           <p className="md:w-[40%] font-light text-2xl leading-[2rem]">

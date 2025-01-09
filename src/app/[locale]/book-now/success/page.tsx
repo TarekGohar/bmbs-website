@@ -1,20 +1,29 @@
 import { useTranslations } from "next-intl";
-import { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 
-export const metadata: Metadata = {
-  title: "Booking Success",
-  description: "Your booking was successful",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: string };
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Metadata" });
+
+  return {
+    title: `${t("success-title")}`,
+    description: t("success-description"),
+  };
+}
 
 export default function Home() {
   const t = useTranslations("Booking");
   return (
     <section id="booking-success" className="">
       <div className="container mx-auto min-h-[50rem] h-screen flex flex-col items-center justify-center space-y-4">
-        <h1 className="w-fit px-56 text-white text-center text-6xl font-bold">
+        <h1 className="w-fit px-56 text-white text-center text-5xl font-medium">
           {t("title")}
         </h1>
-        <h2 className="text-white font-medium">{t("subtitle")}</h2>
+        <h2 className="text-white">{t("subtitle")}</h2>
       </div>
     </section>
   );

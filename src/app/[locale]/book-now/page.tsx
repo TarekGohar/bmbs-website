@@ -1,11 +1,20 @@
 import Form from "@/components/form";
-import { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 
-export const metadata: Metadata = {
-  title: "Book Now",
-  description: "Book Brahm Mauer Bartending Service for your next event",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: string };
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Metadata" });
+
+  return {
+    title: `${t("book-now-title")}`,
+    description: t("book-now-description"),
+  };
+}
 
 export default async function Home(props: {
   searchParams: Promise<{ [key: string]: string | undefined }>;

@@ -279,7 +279,7 @@ section#about-staff {
   background-position: center center; /* Aligns the background to the right */
   height: 100%;
   width: 100%;
-  filter: grayscale(100%); /* Makes the image black and white */
+  filter: grayscale(20%); /* Makes the image black and white */
 }
 
 .quote-bg {
@@ -430,7 +430,7 @@ section#contact {
 }
 
 .navbar-link {
-  @apply duration-150 text-lg tracking-wide;
+  @apply duration-150 text-lg hover:text-neutral-300 cursor-pointer;
 }
 
 .arrow-div:hover .arrow {

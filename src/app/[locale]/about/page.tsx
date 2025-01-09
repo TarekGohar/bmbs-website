@@ -1,13 +1,24 @@
-"use client";
-
-import Navbar from "@/components/navbar";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/routing";
 import Image from "next/image";
 
-export default function About() {
-  const t = useTranslations("About");
-  const ts = useTranslations("Services");
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: string };
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Metadata" });
+
+  return {
+    title: t("about-title"),
+    description: t("about-description"),
+  };
+}
+
+export default async function About() {
+  const t = await getTranslations("About");
+  const ts = await getTranslations("Services");
 
   return (
     <>
@@ -15,7 +26,7 @@ export default function About() {
       <section className="text-white max-w-[100rem] mx-auto">
         <div className="px-4 flex items-center justify-starts h-[25rem] md:h-[30rem]">
           <h1 className="text-6xl md:text-7xl font-semibold uppercase">
-            About Us
+            {t("title")}
           </h1>
         </div>
         {/* <h2 className="w-full font-bold text-4xl md:text-5xl uppercase text-left tracking-wider">
@@ -27,18 +38,15 @@ export default function About() {
       <section className="max-w-[100rem] text-white mx-auto md:mb-[12rem]">
         <div className="flex flex-col md:flex-row px-4 space-y-20 md:space-y-0 md:gap-x-28">
           <p className="md:w-[60%] text-4xl font-medium md:text-5xl md:leading-[3rem]">
-            Brahm Mauer and his team firmly believe that with the right blend of{" "}
-            <span className="text-sky-600">talent</span>,{" "}
-            <span className="text-sky-600">passion</span>, and{" "}
-            <span className="text-sky-600">support</span>, anything is possible.
-            More than just a bar service, we embody the true essence of
-            hospitality.
+            {t("first-sentence")}{" "}
+            <span className="text-neutral-600">talent</span>,{" "}
+            <span className="text-neutral-600">passion</span>, {t("and")}{" "}
+            <span className="text-neutral-600">{t("support")}</span>
+            {t("second-sentence")}
           </p>
 
-          <p className="md:w-[40%] font-light text-2xl leading-[2rem]">
-            Based in Montreal, we specialize in providing top-tier bartending
-            services for a wide range of events. Whether you're hosting a
-            corporate gathering, a
+          <p className="md:w-[40%] text-2xl leading-[2rem]">
+            {t("first-paragraph")}
           </p>
         </div>
       </section>
@@ -50,7 +58,7 @@ export default function About() {
       >
         <div className="w-[100rem] px-4 space-y-2">
           <p className="font-medium text-2xl sm:text-3xl md:text-5xl text-left text-white opacity-70">
-            {t("third-paragraph")}
+            {t("second-paragraph")}
             <span className="text-lg md:text-3xl text-white opacity-50">
               - Richard Branson
             </span>
@@ -60,25 +68,18 @@ export default function About() {
 
       {/* Our Mission */}
       <section className="my-[10rem] px-4 max-w-[100rem] mx-auto space-y-[10rem] md:space-y-[16rem] md:space-x-[4rem] lg:space-x-[5rem] flex flex-col md:flex-row items-start justify-start">
-        <div className="md:w-1/2 flex flex-col text-white font-light text-2xl space-y-[2rem]">
-          <h2 className="text-sky-600 text-5xl font-medium">
+        <div className="md:w-1/2 flex flex-col text-white text-2xl space-y-[2rem]">
+          <h2 className="text-neutral-500 text-5xl font-medium">
             The Special Ingredient
           </h2>
-          <p className="font-light">
-            Our service staff are the heart of our business and the face of our
-            brand. Passionate and highly trained, they consistently ensure
-            everyone has an exceptional experience. Unlike competitors who rely
-            on agency staff, leading to inconsistency, BMBS boasts a loyal,
-            cohesive team and one of the lowest turnover rates in the industry —
-            giving us a distinct edge.
-          </p>
+          <p className="md:leading-10">{t("third-paragraph")}</p>
         </div>
 
-        <div className="md:w-1/2 flex flex-col text-white font-light text-2xl space-y-[2rem]">
-          <h2 className="text-sky-600 text-5xl font-medium">
+        <div className="md:w-1/2 flex flex-col text-white text-2xl space-y-[2rem]">
+          <h2 className="text-neutral-500 text-5xl font-medium">
             Our Mixology Program
           </h2>
-          <p className="font-light">{t("fifth-paragraph")}</p>
+          <p className="md:leading-10">{t("fourth-paragraph")}</p>
         </div>
       </section>
 
@@ -90,7 +91,7 @@ export default function About() {
         <div className="flex space-x-2 max-w-[100rem] mx-auto px-4 mt-10 overflow-x-auto no-scrollbar">
           <Link
             href="/services/corporate"
-            className="relative min-w-[20rem] md:min-w-[30rem] h-[35rem] md:h-[42rem] group cursor-pointer grayscale"
+            className="relative min-w-[20rem] md:min-w-[30rem] h-[35rem] md:h-[42rem] group cursor-pointer"
           >
             <Image
               src="/images/corporate/corporate-1.jpg"
@@ -106,7 +107,7 @@ export default function About() {
           </Link>
           <Link
             href="/services/festivals"
-            className="relative min-w-[20rem] md:min-w-[30rem] h-[35rem] md:h-[42rem] group cursor-pointer grayscale"
+            className="relative min-w-[20rem] md:min-w-[30rem] h-[35rem] md:h-[42rem] group cursor-pointer"
           >
             <Image
               src="/images/festivals/festivals-3.jpg"
@@ -123,7 +124,7 @@ export default function About() {
 
           <Link
             href="/services/fundraisers"
-            className="relative min-w-[20rem] md:min-w-[30rem] h-[35rem] md:h-[42rem] group cursor-pointer grayscale"
+            className="relative min-w-[20rem] md:min-w-[30rem] h-[35rem] md:h-[42rem] group cursor-pointer"
           >
             <Image
               src="/images/fundraisers/fundraisers-1.jpg"
@@ -140,7 +141,7 @@ export default function About() {
 
           <Link
             href="/services/private"
-            className="relative min-w-[20rem] md:min-w-[30rem] h-[35rem] md:h-[42rem] group cursor-pointer grayscale"
+            className="relative min-w-[20rem] md:min-w-[30rem] h-[35rem] md:h-[42rem] group cursor-pointer"
           >
             <Image
               src="/images/private/private-0.jpg"

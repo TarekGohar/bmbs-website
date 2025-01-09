@@ -1,4 +1,26 @@
 {
+  "Metadata":{
+    "about-title": "À propos",
+    "about-description": "En savoir plus sur Brahm Mauer Bar Services.",
+    "services-title": "Services",
+    "services-description": "Explorez notre gamme de services de bar.",
+    "home-title": "Accueil",
+    "home-description": "Bienvenue chez Brahm Mauer Bar Services.",
+    "mila-title": "Espace Mila",
+    "mila-description": "En savoir plus sur notre nouvel espace événementiel.",
+    "book-now-title": "Réserver",
+    "book-now-description": "Intéressé par une collaboration avec nous?",
+    "corporate-title": "Entreprises",
+    "corporate-description": "Combinant un service de bar sur mesure avec un personnel professionnel hautement qualifié, Brahm Mauer Bar Services garantit que l'évènement est un succès tant aux yeux du client que de ses invités.",
+    "festivals-title": "Festivals",
+    "festivals-description": "Nous élevons l'expérience VIP dans les festivals les plus renommés de Montréal. Du festival le plus froid au monde à la scène principale d'Osheaga, il n'y a pas de festival trop grand ou trop petit pour Brahm Mauer et son équipe.",
+    "private-title": "Privée",
+    "private-description": "Reconnu pour faire des rêves de mariage des réalités inoubliables. Nos mixologues talentueux raviront vos invités avec des cocktails alléchants et un service inégalé.",
+    "fundraisers-title": "Levée de fonds",
+    "fundraisers-description": "En aidant à rendre chaque levée de fonds impactante et mémorable, Brahm Mauer Bar Services apporte le mélange parfait de professionnalisme et de créativité pour améliorer votre cause.",
+    "success-title": "Réservation effectuée!",
+    "success-description": "Nous vous contacterons bientôt."
+  },
   "Hero": {
     "title": "Service de Bar Brahm Mauer",
     "subtitle": "Mariages. Festivals. Entreprises.",
@@ -26,7 +48,7 @@
       "subtitle": "En savoir plus sur nous"
     },
     "mila": {
-      "subtitle": "Découvrez notre nouvel espace polyvalent, conçu pour rehausser les rassemblements de toutes sortes.",
+      "subtitle": "Notre espace polyvalent, parfait pour tous les événements.",
       "learn": "En savoir plus"
     },
     "book-now": "Réserver",
@@ -56,7 +78,7 @@
       "long-description": "Nous élevons l’expérience VIP dans les festivals les plus renommés de Montréal. Du festival le plus froid du monde à la scène principale d'Osheaga, il n'y a pas de festival trop grand ou trop petit pour Brahm Mauer et son équipe. En augmentant les ventes, la productivité, l'efficacité et l'expérience client globale, BMBS a obtenu avec succès des contrats annuels avec Osheaga, Ile Soniq, Lasso, Piknic Electronic et Igloofest. Rendez-vous en VIP !"
     },
     "private": {
-      "title": "Privé",
+      "title": "Privée",
       "description": "Reconnu pour faire des rêves de mariage des réalités inoubliables. Nos mixologues talentueux raviront vos invités avec des cocktails alléchants et un service inégalé.",
       "long-description": "BMBS est reconnu pour faire des rêves de mariage des réalités inoubliables. Nos mixologues talentueux raviront vos invités avec des cocktails alléchants, des vibes incroyables et un service inégalé. Pour garantir que votre grand jour soit exactement comme vous l'avez imaginé, notre équipe de mariage travaillera en étroite collaboration avec vous et votre planificateur pour élaborer un menu sur mesure qui dépassera toutes les attentes. Nos bars sont également dotés de visuels époustouflants entièrement personnalisables pour correspondre à votre style souhaité. Si vous voulez aller plus loin pour divertir et fasciner vos invités, laissez-nous les enchanter au bar."
     },
@@ -67,18 +89,21 @@
     }
   },
   "About": {
-    "first-heading": "<span>C'EST</span>quoi Brahm Mauer Bartending Service?",
-    "first-paragraph": "Le voyage de Brahm Mauer commence dans les restaurants et les bars. Après avoir occupé avec succès tous les postes en restauration, il jete son dévolu sur l'industrie de l'évènementiel. Réalisant que la ville avait besoin d’autre chose, plus frais et nouveau, il décide de lancer Brahm Mauer Bar Services. Avance rapide jusqu'à aujourd'hui : avec plus de 25 ans d'expérience et une formation approfondie, Brahm Mauer et son équipe deviennent la première entreprise d'évènements à Montréal ; au service des particuliers, des entreprises, collectes de fonds et des festivals. En fournissant un service parfait depuis le premier contact avec nos clients jusqu'au dernier verre servi, nous avons pu passer de quelques évènements annuels au monopole qu'est BMBS aujourd'hui. BMBS est exclusif dans certains lieux les plus en vogue de la ville et le fournisseur préféré des autres.",
-    "second-heading": "Chef de l'industrie des services de Montréal",
-    "second-paragraph": "Brahm Mauer et son équipe sont fermement convaincus qu’avec la bonne équipe et le personnel de soutien, tout est possible ! Nous sommes plus qu’un simple bar ; nous sommes la définition même de l’hospitalité.",
-    "third-paragraph": "\"Les clients ne passent pas en premier. Les employés passent en premier. Si vous prenez soin de vos employés, ils prendront soin des clients\"",
-    "fourth-paragraph": "Notre personnel de service est la colonne vertébrale de notre entreprise et les ambassadeurs de notre marque. Ils sont passionnés, bien formés et s'assurent toujours que tout le monde autour d'eux passe le meilleur moment possible. BMBS a un taux de rotation du personnel extrêmement faible, ce qui nous donne un avantage sur la concurrence. D'autres entreprises de services de bar et de restauration s'appuient sur des agences de recrutement, ce qui signifie que leur personnel diffère d'un événement à l’autre. Cela élimine la synergie et la loyauté avec leur équipe de service.",
-    "fifth-paragraph": "On ne peut pas parler de l'expérience BMBS sans mentionner leur programme de mixologie fraîche du marché. Leur équipe de mixologie interne crée des menus de saison parmi lesquels nos clients peuvent choisir. Ils fournissent également leurs purées fait maison aux festivals montréalais, dont Beach Club & Piknic Electronic. Utilisant uniquement des ingrédients les plus frais et restant à l'avant-garde des tendances, Brahm Mauer fait passer la mixologie au niveau supérieur.",
+    "title": "À propos",
+    "first-sentence": "Brahm Mauer et son équipe sont fermement convaincus qu'avec le bon mélange de",
+    "and": "et",
+    "support": "soutien",
+    "second-sentence": ", tout est possible. Plus qu'un simple service de bar, nous représentons l'essence même de l'hospitalité.",
+    "first-paragraph": "Situé à Montréal, nous fournissons des services de bar pour des événements de toutes sortes. Qu'il s'agisse de réunions d'entreprise ou de fêtes privées, nos experts offrent un service exceptionnel et des boissons inoubliables adaptées à vos besoins.",
+    "second-paragraph": "\"Les clients ne passent pas en premier. Les employés passent en premier. Si vous prenez soin de vos employés, ils prendront soin des clients\"",
+    "third-paragraph": "Notre équipe de service est le cœur de notre entreprise et le reflet de notre marque. Passionnés et hautement qualifiés, ils garantissent une expérience exceptionnelle à tous les clients. Contrairement à ses compétiteurs qui font appel à du personnel en agence, ce qui entraîne des incohérences, BMBS peut se vanter d'avoir une équipe loyale et cohésive et d'avoir l'un des taux de rotation les plus bas du secteur, ce qui lui donne une avantage indéniable.",
+    "fourth-paragraph": "On ne peut pas parler de l'expérience BMBS sans mentionner leur programme de mixologie fraîche du marché. Leur équipe de mixologie interne crée des menus de saison parmi lesquels nos clients peuvent choisir. Ils fournissent également leurs purées fait maison aux festivals montréalais, dont Beach Club & Piknic Electronic. Utilisant uniquement des ingrédients les plus frais et restant à l'avant-garde des tendances, Brahm Mauer fait passer la mixologie au niveau supérieur.",
 
     "book-now": "Réserver"
   },
   "Mila": {
-    "description": "Niché au cœur du Vieux-Montréal, notre lieu intime offre le cadre idéal pour tous les types d'événements spéciaux. Qu'il s'agisse d'une célébration privée, d'une réunion d'entreprise ou d'une soirée intime, notre espace offre une atmosphère charmante et élégante. Vous pouvez agrémenter votre expérience d'une cuisine exquise préparée par Beatrice Catering et de cocktails préparés par Brahm Mauer Bar Services. Laissez-nous vous aider à créer des moments inoubliables dans un cadre aussi unique que votre événement",
+    "first-paragraph": "Découvrez notre nouvel espace d'événements, moderne, polyvalent et parfait pour toutes les occasions. L'endroit idéal pour se réunir, célébrer et passer un bon moment.",
+    "description": "Niché au cœur du Vieux-Montréal, notre lieu intime offre le cadre idéal pour tous les types d'événements spéciaux. Qu'il s'agisse d'une célébration privée, d'une réunion d'entreprise ou d'une soirée intime, notre espace offre une atmosphère charmante et élégante. Vous pouvez agrémenter votre expérience d'une cuisine exquise préparée par Restauration Beatrice et de cocktails préparés par Brahm Mauer Bar Services. Laissez-nous vous aider à créer des moments inoubliables dans un cadre aussi unique que votre événement",
     "book-now": "Réserver"
   },
   "Booking": {

@@ -1,4 +1,26 @@
 {
+  "Metadata":{
+    "about-title": "About Us",
+    "about-description": "Learn more about Brahm Mauer Bar Services.",
+    "services-title": "Services",
+    "services-description": "Explore our range of bar services.",
+    "home-title": "Home",
+    "home-description": "Welcome to Brahm Mauer Bar Services.",
+    "mila-title": "Espace Mila",
+    "mila-description": "Learn more about our new event space.",
+    "book-now-title": "Book Now",
+    "book-now-description": "Interested in working with us?",
+    "corporate-title": "Corporate",
+    "corporate-description": "Combining a bespoke bar service with a highly trained professional staff, Brahm Mauer Bar Services ensures that the event is a success in both the eyes of the client as well as their guests.",
+    "festivals-title": "Festivals",
+    "festivals-description": "We elevate the VIP experience at Montréal's most renowned festivals. From the coldest festival in the world to the main stage at Osheaga, there is no festival too big or too small for Brahm Mauer and his team.",
+    "private-title": "Private",
+    "private-description": "Recognized for making wedding dreams unforgettable realities. Our skilled mixologists will delight your guests with enticing cocktails and unparalleled service.",
+    "fundraisers-title": "Fundraisers",
+    "fundraisers-description": "Helping to make every fundraiser impactful and memorable, Brahm Mauer Bar Services brings the perfect blend of professionalism and creativity to enhance your cause.",
+    "success-title": "Booking Submitted!",
+    "success-description": "We will get in touch soon."
+  },
   "Hero": {
     "title": "Brahm Mauer Bar Services",
     "subtitle": "Weddings. Festivals. Corporate Events.",
@@ -26,7 +48,7 @@
       "subtitle": "Learn more about us"
     },
     "mila": {
-      "subtitle": "Discover our versatile new event space, designed to elevate gatherings of all kinds.",
+      "subtitle": "Our versatile event space, perfect for all gatherings.",
       "learn": "Learn More"
     },
     "book-now": "Book Now",
@@ -67,16 +89,17 @@
     }
   },
   "About": {
-    "first-heading": "<span>WHAT</span>is Brahm Mauer Bartending Services?",
-    "first-paragraph": "Brahm Mauer's journey began in the restaurant and bar scene. After successfully completing every position in restaurants, he set his sights on the event industry. Realizing that the city needed something fresh and new, he decided to start Brahm Mauer Bar Services. Fast forward to today with over 25 years of experience and extensive training Brahm Mauer and his team have become Montréal's premiere event company; servicing private, corporate, fundraisers & festivals. In providing a perfect service from the initial contact with our clients until the last drink is served, we've been able to grow from a couple of events a year into the monopoly that is BMBS today. BMBS is exclusive in some of the city's hottest venues and the preferred vendor to the rest of them.",
-    "second-heading": "Leader in Montréal's Service Industries",
-    "second-paragraph": "Brahm Mauer and his team are firm believers that with the right team & support staff anything and everything is possible! We are more than just a bar service, we are the definition of hospitality.",
-    "third-paragraph": "\"Clients do not come first. Employees come first. If you take care of your employees, they will take care of the clients\"",
-    "fourth-paragraph": "Our service staff are the backbone of our business and the ambassadors of our brand. They are passionate, well trained, and always ensure that everyone around them are having the best time possible. BMBS has an extremely low staff turnover rate which gives us the edge over the competition. Other bar service and catering companies rely on staffing agencies, which means their staff differ from event to event. This eliminates the synergy and loyalties with their service team.",
-    "fifth-paragraph": "The BMBS experience cannot be spoken about without mentioning their market fresh Mixology program. Their in-house mixology team creates seasonal menus for our guests to choose from. They also provide their homemade purées to Montreal festivals, including Beach Club & Piknic Electronic. Using only the freshest ingredients and staying ahead of the trends, Brahm Mauer brings mixology to the next level.",
+    "title": "About Us",
+    "first-sentence": "Brahm Mauer and his team firmly believe that with the right blend of",
+    "second-sentence": ", anything is possible. More than just a bar service, we embody the true essence of hospitality.",
+    "first-paragraph": "Based in Montreal, we provide top-tier bartending services for events of all kinds. From corporate gatherings to private parties, our skilled bartenders deliver exceptional service and unforgettable drinks tailored to your needs.",
+    "second-paragraph": "\"Clients do not come first. Employees come first. If you take care of your employees, they will take care of the clients\"",
+    "third-paragraph": "Our service staff are the heart of our business and the face of our brand. Passionate and highly trained, they consistently ensure everyone has an exceptional experience. Unlike competitors who rely on agency staff, leading to inconsistency, BMBS boasts a loyal, cohesive team and one of the lowest turnover rates in the industry — giving us a distinct edge.",
+    "fourth-paragraph": "The BMBS experience cannot be spoken about without mentioning their market fresh Mixology program. Their in-house mixology team creates seasonal menus for our guests to choose from. They also provide their homemade purées to Montreal festivals, including Beach Club & Piknic Electronic. Using only the freshest ingredients and staying ahead of the trends, Brahm Mauer brings mixology to the next level.",
     "book-now": "Book Now"
   },
   "Mila": {
+    "first-paragraph": "Experience our new event space—modern, versatile, and perfect for any occasion. The perfect spot to gather, celebrate, and enjoy.",
     "description": "Nestled in the heart of Old Montreal, our intimate venue offers the perfect setting for all types of special events. Whether you're hosting a private celebration, corporate gathering, or intimate soirée, our space provides a charming and elegant atmosphere. Enhance your experience with exquisite cuisine from Beatrice Catering and expertly crafted cocktails from Brahm Mauer Bar Services. Let us help you create unforgettable moments in a setting that’s as unique as your event.",
     "book-now": "Book Now"
   },

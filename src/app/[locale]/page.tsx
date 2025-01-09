@@ -1,13 +1,22 @@
 import LogoShow from "@/components/LogoShow";
-// import { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import EventRotator from "@/components/EventRotator";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 
-// export const metadata: Metadata = {
-//   title: "Homepage",
-//   description: "The homepage of the Brahm Mauer Bartending Service website",
-// };
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: string };
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Metadata" });
+
+  return {
+    title: `${t("home-title")} - Brahm Mauer Bar Services`,
+    description: t("home-description"),
+  };
+}
 
 export default function Home() {
   const t = useTranslations("Hero");
@@ -48,16 +57,16 @@ export default function Home() {
       >
         {/* Panels */}
         <div className="collection-background max-w-[120rem] p-1 flex flex-col items-start justify-end xl:justify-center w-full h-fit gap-x-2">
-          <div className="collection-panel h-fit w-full lg:w-[17rem] lg:h-full gap-y-1 p-2 lg:p-4">
+          <div className="collection-panel h-fit w-full lg:w-[20rem] lg:h-full gap-y-1 lg:gap-y-2 p-2 lg:p-4">
             <h1 className="text-4xl lg:text-6xl text-white font-medium ">
               {t("service.title")}
             </h1>
-            <div className="text-md lg:text-xl">
+            <div className="text-lg lg:text-2xl lg:space-y-1">
               <p className="font-light leading-[1.5rem] text-white opacity-95">
                 {t("service.subtitle")}
               </p>
               <Link
-                href="/collections"
+                href="/services"
                 className="flex items-center gap-x-2 w-fit  text-sky-600 hover:text-white duration-150"
               >
                 <svg
@@ -132,11 +141,11 @@ export default function Home() {
       >
         {/* Panels */}
         <div className="buy-background max-w-[120rem] px-4 md:px-8 flex flex-col items-center justify-center w-full h-fit gap-x-2">
-          <div className="buy-panel p-3 h-fit w-[18rem] md:w-[40rem] flex flex-col items-start justify-center gap-y-1 ">
+          <div className="buy-panel p-3 h-fit w-[18rem] md:w-[40rem] flex flex-col items-start justify-center gap-y-1 lg:gap-y-2">
             <h1 className="text-4xl lg:text-5xl text-white font-semibold">
               Espace Mila
             </h1>
-            <div className="space-y-[0.2rem] text-md lg:text-xl">
+            <div className="text-lg lg:text-xl">
               <p className="font-light leading-[1.5rem] text-white">
                 {t("mila.subtitle")}
               </p>
