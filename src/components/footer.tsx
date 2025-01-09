@@ -59,7 +59,7 @@ export default function Footer() {
 
           {/* Mila */}
           <li className="w-fit md:px-0 md:w-full text-left lg:text-center font-semibold uppercase">
-            <Link href="/book-now">Espace Mila</Link>
+            <Link href="/espace-mila">Espace Mila</Link>
           </li>
 
           {/* Book-Now */}
