@@ -69,7 +69,7 @@ export default async function Home({ params }: { params: { locale: string } }) {
             <h1 className="text-4xl lg:text-6xl text-white font-medium ">
               {t("service.title")}
             </h1>
-            <div className="text-lg lg:text-2xl lg:space-y-1">
+            <div className="text-lg lg:text-xl lg:space-y-1">
               <p className="font-light leading-[1.5rem] text-white opacity-95">
                 {t("service.subtitle")}
               </p>
@@ -158,7 +158,7 @@ export default async function Home({ params }: { params: { locale: string } }) {
                 {t("mila.subtitle")}
               </p>
               <Link
-                href="/collections"
+                href="/espace-mila"
                 className="flex items-center gap-x-2 w-fit text-neutral-700 hover:text-white duration-150"
               >
                 <svg
