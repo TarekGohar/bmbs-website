@@ -39,7 +39,7 @@ export default async function page({ params }: { params: { locale: string } }) {
             className="relative min-w-[20rem] md:min-w-[30rem] h-[35rem] md:h-[42rem] group cursor-pointer "
           >
             <Image
-              src="/images/corporate/corporate-1.jpg"
+              src="/images/corporate/BrahmxAmexHouse-11.jpg"
               alt="corporate event"
               width={1920}
               height={1080}

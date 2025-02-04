@@ -39,9 +39,9 @@ export default async function Home(props: {
       {/* Form Section */}
       <section
         id="form"
-        className="px-4 max-w-[100rem] mx-auto mb-20 flex flex-col md:flex-row items-center gap-x-4"
+        className="px-4 max-w-[100rem] mx-auto mb-20 flex flex-col md:flex-row items-center md:justify-between gap-x-4"
       >
-        <div className="w-full">
+        <div className="md:w-[40%]">
           <Form service={service} />
         </div>
 

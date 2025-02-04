@@ -12,8 +12,6 @@ export default function Navbar() {
   const t = useTranslations("Navbar");
   const pathname = usePathname();
 
-  console.log(pathname);
-
   const [visibleWords, setVisibleWords] = useState({
     about: false,
     mila: false,
@@ -75,6 +73,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           href="/"
+          aria-label="Brahm Mauer Logo Home Button"
           className={`w-40 xxs:w-48 md:w-[14rem] xl:w-[14rem] z-10 duration-300 ${light_color} text-transparent fill-white hover:fill-slate-200`}
           onClick={() => setMenu(false)}
         >

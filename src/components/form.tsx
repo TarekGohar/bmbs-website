@@ -16,6 +16,8 @@ export default function Form({ service }: FormProps) {
   const router = useRouter();
   const pathname = usePathname();
   const t = useTranslations("Booking");
+  const [isMila, setIsMila] = useState(service === "mila");
+  console.log(service, isMila);
 
   async function handleSubmit(event: any) {
     event.preventDefault();
@@ -122,15 +124,18 @@ export default function Form({ service }: FormProps) {
       {/* Event Information */}
       <h2 className="mt-6 text-white font-medium text-4xl">{t("details")}</h2>
       <div className="mt-4 flex flex-col space-y-3">
-        <div>
-          <h2 className="text-white  mb-1 ml-3">{t("location")}</h2>
-          <input
-            type="text"
-            name="Location"
-            placeholder={t("location-placeholder")}
-            className="input"
-          />
-        </div>
+        {!isMila && (
+          <div>
+            <h2 className="text-white  mb-1 ml-3">{t("location")}</h2>
+            <input
+              type="text"
+              name="Location"
+              placeholder={t("location-placeholder")}
+              className="input"
+            />
+          </div>
+        )}
+
         <div>
           <h2 className="text-white  mb-1 ml-3">{t("capacity")}</h2>
           <input

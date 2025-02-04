@@ -30,15 +30,12 @@ export default function EventRotator() {
   return (
     <div className="text-white flex flex-col items-start justify-center lg:space-y-4">
       {/* Static Text */}
-      <span className="text-4xl lg:text-6xl font-medium h-fit">
-        {t("title")}
-      </span>
-      {/* <span className="text-4xl lg:text-6xl font-medium h-fit">graduation</span> */}
+      <h2 className="text-4xl lg:text-6xl font-medium h-fit">{t("title")}</h2>
 
       {/* Rotating Words */}
       <div className="relative h-16 flex items-center justify-center overflow-hidden w-full">
         {events.map((event, index) => (
-          <div
+          <span
             key={index}
             className={`absolute -top-[.6rem] left-0 pl-0 w-fit h-16 flex items-center justify-center text-sky-600 text-4xl lg:text-6xl  font-medium transition-all duration-500 ease-in-out ${
               index === currentIndex
@@ -49,7 +46,7 @@ export default function EventRotator() {
             }`}
           >
             {event}
-          </div>
+          </span>
         ))}
       </div>
     </div>

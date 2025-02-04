@@ -308,7 +308,7 @@ section#contact {
 }
 
 .collection-background {
-  background: url("/images/corporate/services.jpg");
+  background: url("/images/corporate/BrahmCorporate2024Pt3-61.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center; /* Aligns the background to the center */
@@ -341,10 +341,10 @@ section#contact {
 }
 
 .buy-background {
-  background: url("/images/mila/mila-1.jpg");
+  background: url("/images/mila/MilaDay2-43.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top center; /* Centers the image */
+  background-position: center center; /* Centers the image */
   height: 100%;
   width: 100%;
   filter: grayscale(20%);

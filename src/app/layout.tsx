@@ -1,9 +1,5 @@
 import "./globals.css";
-import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
 import React from "react";
-import Footer from "@/components/footer";
-import Navbar from "@/components/navbar";
 
 export default async function RootLayout({
   children,
@@ -12,6 +8,9 @@ export default async function RootLayout({
 }) {
   return (
     <html>
+      <head>
+        <link rel="preload" href="/images/maxim-1.jpg" />
+      </head>
       <body className="font-carving">{children}</body>
     </html>
   );
