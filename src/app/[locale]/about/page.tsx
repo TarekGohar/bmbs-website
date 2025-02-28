@@ -95,7 +95,7 @@ export default async function About() {
             className="relative min-w-[20rem] md:min-w-[30rem] h-[35rem] md:h-[42rem] group cursor-pointer"
           >
             <Image
-              src="/images/corporate/BrahmxAmexHouse-11.jpg"
+              src="/images/corporate/BrahmxAmexHouse-11.webp"
               alt="corporate event"
               width={1920}
               height={1080}
@@ -111,7 +111,7 @@ export default async function About() {
             className="relative min-w-[20rem] md:min-w-[30rem] h-[35rem] md:h-[42rem] group cursor-pointer"
           >
             <Image
-              src="/images/festivals/festivals-3.jpg"
+              src="/images/festivals/festivals-3.webp"
               alt="festivals"
               width={1920}
               height={1080}
@@ -128,7 +128,7 @@ export default async function About() {
             className="relative min-w-[20rem] md:min-w-[30rem] h-[35rem] md:h-[42rem] group cursor-pointer"
           >
             <Image
-              src="/images/fundraisers/fundraisers-1.jpg"
+              src="/images/fundraisers/fundraisers-1.webp"
               alt="corporate event"
               width={1920}
               height={1080}
@@ -145,7 +145,7 @@ export default async function About() {
             className="relative min-w-[20rem] md:min-w-[30rem] h-[35rem] md:h-[42rem] group cursor-pointer"
           >
             <Image
-              src="/images/private/private-0.jpg"
+              src="/images/private/private-0.webp"
               alt="private event"
               width={1920}
               height={1080}

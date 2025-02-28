@@ -246,7 +246,7 @@ section#hero {
       rgba(0, 0, 0, 0.9) 90%,
       rgba(0, 0, 0, 1) 100%
     ),
-    url("/images/maxim-1.jpg");
+    url("/images/maxim-1.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right center; /* Aligns the background to the right */
@@ -263,7 +263,7 @@ section#festivals {
       rgba(0, 0, 0, 0.9) 90%,
       rgba(0, 0, 0, 1) 100%
     ),
-    url("/images/festivals-1.jpg");
+    url("/images/festivals-1.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right center; /* Aligns the background to the right */
@@ -273,7 +273,7 @@ section#festivals {
 }
 
 section#about-staff {
-  background: url("/images/corporate/patron-2.jpg");
+  background: url("/images/corporate/patron-2.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center; /* Aligns the background to the right */
@@ -298,7 +298,7 @@ section#contact {
       rgba(0, 0, 0, 0.9) 90%,
       rgba(0, 0, 0, 1) 100%
     ),
-    url("/images/contact.jpg");
+    url("/images/contact.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center; /* Aligns the background to the right */
@@ -308,7 +308,7 @@ section#contact {
 }
 
 .collection-background {
-  background: url("/images/corporate/BrahmCorporate2024Pt3-61.jpg");
+  background: url("/images/corporate/BrahmCorporate2024Pt3-61.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center; /* Aligns the background to the center */
@@ -341,7 +341,7 @@ section#contact {
 }
 
 .buy-background {
-  background: url("/images/mila/MilaDay2-43.jpg");
+  background: url("/images/mila/MilaDay2-43.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center; /* Centers the image */

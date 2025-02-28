@@ -9,7 +9,7 @@ export default async function RootLayout({
   return (
     <html>
       <head>
-        <link rel="preload" href="/images/maxim-1.jpg" />
+        <link rel="preload" href="/images/maxim-1.webp" />
       </head>
       <body className="font-carving">{children}</body>
     </html>

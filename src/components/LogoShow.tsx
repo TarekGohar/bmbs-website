@@ -6,19 +6,19 @@ import { useTranslations } from "next-intl";
 export default function LogoScroll() {
   const t = useTranslations("Hero");
   const images = [
-    "/images/logos/k4k.png",
-    "/images/logos/maxim.png",
-    "/images/logos/f1.png",
-    "/images/logos/igloofest.png",
-    "/images/logos/osheaga.png",
-    "/images/logos/patron.png",
-    "/images/logos/picnik.png",
-    "/images/logos/ilesoniq.png",
-    "/images/logos/evenko.png",
-    "/images/logos/cedar.png",
-    "/images/logos/greygoose.png",
-    "/images/logos/saint-mary.png",
-    "/images/logos/jewish.png",
+    "/images/logos/k4k.webp",
+    "/images/logos/maxim.webp",
+    "/images/logos/f1.webp",
+    "/images/logos/igloofest.webp",
+    "/images/logos/osheaga.webp",
+    "/images/logos/patron.webp",
+    "/images/logos/picnik.webp",
+    "/images/logos/ilesoniq.webp",
+    "/images/logos/evenko.webp",
+    "/images/logos/cedar.webp",
+    "/images/logos/greygoose.webp",
+    "/images/logos/saint-mary.webp",
+    "/images/logos/jewish.webp",
   ];
 
   // Assign each grid cell a unique subset of 2-3 images

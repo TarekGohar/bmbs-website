@@ -46,7 +46,7 @@ export default async function Home(props: {
         </div>
 
         <Image
-          src="/images/corporate/patron-1.jpg"
+          src="/images/corporate/patron-1.webp"
           width={1000}
           height={1000}
           alt="Brahm Mauer Bartending"
