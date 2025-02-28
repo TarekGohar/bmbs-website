@@ -33,8 +33,9 @@ export default async function page({ params }: { params: { locale: string } }) {
       </section>
 
       <section className="-my-20 mb-20 h-fit">
-        <div className="flex space-x-2 max-w-[100rem] mx-auto px-4 mt-10 overflow-x-auto no-scrollbar">
+        <div className="flex flex-col md:flex-row space-x-2 max-w-[100rem] mx-auto px-4 mt-10 overflow-x-auto no-scrollbar">
           <Link
+            aria-label="Corporate Section"
             href="/services/corporate"
             className="relative min-w-[20rem] md:min-w-[30rem] h-[35rem] md:h-[42rem] group cursor-pointer "
           >
@@ -51,6 +52,7 @@ export default async function page({ params }: { params: { locale: string } }) {
             </h2>
           </Link>
           <Link
+            aria-label="Festivals Section"
             href="/services/festivals"
             className="relative min-w-[20rem] md:min-w-[30rem] h-[35rem] md:h-[42rem] group cursor-pointer "
           >
@@ -68,6 +70,7 @@ export default async function page({ params }: { params: { locale: string } }) {
           </Link>
 
           <Link
+            aria-label="Fundraisers Section"
             href="/services/fundraisers"
             className="relative min-w-[20rem] md:min-w-[30rem] h-[35rem] md:h-[42rem] group cursor-pointer "
           >
@@ -85,6 +88,7 @@ export default async function page({ params }: { params: { locale: string } }) {
           </Link>
 
           <Link
+            aria-label="Private Section"
             href="/services/private"
             className="relative min-w-[20rem] md:min-w-[30rem] h-[35rem] md:h-[42rem] group cursor-pointer "
           >

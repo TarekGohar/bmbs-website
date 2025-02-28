@@ -33,15 +33,15 @@ export default async function ServicePage({
       </section>
 
       {/* First Paragraphs */}
-      <section className="max-w-[100rem] text-white mx-auto mb-[12rem]">
-        <div className="flex flex-col md:flex-row px-4 space-y-20 md:space-y-0 md:gap-x-28">
-          <p className="md:w-[60%] text-4xl font-medium md:text-5xl md:leading-[3rem]">
+      <section className="max-w-[100rem] text-neutral-200 mx-auto mb-[10rem]">
+        <div className="flex flex-col md:flex-row px-4 space-y-20 md:space-y-0">
+          <p className="md:w-[70%] text-4xl font-medium md:text-4xl md:leading-[2.5rem]">
             {t("description")}
           </p>
 
-          <p className="md:w-[40%] font-light text-2xl leading-[2rem]">
+          {/* <p className="md:w-[40%] font-light text-2xl leading-[2rem]">
             {t("long-description")}
-          </p>
+          </p> */}
         </div>
       </section>
 
@@ -66,8 +66,9 @@ export default async function ServicePage({
 
       <section>
         <div className="h-[30rem] w-full flex flex-col items-center justify-center space-y-2 text-2xl tracking-wide">
-          <p className="text-white ">{ts("book-now-subheading")}</p>
+          <h2 className="text-white ">{ts("book-now-subheading")}</h2>
           <Link
+            aria-label="Book Now"
             href="/book-now?mila"
             className="text-white w-fit font-semibold"
           >

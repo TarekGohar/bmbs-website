@@ -29,9 +29,6 @@ export default async function About() {
             {t("title")}
           </h1>
         </div>
-        {/* <h2 className="w-full font-bold text-4xl md:text-5xl uppercase text-left tracking-wider">
-              {t("second-heading")}
-            </h2> */}
       </section>
 
       {/* First Paragraphs */}
@@ -45,7 +42,7 @@ export default async function About() {
             {t("second-sentence")}
           </p>
 
-          <p className="md:w-[40%] text-2xl leading-[2rem]">
+          <p className="md:w-[40%] font-light text-2xl leading-8">
             {t("first-paragraph")}
           </p>
         </div>
@@ -68,18 +65,22 @@ export default async function About() {
 
       {/* Our Mission */}
       <section className="my-[10rem] px-4 max-w-[100rem] mx-auto space-y-[10rem] md:space-y-[16rem] md:space-x-[4rem] lg:space-x-[5rem] flex flex-col md:flex-row items-start justify-start">
-        <div className="md:w-1/2 flex flex-col text-white text-2xl space-y-[2rem]">
-          <h2 className="text-neutral-500 text-5xl font-medium">
+        <div className="md:w-1/2 flex flex-col text-white  space-y-[2rem]">
+          <h2 className="text-white text-5xl font-medium">
             The Special Ingredient
           </h2>
-          <p className="md:leading-10">{t("third-paragraph")}</p>
+          <p className="md:leading-8 font-light text-2xl">
+            {t("third-paragraph")}
+          </p>
         </div>
 
-        <div className="md:w-1/2 flex flex-col text-white text-2xl space-y-[2rem]">
-          <h2 className="text-neutral-500 text-5xl font-medium">
+        <div className="md:w-1/2 flex flex-col text-white space-y-[2rem]">
+          <h2 className="text-white text-5xl font-medium">
             Our Mixology Program
           </h2>
-          <p className="md:leading-10">{t("fourth-paragraph")}</p>
+          <p className="md:leading-8 font-light text-xl">
+            {t("fourth-paragraph")}
+          </p>
         </div>
       </section>
 

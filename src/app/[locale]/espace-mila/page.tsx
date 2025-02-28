@@ -74,8 +74,9 @@ export default async function EspaceMila({
 
       <section>
         <div className="h-[30rem] w-full flex flex-col items-center justify-center space-y-2 text-2xl tracking-wide">
-          <p className="text-white ">{ts("book-now-subheading")}</p>
+          <h2 className="text-white ">{ts("book-now-subheading")}</h2>
           <Link
+            aria-label="Book Now"
             href="/book-now?service=mila"
             className="text-white w-fit font-semibold"
           >
