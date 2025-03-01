@@ -18,7 +18,6 @@ export default async function ServicePage({
 }: ServiceProps) {
   const t = await getTranslations(`Services.${serviceTitle}`);
   const ts = await getTranslations("Hero");
-  // const images = await fetchImages(serviceTitle);
   const images = imageMetadata;
 
   return (
@@ -45,7 +44,7 @@ export default async function ServicePage({
         </div>
       </section>
 
-      {/* Mila Images */}
+      {/* Images */}
       <section className="mb-16 mx-auto py-0 px-2 md:px-2">
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-2 md:gap-2">
           {images.map(({ src, width, height, isHorizontal }, index) => (
@@ -53,8 +52,10 @@ export default async function ServicePage({
               key={index}
               src={src}
               alt={`${serviceTitle} ${index + 1}`}
-              width={600} // Adjust width for better grid layout
-              height={1000} // Adjust height for better grid layout
+              width={isHorizontal ? width * 0.1 : 600} // Adjust width for better grid layout
+              height={isHorizontal ? height * 0.1 : 1000} // Adjust height for better grid layout
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw" // Adaptive sizes
+              quality={75}
               className={`object-cover h-full w-full ${
                 isHorizontal ? "col-span-1 md:col-span-2" : "col-span-1"
               }`}
