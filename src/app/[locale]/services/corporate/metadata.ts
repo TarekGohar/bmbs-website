@@ -48,22 +48,22 @@ export default [
         isHorizontal: true
     },
     {
-    src: '/images/corporate/BrahmCorporate2024Pt3-136.webp',
-    width: 4672,
-    height: 7008,
-    isHorizontal: false
+      src: '/images/corporate/BrahmCorporate2024Pt3-136.webp',
+      width: 4672,
+      height: 7008,
+      isHorizontal: false
     },
     {
-    src: '/images/corporate/BrahmCorporate2024Pt3-148.webp',
-    width: 4672,
-    height: 7008,
-    isHorizontal: false
+      src: '/images/corporate/BrahmCorporate2024Pt3-148.webp',
+      width: 4672,
+      height: 7008,
+      isHorizontal: false
     },
     {
-    src: '/images/corporate/BrahmCorporate2024Pt3-3.webp',
-    width: 4672,
-    height: 7008,
-    isHorizontal: false
+      src: '/images/corporate/BrahmCorporate2024Pt3-3.webp',
+      width: 4672,
+      height: 7008,
+      isHorizontal: false
     },
     {
         src: '/images/corporate/BrahmxAmexHouse-11.webp',

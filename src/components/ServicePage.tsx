@@ -53,8 +53,8 @@ export default async function ServicePage({
               key={index}
               src={src}
               alt={`${serviceTitle} ${index + 1}`}
-              width={isHorizontal ? width : 600} // Adjust width for better grid layout
-              height={isHorizontal ? height : 1000} // Adjust height for better grid layout
+              width={600} // Adjust width for better grid layout
+              height={1000} // Adjust height for better grid layout
               className={`object-cover h-full w-full ${
                 isHorizontal ? "col-span-1 md:col-span-2" : "col-span-1"
               }`}
