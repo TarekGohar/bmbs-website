@@ -12,6 +12,9 @@ interface ServiceProps {
   }[];
 }
 
+const cloudflareImageUrl = (src: string, width: number, height: number) =>
+  `${src}?width=${width}&height=${height}&format=auto&quality=70`;
+
 export default async function ServicePage({
   serviceTitle,
   imageMetadata,
@@ -24,17 +27,17 @@ export default async function ServicePage({
     <>
       {/* Header Section */}
       <section className="text-white max-w-[100rem] mx-auto">
-        <div className="px-4 flex items-center justify-starts h-[25rem] md:h-[30rem]">
-          <h1 className="text-6xl md:text-7xl font-semibold uppercase">
+        <div className="px-4 flex items-end justify-start h-[14.5rem] md:h-[15rem]">
+          <h1 className="text-5xl md:text-7xl font-semibold uppercase">
             {t("title")}
           </h1>
         </div>
       </section>
 
       {/* First Paragraphs */}
-      <section className="max-w-[100rem] text-neutral-200 mx-auto mb-[10rem]">
-        <div className="flex flex-col md:flex-row px-4 space-y-20 md:space-y-0">
-          <p className="md:w-[70%] text-4xl font-medium md:text-4xl md:leading-[2.5rem]">
+      <section className="max-w-[100rem] text-neutral-200 mx-auto mt-[5rem] mb-[7rem]">
+        <div className="flex flex-col md:flex-row px-4 ">
+          <p className="md:w-[70%] text-2xl font-medium md:text-4xl md:leading-[2.5rem]">
             {t("description")}
           </p>
 
@@ -50,12 +53,17 @@ export default async function ServicePage({
           {images.map(({ src, width, height, isHorizontal }, index) => (
             <Image
               key={index}
-              src={src}
+              src={cloudflareImageUrl(
+                src,
+                isHorizontal ? height * 0.1 : 600,
+                isHorizontal ? width * 0.1 : 1000
+              )}
               alt={`${serviceTitle} ${index + 1}`}
               width={isHorizontal ? width * 0.1 : 600} // Adjust width for better grid layout
               height={isHorizontal ? height * 0.1 : 1000} // Adjust height for better grid layout
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw" // Adaptive sizes
               quality={75}
+              // loading={index > 3 ? "lazy" : "eager"}
               className={`object-cover h-full w-full ${
                 isHorizontal ? "col-span-1 md:col-span-2" : "col-span-1"
               }`}

@@ -237,7 +237,7 @@ export default function Navbar() {
           {/* Book Now */}
           <Link
             href="/book-now"
-            className={`navbar-link ${light_color}`}
+            className={`navbar-link underline underline-offset-8 ${light_color}`}
             style={{ fontWeight: 500 }}
           >
             {t("book-now")}
@@ -377,7 +377,7 @@ export default function Navbar() {
 
         <Link
           href="/book-now"
-          className={`navbar-link word ${light_color} ${
+          className={`navbar-link word underline underline-offset-8 ${light_color} ${
             visibleWords.contact ? "show" : ""
           }`}
           onClick={() => setMenu(false)}

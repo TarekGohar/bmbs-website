@@ -25,15 +25,15 @@ export default async function page({ params }: { params: { locale: string } }) {
     <>
       {/* Header Section */}
       <section className="text-white max-w-[100rem] mx-auto">
-        <div className="px-4 flex items-center justify-starts h-[25rem] md:h-[30rem]">
-          <h1 className="text-6xl md:text-7xl font-semibold uppercase">
+        <div className="px-4 flex items-end justify-start h-[14.5rem] md:h-[15rem]">
+          <h1 className="text-5xl md:text-7xl font-semibold uppercase">
             Services
           </h1>
         </div>
       </section>
 
-      <section className="-my-20 mb-20 h-fit">
-        <div className="flex flex-col md:flex-row space-x-2 max-w-[100rem] mx-auto px-4 mt-10 overflow-x-auto no-scrollbar">
+      <section className="my-20 h-fit">
+        <div className="flex flex-col md:flex-row md:space-x-2 max-w-[100rem] mx-auto px-4 mt-10 overflow-x-auto no-scrollbar">
           <Link
             aria-label="Corporate Section"
             href="/services/corporate"

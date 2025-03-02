@@ -29,8 +29,8 @@ export default async function Home(props: {
     <>
       {/* Header Section */}
       <section className="text-white max-w-[100rem] mx-auto">
-        <div className="px-4 flex items-center justify-starts h-[25rem] md:h-[30rem]">
-          <h1 className="text-6xl md:text-7xl font-semibold uppercase">
+        <div className="px-4 flex items-end justify-start h-[14.5rem] md:h-[15rem]">
+          <h1 className="text-5xl md:text-7xl font-semibold uppercase">
             Booking Details
           </h1>
         </div>
@@ -39,9 +39,9 @@ export default async function Home(props: {
       {/* Form Section */}
       <section
         id="form"
-        className="px-4 max-w-[100rem] mx-auto mb-20 flex flex-col md:flex-row items-center md:justify-between gap-x-4"
+        className="md:h-[80vh] md:min-h-[80rem]  px-4 max-w-[100rem] mx-auto flex flex-col md:flex-row items-center md:justify-between gap-x-4 my-[4rem]"
       >
-        <div className="md:w-[40%]">
+        <div className="md:w-[45%]">
           <Form service={service} />
         </div>
 
@@ -50,7 +50,7 @@ export default async function Home(props: {
           width={1000}
           height={1000}
           alt="Brahm Mauer Bartending"
-          className="hidden md:block md:w-[40%] h-[57rem] object-cover"
+          className="hidden md:block md:w-[45%] h-[57rem] object-cover"
         />
       </section>
     </>

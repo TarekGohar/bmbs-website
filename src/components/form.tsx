@@ -17,6 +17,7 @@ export default function Form({ service }: FormProps) {
   const pathname = usePathname();
   const t = useTranslations("Booking");
   const [isMila, setIsMila] = useState(service === "mila");
+  // const
   console.log(service, isMila);
 
   async function handleSubmit(event: any) {
@@ -24,7 +25,12 @@ export default function Form({ service }: FormProps) {
     setLoading(true);
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "8fb96e49-b2ea-414b-a6af-1eedf71a1277");
+    formData.append(
+      "access_key",
+      isMila
+        ? process.env.NEXT_PUBLIC_WEB_API_ACCESS_KEY_MILA || ""
+        : process.env.NEXT_PUBLIC_WEB_API_ACCESS_KEY_BMBS || ""
+    );
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
@@ -55,24 +61,29 @@ export default function Form({ service }: FormProps) {
       <input
         type="hidden"
         name="access_key"
-        value={process.env.WEB_API_ACCESS_KEY}
+        value={
+          isMila
+            ? process.env.NEXT_PUBLIC_WEB_API_ACCESS_KEY_MILA
+            : process.env.NEXT_PUBLIC_WEB_API_ACCESS_KEY_BMBS
+        }
       />
 
       <h2 className="text-white font-medium text-4xl">{t("service-type")}</h2>
       <div className="mt-2 flex flex-col space-y-3">
-        <div>
-          <DropdownSelector
-            name="Service"
-            placeholder={
-              service === "mila" ? "Espace Mila" : "Brahm Mauer Bar Services"
-            }
-            options={["Brahm Mauer Bar Services", "Espace Mila"]}
-          />
-        </div>
+        <DropdownSelector
+          name="Service"
+          placeholder={
+            service === "mila" ? "Espace Mila" : "Brahm Mauer Bar Services"
+          }
+          options={["Brahm Mauer Bar Services", "Espace Mila"]}
+          onValueChange={(key, value) => {
+            setIsMila(value === "Espace Mila");
+          }}
+        />
       </div>
 
       {/* Personal Information */}
-      <h2 className="text-white font-medium text-4xl mt-6">{t("info")}</h2>
+      <h2 className="text-white font-medium text-4xl mt-8">{t("info")}</h2>
       <div className="mt-4 flex flex-col space-y-3">
         <div>
           <h2 className="text-white  mb-1 ml-3">
@@ -122,7 +133,7 @@ export default function Form({ service }: FormProps) {
       </div>
 
       {/* Event Information */}
-      <h2 className="mt-6 text-white font-medium text-4xl">{t("details")}</h2>
+      <h2 className="mt-8 text-white font-medium text-4xl">{t("details")}</h2>
       <div className="mt-4 flex flex-col space-y-3">
         {!isMila && (
           <div>

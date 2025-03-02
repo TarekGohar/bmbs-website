@@ -12,8 +12,8 @@ export default async function NotFound() {
     <NextIntlClientProvider messages={messages}>
       <Navbar />
       <section className="text-white max-w-[100rem] mx-auto h-[58vh] min-h-[40rem]">
-        <div className="px-4 flex items-center justify-starts h-[25rem] md:h-[30rem]">
-          <h1 className="text-6xl md:text-7xl font-semibold uppercase">
+        <div className="px-4 flex items-end justify-start h-[14.5rem] md:h-[15rem]">
+          <h1 className="text-5xl md:text-7xl font-semibold uppercase">
             Page non trouvée
           </h1>
         </div>

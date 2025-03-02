@@ -1,14 +1,20 @@
 {
+  "/apple-icon.png/route": "app/apple-icon.png/route.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/icon.png/route": "app/icon.png/route.js",
+  "/icon.svg/route": "app/icon.svg/route.js",
+  "/manifest.json/route": "app/manifest.json/route.js",
+  "/robots.txt/route": "app/robots.txt/route.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
   "/_not-found/page": "app/_not-found/page.js",
-  "/[locale]/book-now/page": "app/[locale]/book-now/page.js",
-  "/[locale]/services/corporate/page": "app/[locale]/services/corporate/page.js",
-  "/[locale]/about/page": "app/[locale]/about/page.js",
   "/[locale]/book-now/success/page": "app/[locale]/book-now/success/page.js",
+  "/[locale]/about/page": "app/[locale]/about/page.js",
+  "/[locale]/book-now/page": "app/[locale]/book-now/page.js",
+  "/[locale]/services/festivals/page": "app/[locale]/services/festivals/page.js",
+  "/[locale]/services/corporate/page": "app/[locale]/services/corporate/page.js",
+  "/[locale]/services/page": "app/[locale]/services/page.js",
   "/[locale]/espace-mila/page": "app/[locale]/espace-mila/page.js",
   "/[locale]/services/fundraisers/page": "app/[locale]/services/fundraisers/page.js",
-  "/[locale]/services/festivals/page": "app/[locale]/services/festivals/page.js",
-  "/[locale]/services/page": "app/[locale]/services/page.js",
-  "/[locale]/services/private/page": "app/[locale]/services/private/page.js",
-  "/[locale]/page": "app/[locale]/page.js"
+  "/[locale]/page": "app/[locale]/page.js",
+  "/[locale]/services/private/page": "app/[locale]/services/private/page.js"
 }

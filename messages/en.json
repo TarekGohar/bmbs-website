@@ -102,12 +102,13 @@
   },
   "Mila": {
     "first-paragraph": "Experience our new event space—modern, versatile, and perfect for any occasion. The perfect spot to gather, celebrate, and enjoy.",
-    "description": "Nestled in the heart of Old Montreal, our intimate venue offers the perfect setting for all types of special events. Whether you're hosting a private celebration, corporate gathering, or intimate soirée, our space provides a charming and elegant atmosphere. Enhance your experience with exquisite cuisine from Beatrice Catering and expertly crafted cocktails from Brahm Mauer Bar Services. Let us help you create unforgettable moments in a setting that’s as unique as your event.",
+    "description-1": "Nestled in the heart of Old Montreal, our intimate venue offers the perfect setting for all types of special events. Whether you're hosting a private celebration, corporate gathering, or intimate soirée, our space provides a charming and elegant atmosphere.",
+    "description-2": "Enhance your experience with exquisite cuisine from Beatrice Catering and expertly crafted cocktails from Brahm Mauer Bar Services. Let us help you create unforgettable moments in a setting that’s as unique as your event.",
     "book-now": "Book Now"
   },
   "Booking": {
-    "title": "Booking Submitted!",
-    "subtitle": "We will get in touch soon.",
+    "title": "Booking Submitted",
+    "subtitle": "We will get in touch soon!",
     "main-title": "Booking Details",
     "service-type": "Service Type",
     "info": "Personal Information",

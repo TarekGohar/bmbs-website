@@ -279,7 +279,6 @@ section#about-staff {
   background-position: center center; /* Aligns the background to the right */
   height: 100%;
   width: 100%;
-  filter: grayscale(20%); /* Makes the image black and white */
 }
 
 .quote-bg {
@@ -311,7 +310,7 @@ section#contact {
   background: url("/images/corporate/BrahmCorporate2024Pt3-61.webp");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center; /* Aligns the background to the center */
+  background-position: 43% 25%; /* Aligns the background to the center */
   height: 100%;
   width: 100%;
   filter: grayscale(20%);

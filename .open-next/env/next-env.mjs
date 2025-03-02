@@ -1,3 +1,3 @@
-export const production = {};
-export const development = {};
-export const test = {};
+export const production = {"NEXT_PUBLIC_WEB_API_ACCESS_KEY_MILA":"5c6329e5-e7f7-4765-abb7-b31485b672c2","NEXT_PUBLIC_WEB_API_ACCESS_KEY_BMBS":"38f5f0c8-59d6-48dd-8c35-b5b0755393a9"};
+export const development = {"NEXT_PUBLIC_WEB_API_ACCESS_KEY_MILA":"5c6329e5-e7f7-4765-abb7-b31485b672c2","NEXT_PUBLIC_WEB_API_ACCESS_KEY_BMBS":"38f5f0c8-59d6-48dd-8c35-b5b0755393a9"};
+export const test = {"NEXT_PUBLIC_WEB_API_ACCESS_KEY_MILA":"5c6329e5-e7f7-4765-abb7-b31485b672c2","NEXT_PUBLIC_WEB_API_ACCESS_KEY_BMBS":"38f5f0c8-59d6-48dd-8c35-b5b0755393a9"};

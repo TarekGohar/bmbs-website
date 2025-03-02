@@ -24,17 +24,17 @@ export default async function About() {
     <>
       {/* Header Section */}
       <section className="text-white max-w-[100rem] mx-auto">
-        <div className="px-4 flex items-center justify-starts h-[25rem] md:h-[30rem]">
-          <h1 className="text-6xl md:text-7xl font-semibold uppercase">
+        <div className="px-4 flex items-end justify-start h-[14.5rem] md:h-[15rem]">
+          <h1 className="text-5xl md:text-7xl font-semibold uppercase">
             {t("title")}
           </h1>
         </div>
       </section>
 
       {/* First Paragraphs */}
-      <section className="max-w-[100rem] text-white mx-auto md:mb-[12rem]">
+      <section className="max-w-[100rem] text-white mx-auto my-[4rem] md:my-[8rem]">
         <div className="flex flex-col md:flex-row px-4 space-y-20 md:space-y-0 md:gap-x-28">
-          <p className="md:w-[60%] text-4xl font-medium md:text-5xl md:leading-[3rem]">
+          <p className="md:w-[60%] text-3xl font-medium md:text-5xl md:leading-[3rem]">
             {t("first-sentence")}{" "}
             <span className="text-neutral-600">talent</span>,{" "}
             <span className="text-neutral-600">passion</span>, {t("and")}{" "}
@@ -42,7 +42,7 @@ export default async function About() {
             {t("second-sentence")}
           </p>
 
-          <p className="md:w-[40%] font-light text-2xl leading-8">
+          <p className="md:w-[40%] font-light text-xl md:text-2xl leading-8">
             {t("first-paragraph")}
           </p>
         </div>
@@ -64,21 +64,21 @@ export default async function About() {
       </section>
 
       {/* Our Mission */}
-      <section className="my-[10rem] px-4 max-w-[100rem] mx-auto space-y-[10rem] md:space-y-[16rem] md:space-x-[4rem] lg:space-x-[5rem] flex flex-col md:flex-row items-start justify-start">
+      <section className="my-[10rem] px-4 max-w-[100rem] mx-auto space-y-[8rem] md:space-y-[16rem] md:space-x-[4rem] lg:space-x-[5rem] flex flex-col md:flex-row items-start justify-start">
         <div className="md:w-1/2 flex flex-col text-white  space-y-[2rem]">
-          <h2 className="text-white text-5xl font-medium">
+          <h2 className="text-white text-4xl md:text-5xl font-medium">
             The Special Ingredient
           </h2>
-          <p className="md:leading-8 font-light text-2xl">
+          <p className="leading-6 md:leading-8 font-light text-xl md:text-2xl">
             {t("third-paragraph")}
           </p>
         </div>
 
         <div className="md:w-1/2 flex flex-col text-white space-y-[2rem]">
-          <h2 className="text-white text-5xl font-medium">
+          <h2 className="text-white text-4xl md:text-5xl font-medium">
             Our Mixology Program
           </h2>
-          <p className="md:leading-8 font-light text-xl">
+          <p className="leading-6 md:leading-8 font-light text-xl md:text-2xl">
             {t("fourth-paragraph")}
           </p>
         </div>
@@ -86,7 +86,7 @@ export default async function About() {
 
       {/* Services */}
       <section className=" mb-20 h-fit">
-        <h2 className="text-white text-5xl font-medium max-w-[100rem] mx-auto px-4">
+        <h2 className="text-white text-4xl md:text-5xl font-medium max-w-[100rem] mx-auto px-4">
           Our Services
         </h2>
         <div className="flex space-x-2 max-w-[100rem] mx-auto px-4 mt-10 overflow-x-auto no-scrollbar">

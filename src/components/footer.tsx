@@ -7,7 +7,7 @@ export default function Footer() {
 
   return (
     <footer>
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center px-2">
         {/* Logo */}
         <svg
           width="160"

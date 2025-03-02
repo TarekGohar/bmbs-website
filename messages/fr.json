@@ -103,12 +103,13 @@
   },
   "Mila": {
     "first-paragraph": "Découvrez notre nouvel espace d'événements, moderne, polyvalent et parfait pour toutes les occasions. L'endroit idéal pour se réunir, célébrer et passer un bon moment.",
-    "description": "Niché au cœur du Vieux-Montréal, notre lieu intime offre le cadre idéal pour tous les types d'événements spéciaux. Qu'il s'agisse d'une célébration privée, d'une réunion d'entreprise ou d'une soirée intime, notre espace offre une atmosphère charmante et élégante. Vous pouvez agrémenter votre expérience d'une cuisine exquise préparée par Restauration Beatrice et de cocktails préparés par Brahm Mauer Bar Services. Laissez-nous vous aider à créer des moments inoubliables dans un cadre aussi unique que votre événement",
+    "description-1": "Niché au cœur du Vieux-Montréal, notre lieu intime offre le cadre idéal pour tous les types d'événements spéciaux. Qu'il s'agisse d'une célébration privée, d'une réunion d'entreprise ou d'une soirée intime, notre espace offre une atmosphère charmante et élégante.",
+    "description-2": "Vous pouvez agrémenter votre expérience d'une cuisine exquise préparée par Restauration Beatrice et de cocktails préparés par Brahm Mauer Bar Services. Laissez-nous vous aider à créer des moments inoubliables dans un cadre aussi unique que votre événement.",
     "book-now": "Réserver"
   },
   "Booking": {
-    "title": "Réservation effectuée!",
-    "subtitle": "Nous vous contacterons bientôt.",
+    "title": "Réservation effectuée",
+    "subtitle": "Nous vous contacterons bientôt!",
     "main-title": "Détails de la réservation",
     "service-type": "Type de service",
     "info": "Informations personnelles",

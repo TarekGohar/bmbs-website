@@ -33,7 +33,7 @@ export default async function Home({ params }: { params: { locale: string } }) {
       {/* Hero */}
       <section
         id="hero"
-        className="h-[80vh] min-h-[50rem] md:h-screen flex items-center"
+        className="h-screen min-h-[50rem] md:h-screen flex items-center"
       >
         <div className="container h-fit w-full flex justify-left px-4">
           <h1 className="flex flex-col font-bold text-white uppercase text-7xl xxs:text-7xl xs:text-8xl md:text-[8rem] leading-[6rem] xxs:leading-[5rem] xs:leading-[6rem] md:leading-[7.5rem]">
@@ -54,7 +54,7 @@ export default async function Home({ params }: { params: { locale: string } }) {
       </section>
 
       {/* Event Rotator */}
-      <section className="h-[40rem] px-6 lg:px-10 flex items-center justify-center">
+      <section className="h-[35rem] px-6 lg:px-10 flex items-center justify-center">
         <EventRotator />
       </section>
 
@@ -75,7 +75,7 @@ export default async function Home({ params }: { params: { locale: string } }) {
               </h3>
               <Link
                 href="/services"
-                className="flex items-center gap-x-2 w-fit  text-sky-600 hover:text-white duration-150"
+                className="flex items-center gap-x-2 w-fit  text-neutral-700 hover:text-white duration-150"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -100,7 +100,7 @@ export default async function Home({ params }: { params: { locale: string } }) {
       </section>
 
       {/* About */}
-      <section className="h-[48rem] lg:h-[44rem] flex items-center justify-center">
+      <section className="h-[40rem] lg:h-[44rem] flex items-center justify-center">
         <div className="max-w-[120rem] flex flex-col lg:flex-row items-center px-4 space-y-8 lg:space-x-8">
           <div className="w-full lg:w-[70%] space-y-3 lg:space-y-8">
             <h2 className="text-4xl lg:text-6xl text-white font-medium">
@@ -133,7 +133,7 @@ export default async function Home({ params }: { params: { locale: string } }) {
       </section>
 
       {/* Trusted */}
-      <section className="h-[50rem] flex items-center justify-center">
+      <section className="h-[35rem] md:h-[50rem] mt-[4rem] md:mt-0 flex items-start md:items-center justify-center">
         <LogoShow />
       </section>
 
@@ -143,8 +143,8 @@ export default async function Home({ params }: { params: { locale: string } }) {
         className="mb-[8rem] mt-[6rem] h-[28rem] md:h-[45rem] flex items-center justify-center px-2"
       >
         {/* Panels */}
-        <div className="buy-background max-w-[120rem] flex flex-col items-start justify-start w-full h-fit gap-x-2">
-          <div className="buy-panel p-5 h-fit w-full flex flex-col items-start justify-center gap-y-1 lg:gap-y-2">
+        <div className="buy-background max-w-[120rem] flex flex-col items-start justify-start w-full h-fit gap-x-2 p-1">
+          <div className="buy-panel p-5 h-fit w-full flex flex-col items-start justify-center gap-y-1 lg:gap-y-2 ">
             <h2 className="text-4xl lg:text-5xl text-white font-semibold">
               Espace Mila
             </h2>
@@ -180,17 +180,16 @@ export default async function Home({ params }: { params: { locale: string } }) {
       </section>
 
       {/* Book Now */}
-      <section>
-        <div className="h-[26rem] w-full flex flex-col items-center justify-center space-y-2 text-2xl tracking-wide">
-          <h2 className="text-white">{t("book-now-subheading")}</h2>
-          <Link
-            aria-label="Book Brahm Mauer Now Button"
-            href="/book-now"
-            className="text-white w-fit font-semibold"
-          >
-            {t("book-now")}
-          </Link>
-        </div>
+
+      <section className="h-[26rem] w-full flex flex-col items-center justify-center space-y-2 text-2xl tracking-wide">
+        <h2 className="text-white">{t("book-now-subheading")}</h2>
+        <Link
+          aria-label="Book Brahm Mauer Now Button"
+          href="/book-now"
+          className="text-white underline underline-offset-8 w-fit font-semibold"
+        >
+          {t("book-now")}
+        </Link>
       </section>
     </>
   );

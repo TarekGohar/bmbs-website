@@ -33,23 +33,28 @@ export default async function EspaceMila({
     <>
       {/* Header Section */}
       <section className="text-white max-w-[100rem] mx-auto">
-        <div className="px-4 flex items-center justify-starts h-[25rem] md:h-[30rem]">
-          <h1 className="text-6xl md:text-7xl font-semibold uppercase">
+        <div className="px-4 flex items-end justify-start h-[14.5rem] md:h-[15rem]">
+          <h1 className="text-5xl md:text-7xl font-semibold uppercase">
             Espace Mila
           </h1>
         </div>
       </section>
 
       {/* First Paragraphs */}
-      <section className="max-w-[100rem] text-white mx-auto md:mb-[12rem]">
-        <div className="flex flex-col md:flex-row px-4 space-y-20 md:space-y-0 md:gap-x-28">
-          <p className="md:w-[60%] text-4xl font-medium md:text-5xl md:leading-[3rem]">
+      <section className="max-w-[100rem] text-white mx-auto my-[6rem]">
+        <div className="flex flex-col md:flex-col px-4 space-y-10 md:gap-x-28">
+          <p className="md:w-[100%] text-2xl font-medium md:text-4xl md:leading-[2.5rem]">
             {t("first-paragraph")}
           </p>
 
-          <p className="md:w-[40%] font-light text-2xl leading-[2rem]">
-            {t("description")}
-          </p>
+          <div className="flex flex-col md:flex-row gap-y-[2.5rem] md:gap-y-0 md:gap-x-[10rem]">
+            <p className="w-[100%] font-light text-xl md:text-2xl md:leading-[2rem]">
+              {t("description-1")}
+            </p>
+            <p className="w-[100%] font-light text-xl md:text-2xl md:leading-[2rem]">
+              {t("description-2")}
+            </p>
+          </div>
         </div>
       </section>
 
