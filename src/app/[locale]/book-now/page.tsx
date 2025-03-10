@@ -28,7 +28,7 @@ export default async function Home(props: {
   return (
     <>
       {/* Header Section */}
-      <section className="text-white max-w-[100rem] mx-auto">
+      <section className="text-white max-w-[120rem] mx-auto">
         <div className="px-4 flex items-end justify-start h-[14.5rem] md:h-[15rem]">
           <h1 className="text-5xl md:text-7xl font-semibold uppercase">
             Booking Details
@@ -39,8 +39,7 @@ export default async function Home(props: {
       {/* Form Section */}
       <section
         id="form"
-        className="md:h-[80vh] md:min-h-[80rem]  px-4 max-w-[100rem] mx-auto flex flex-col md:flex-row items-center md:justify-between gap-x-4 my-[4rem]"
-      >
+        className="md:h-[80vh] md:min-h-[60rem]  px-4 max-w-[120rem] mx-auto flex flex-col md:flex-row items-center md:justify-between gap-x-4 my-[4rem]">
         <div className="md:w-[45%]">
           <Form service={service} />
         </div>

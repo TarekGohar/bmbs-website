@@ -233,9 +233,14 @@
   }
 }
 
-body {
-  background-color: black;
+html, body {
+  @apply bg-black;
 }
+
+#__next {
+  @apply min-h-screen bg-black;
+}
+
 
 section#hero {
   background: linear-gradient(

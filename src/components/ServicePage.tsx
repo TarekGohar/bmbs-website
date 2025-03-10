@@ -26,7 +26,7 @@ export default async function ServicePage({
   return (
     <>
       {/* Header Section */}
-      <section className="text-white max-w-[100rem] mx-auto">
+      <section className="text-white max-w-[120rem] mx-auto">
         <div className="px-4 flex items-end justify-start h-[14.5rem] md:h-[15rem]">
           <h1 className="text-5xl md:text-7xl font-semibold uppercase">
             {t("title")}
@@ -35,7 +35,7 @@ export default async function ServicePage({
       </section>
 
       {/* First Paragraphs */}
-      <section className="max-w-[100rem] text-neutral-200 mx-auto mt-[5rem] mb-[7rem]">
+      <section className="max-w-[120rem] text-neutral-200 mx-auto mt-[5rem] mb-[7rem]">
         <div className="flex flex-col md:flex-row px-4 ">
           <p className="md:w-[70%] text-2xl font-medium md:text-4xl md:leading-[2.5rem]">
             {t("description")}
@@ -79,8 +79,7 @@ export default async function ServicePage({
           <Link
             aria-label="Book Now"
             href="/book-now?mila"
-            className="text-white w-fit font-semibold"
-          >
+            className="text-white w-fit font-semibold">
             {ts("book-now")}
           </Link>
         </div>

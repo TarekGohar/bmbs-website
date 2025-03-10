@@ -75,14 +75,12 @@ export default function Navbar() {
           href="/"
           aria-label="Brahm Mauer Logo Home Button"
           className={`w-40 xxs:w-48 md:w-[14rem] xl:w-[14rem] z-10 duration-300 ${light_color} text-transparent fill-white hover:fill-slate-200`}
-          onClick={() => setMenu(false)}
-        >
+          onClick={() => setMenu(false)}>
           <svg
             id="Layer_1"
             data-name="Layer 1"
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 693.21968 192.373"
-          >
+            viewBox="0 0 693.21968 192.373">
             <path
               d="M81.5747,129.913c-.9927,0-1.8159-.2373-2.4687-.7089-.6543-.4707-.982-1.0469-.982-1.7247,0-.6816.336-1.2832,1.021-1.8066,1.2027-.9961,5.9287-2.8916,14.1646-5.6894,8.2441-2.8008,13.124-4.1993,14.6391-4.1993,1.3111,0,1.9639.7315,1.9639,2.1983,0,.9931-.7837,1.751-2.355,2.2734-1.1518.3174-2.331.6299-3.5298.9424-1.7822.5225-3.5859,1.0488-5.4179,1.5713-2.8272.8896-4.188,1.543-4.0811,1.9629,15.333-2.0938,32.834-7.7451,52.5078-16.9551,6.5381-3.0342,13.9981-7.0137,22.3731-11.9282,12.2929-7.1719,18.4443-12.0371,18.4443-14.6011,0-2.9312-4.4731-4.397-13.4214-4.397-7.5908,0-17.7427,1.021-30.4546,3.063-13.5522,2.1968-23.3393,4.5518-29.3564,7.063,1.3071,5.9639,2.458,10.937,3.4512,14.9146.5791-1.0997,1.2871-1.6504,2.123-1.6504,1.0439,0,1.9111.916,2.5908,2.749.4673,1.4131.7051,2.7978.7051,4.1592,0,1.6748-.2607,3.1923-.7837,4.5517-.6802,1.6768-1.5713,2.5108-2.6714,2.5108-.7837,0-1.623-.417-2.5088-1.2539-1.2592-1.1524-3.5351-9.2891-6.8281-24.4121-13.1909,5.2343-21.665,7.85-25.4321,7.85-2.3037,0-3.4546-.8369-3.4546-2.5107,0-.7324.3398-1.4922,1.021-2.2764,2.1406-2.25,10.9267-5.5449,26.3506-9.8857-1.3618-6.4893-2.7979-13.6069-4.315-21.3501-9.5219,2.8262-22.3369,6.1479-38.4526,9.9678-19.354,4.602-32.1973,7.7431-38.5293,9.415-.835.314-1.647.6011-2.4297.8633-1.3101.4189-2.3594.6289-3.1392.6289-1.413,0-2.121-.6812-2.121-2.042,0-1.0449.8632-1.8838,2.5878-2.5088,1.3101-.3174,2.6202-.6304,3.9312-.9443,18.7832-5.231,31.6299-8.7388,38.5322-10.5181,14.4458-3.7681,27.396-6.75,38.854-8.9487-.7334-3.8194-1.0971-5.8081-1.0971-5.9639,0-.313.1831-.7324.5468-1.2573.3682-.52.7871-.7827,1.2593-.7827,1.3609,0,2.4849,2.4057,3.376,7.2207,13.0278-2.355,23.5439-3.5298,31.5498-3.5298,4.1318,0,7.7461.3628,10.834,1.0947,5.022,1.2061,7.5312,3.2461,7.5312,6.1231,0,3.6123-5.7793,8.7129-17.3471,15.3071,10.9897-1.7788,20.4887-2.6689,28.4921-2.6689,5.6558,0,10.5469.4428,14.6788,1.333,7.0141,1.413,10.52,3.8979,10.52,7.457,0,5.5488-7.6939,12.6108-23.0781,21.1934-9.9419,5.5468-20.3541,10.413-31.2388,14.5986-9.731,3.8174-19.1509,6.8545-28.2583,9.1045-11.6636,2.9287-21.7676,4.3974-30.2969,4.3974M140.0508,56.601c-9.3628,0-19.6968,1.021-31.001,3.0611,1.4092,7.4311,2.8262,14.417,4.2388,20.957,19.8843-5.335,32.624-11.4072,38.2241-18.21.6772-.8349,1.021-1.5952,1.021-2.2763,0-2.355-4.1641-3.5318-12.4829-3.5318"
               fill="currentColor"
@@ -172,12 +170,10 @@ export default function Navbar() {
               onMouseLeave={() => {
                 setHover(false);
                 setIsOpen(false);
-              }}
-            >
+              }}>
               <Link
                 href="/services"
-                className={`relative navbar-link ${light_color}`}
-              >
+                className={`relative navbar-link ${light_color}`}>
                 Services
               </Link>
               <svg
@@ -187,8 +183,7 @@ export default function Navbar() {
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+                xmlns="http://www.w3.org/2000/svg">
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -208,8 +203,7 @@ export default function Navbar() {
                 onMouseLeave={() => {
                   setHover(false);
                   setIsOpen(false);
-                }}
-              >
+                }}>
                 <li>
                   <Link href={"/services/corporate"} className={light_color}>
                     Corporate
@@ -234,12 +228,15 @@ export default function Navbar() {
             ) : null}
           </div>
 
+          <Link href="/venues" className={`navbar-link ${light_color}`}>
+            {t("venues")}
+          </Link>
+
           {/* Book Now */}
           <Link
             href="/book-now"
             className={`navbar-link underline underline-offset-8 ${light_color}`}
-            style={{ fontWeight: 500 }}
-          >
+            style={{ fontWeight: 500 }}>
             {t("book-now")}
           </Link>
 
@@ -248,8 +245,7 @@ export default function Navbar() {
             href={pathname}
             locale={t("locale") as "en" | "fr" | undefined}
             className={`navbar-link uppercase  ${light_color}`}
-            onClick={() => revalidatePath(pathname)}
-          >
+            onClick={() => revalidatePath(pathname)}>
             {t("locale")}
           </Link>
         </div>
@@ -261,8 +257,7 @@ export default function Navbar() {
           className={`${
             menu ? "open" : ""
           } z-50 block hamburger lg:hidden focus:outline-none group`}
-          onClick={() => setMenu((prev) => !prev)}
-        >
+          onClick={() => setMenu((prev) => !prev)}>
           <span className={`hamburger-top ${light_color_bg}`}></span>
           <span className={`hamburger-middle ${light_color_bg}`}></span>
           <span className={`hamburger-bottom ${light_color_bg}`}></span>
@@ -277,15 +272,13 @@ export default function Navbar() {
             ? "flex opacity-100 transition-opacity duration-500"
             : "opacity-0 pointer-events-none"
         }`}
-        onClick={() => setMenu(false)}
-      >
+        onClick={() => setMenu(false)}>
         <Link
           href="/about"
           className={`navbar-link word ${light_color} ${
             visibleWords.about ? "show" : ""
           }`}
-          onClick={() => setMenu(false)}
-        >
+          onClick={() => setMenu(false)}>
           {t("about")}
         </Link>
         <Link
@@ -293,10 +286,20 @@ export default function Navbar() {
           className={`navbar-link word ${light_color} ${
             visibleWords.mila ? "show" : ""
           }`}
-          onClick={() => setMenu(false)}
-        >
+          onClick={() => setMenu(false)}>
           {t("mila")}
         </Link>
+
+        <Link
+          href="/venues"
+          className={`navbar-link word ${light_color} ${
+            visibleWords.mila ? "show" : ""
+          }`}
+          onClick={() => setMenu(false)}>
+          {t("venues")}
+        </Link>
+
+        {/* Services */}
         <div>
           <div
             className={`word group flex flex-row-reverse items-center gap-x-2 pl-12 ${
@@ -309,12 +312,10 @@ export default function Navbar() {
             onMouseLeave={() => {
               setHover(false);
               setIsOpen(false);
-            }}
-          >
+            }}>
             <Link
               href="/services"
-              className={`relative navbar-link ${light_color}`}
-            >
+              className={`relative navbar-link ${light_color}`}>
               Services
             </Link>
             <svg
@@ -324,8 +325,7 @@ export default function Navbar() {
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+              xmlns="http://www.w3.org/2000/svg">
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -349,8 +349,7 @@ export default function Navbar() {
               onMouseLeave={() => {
                 setHover(false);
                 setIsOpen(false);
-              }}
-            >
+              }}>
               <li>
                 <Link href={"/services/corporate"} className={light_color}>
                   Corporate
@@ -381,8 +380,7 @@ export default function Navbar() {
             visibleWords.contact ? "show" : ""
           }`}
           onClick={() => setMenu(false)}
-          style={{ fontWeight: 500 }}
-        >
+          style={{ fontWeight: 500 }}>
           {t("book-now")}
         </Link>
         <Link
@@ -394,8 +392,7 @@ export default function Navbar() {
           onClick={() => {
             setMenu(false);
             revalidatePath(pathname);
-          }}
-        >
+          }}>
           {t("locale")}
         </Link>
       </div>

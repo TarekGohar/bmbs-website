@@ -13,8 +13,10 @@
     "deploy:worker": "npm run build:worker && wrangler deploy"
   },
   "dependencies": {
+    "@studio-freight/lenis": "^1.0.42",
     "framer-motion": "^12.4.7",
     "image-size": "^1.2.0",
+    "motion": "^12.4.10",
     "next": "15.1.3",
     "next-intl": "^3.26.3",
     "react": "19.0.0",

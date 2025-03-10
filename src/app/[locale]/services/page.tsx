@@ -24,7 +24,7 @@ export default async function page({ params }: { params: { locale: string } }) {
   return (
     <>
       {/* Header Section */}
-      <section className="text-white max-w-[100rem] mx-auto">
+      <section className="text-white max-w-[120rem] mx-auto">
         <div className="px-4 flex items-end justify-start h-[14.5rem] md:h-[15rem]">
           <h1 className="text-5xl md:text-7xl font-semibold uppercase">
             Services
@@ -33,12 +33,11 @@ export default async function page({ params }: { params: { locale: string } }) {
       </section>
 
       <section className="my-20 h-fit">
-        <div className="flex flex-col md:flex-row md:space-x-2 max-w-[100rem] mx-auto px-4 mt-10 overflow-x-auto no-scrollbar">
+        <div className="flex flex-col md:flex-row md:space-x-2 max-w-[120rem] mx-auto px-4 mt-10 overflow-x-auto no-scrollbar">
           <Link
             aria-label="Corporate Section"
             href="/services/corporate"
-            className="relative min-w-[20rem] md:min-w-[30rem] h-[35rem] md:h-[42rem] group cursor-pointer "
-          >
+            className="relative min-w-[20rem] md:min-w-[30rem] h-[35rem] md:h-[42rem] group cursor-pointer ">
             <Image
               src="/images/corporate/BrahmxAmexHouse-11.webp"
               alt="corporate event"
@@ -54,8 +53,7 @@ export default async function page({ params }: { params: { locale: string } }) {
           <Link
             aria-label="Festivals Section"
             href="/services/festivals"
-            className="relative min-w-[20rem] md:min-w-[30rem] h-[35rem] md:h-[42rem] group cursor-pointer "
-          >
+            className="relative min-w-[20rem] md:min-w-[30rem] h-[35rem] md:h-[42rem] group cursor-pointer ">
             <Image
               src="/images/festivals/festivals-3.webp"
               alt="festivals"
@@ -72,8 +70,7 @@ export default async function page({ params }: { params: { locale: string } }) {
           <Link
             aria-label="Fundraisers Section"
             href="/services/fundraisers"
-            className="relative min-w-[20rem] md:min-w-[30rem] h-[35rem] md:h-[42rem] group cursor-pointer "
-          >
+            className="relative min-w-[20rem] md:min-w-[30rem] h-[35rem] md:h-[42rem] group cursor-pointer ">
             <Image
               src="/images/fundraisers/fundraisers-1.webp"
               alt="corporate event"
@@ -90,8 +87,7 @@ export default async function page({ params }: { params: { locale: string } }) {
           <Link
             aria-label="Private Section"
             href="/services/private"
-            className="relative min-w-[20rem] md:min-w-[30rem] h-[35rem] md:h-[42rem] group cursor-pointer "
-          >
+            className="relative min-w-[20rem] md:min-w-[30rem] h-[35rem] md:h-[42rem] group cursor-pointer ">
             <Image
               src="/images/private/private-0.webp"
               alt="private event"

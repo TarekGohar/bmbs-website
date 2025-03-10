@@ -30,6 +30,7 @@ const PhoneInput: React.FC = () => {
       placeholder={t("phone-placeholder")}
       className="input"
       value={phone}
+      required
       onInput={handleInput}
     />
   );

@@ -32,7 +32,7 @@ export default async function EspaceMila({
   return (
     <>
       {/* Header Section */}
-      <section className="text-white max-w-[100rem] mx-auto">
+      <section className="text-white max-w-[120rem] mx-auto">
         <div className="px-4 flex items-end justify-start h-[14.5rem] md:h-[15rem]">
           <h1 className="text-5xl md:text-7xl font-semibold uppercase">
             Espace Mila
@@ -41,17 +41,17 @@ export default async function EspaceMila({
       </section>
 
       {/* First Paragraphs */}
-      <section className="max-w-[100rem] text-white mx-auto my-[6rem]">
+      <section className="max-w-[120rem] text-white mx-auto my-[6rem]">
         <div className="flex flex-col md:flex-col px-4 space-y-10 md:gap-x-28">
           <p className="md:w-[100%] text-2xl font-medium md:text-4xl md:leading-[2.5rem]">
             {t("first-paragraph")}
           </p>
 
           <div className="flex flex-col md:flex-row gap-y-[2.5rem] md:gap-y-0 md:gap-x-[10rem]">
-            <p className="w-[100%] font-light text-xl md:text-2xl md:leading-[2rem]">
+            <p className="w-[100%] font-light md:text-xl md:leading-[2rem]">
               {t("description-1")}
             </p>
-            <p className="w-[100%] font-light text-xl md:text-2xl md:leading-[2rem]">
+            <p className="w-[100%] font-light md:text-xl md:leading-[2rem]">
               {t("description-2")}
             </p>
           </div>
@@ -83,8 +83,7 @@ export default async function EspaceMila({
           <Link
             aria-label="Book Now"
             href="/book-now?service=mila"
-            className="text-white w-fit font-semibold"
-          >
+            className="text-white w-fit font-semibold">
             {ts("book-now")}
           </Link>
         </div>

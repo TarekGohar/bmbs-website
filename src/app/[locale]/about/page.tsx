@@ -23,7 +23,7 @@ export default async function About() {
   return (
     <>
       {/* Header Section */}
-      <section className="text-white max-w-[100rem] mx-auto">
+      <section className="text-white max-w-[120rem] mx-auto">
         <div className="px-4 flex items-end justify-start h-[14.5rem] md:h-[15rem]">
           <h1 className="text-5xl md:text-7xl font-semibold uppercase">
             {t("title")}
@@ -32,9 +32,9 @@ export default async function About() {
       </section>
 
       {/* First Paragraphs */}
-      <section className="max-w-[100rem] text-white mx-auto my-[4rem] md:my-[8rem]">
+      <section className="max-w-[120rem] text-white mx-auto my-[4rem] md:my-[8rem]">
         <div className="flex flex-col md:flex-row px-4 space-y-20 md:space-y-0 md:gap-x-28">
-          <p className="md:w-[60%] text-3xl font-medium md:text-5xl md:leading-[3rem]">
+          <p className="md:w-[60%] text-2xl font-medium md:text-4xl md:leading-[2.25rem]">
             {t("first-sentence")}{" "}
             <span className="text-neutral-600">talent</span>,{" "}
             <span className="text-neutral-600">passion</span>, {t("and")}{" "}
@@ -42,7 +42,7 @@ export default async function About() {
             {t("second-sentence")}
           </p>
 
-          <p className="md:w-[40%] font-light text-xl md:text-2xl leading-8">
+          <p className="md:w-[40%] font-light md:text-xl md:leading-[2rem]">
             {t("first-paragraph")}
           </p>
         </div>
@@ -51,10 +51,9 @@ export default async function About() {
       {/* Quote Section */}
       <section
         id="about-staff"
-        className="my-[6rem] min-h-[30rem] md:min-h-[50rem] max-w-[140rem] mx-auto flex items-start justify-center py-[1.5rem] md:py-[5rem] px-[1rem] sm:px-[2rem] md:px-[3rem]"
-      >
+        className="my-[6rem] min-h-[30rem] md:min-h-[50rem] max-w-[140rem] mx-auto flex items-start justify-center py-[1.5rem] md:py-[5rem] px-[1rem] sm:px-[2rem] md:px-[3rem]">
         <div className="w-[100rem] px-4 space-y-2">
-          <p className="font-medium text-2xl sm:text-3xl md:text-5xl text-left text-white opacity-70">
+          <p className="font-medium text-2xl sm:text-3xl md:text-4xl text-left text-white opacity-70">
             {t("second-paragraph")}
             <span className="text-lg md:text-3xl text-white opacity-50">
               - Richard Branson
@@ -64,12 +63,12 @@ export default async function About() {
       </section>
 
       {/* Our Mission */}
-      <section className="my-[10rem] px-4 max-w-[100rem] mx-auto space-y-[8rem] md:space-y-[16rem] md:space-x-[4rem] lg:space-x-[5rem] flex flex-col md:flex-row items-start justify-start">
+      <section className="my-[8rem] px-4 max-w-[120rem] mx-auto space-y-[8rem] md:space-y-[16rem] md:space-x-[4rem] lg:space-x-[5rem] flex flex-col md:flex-row items-start justify-start">
         <div className="md:w-1/2 flex flex-col text-white  space-y-[2rem]">
-          <h2 className="text-white text-4xl md:text-5xl font-medium">
+          <h2 className="text-white text-4xl md:text-5xl font-semibold">
             The Special Ingredient
           </h2>
-          <p className="leading-6 md:leading-8 font-light text-xl md:text-2xl">
+          <p className=" font-light md:text-xl md:leading-[2rem]">
             {t("third-paragraph")}
           </p>
         </div>
@@ -78,7 +77,7 @@ export default async function About() {
           <h2 className="text-white text-4xl md:text-5xl font-medium">
             Our Mixology Program
           </h2>
-          <p className="leading-6 md:leading-8 font-light text-xl md:text-2xl">
+          <p className="font-light md:text-xl md:leading-[2rem]">
             {t("fourth-paragraph")}
           </p>
         </div>
@@ -86,14 +85,13 @@ export default async function About() {
 
       {/* Services */}
       <section className=" mb-20 h-fit">
-        <h2 className="text-white text-4xl md:text-5xl font-medium max-w-[100rem] mx-auto px-4">
+        <h2 className="text-white text-4xl md:text-5xl font-medium max-w-[120rem] mx-auto px-4">
           Our Services
         </h2>
-        <div className="flex space-x-2 max-w-[100rem] mx-auto px-4 mt-10 overflow-x-auto no-scrollbar">
+        <div className="flex space-x-2 max-w-[120rem] mx-auto px-4 mt-10 overflow-x-auto no-scrollbar">
           <Link
             href="/services/corporate"
-            className="relative min-w-[20rem] md:min-w-[30rem] h-[35rem] md:h-[42rem] group cursor-pointer"
-          >
+            className="relative min-w-[20rem] md:min-w-[30rem] h-[35rem] md:h-[42rem] group cursor-pointer">
             <Image
               src="/images/corporate/BrahmxAmexHouse-11.webp"
               alt="corporate event"
@@ -108,8 +106,7 @@ export default async function About() {
           </Link>
           <Link
             href="/services/festivals"
-            className="relative min-w-[20rem] md:min-w-[30rem] h-[35rem] md:h-[42rem] group cursor-pointer"
-          >
+            className="relative min-w-[20rem] md:min-w-[30rem] h-[35rem] md:h-[42rem] group cursor-pointer">
             <Image
               src="/images/festivals/festivals-3.webp"
               alt="festivals"
@@ -125,8 +122,7 @@ export default async function About() {
 
           <Link
             href="/services/fundraisers"
-            className="relative min-w-[20rem] md:min-w-[30rem] h-[35rem] md:h-[42rem] group cursor-pointer"
-          >
+            className="relative min-w-[20rem] md:min-w-[30rem] h-[35rem] md:h-[42rem] group cursor-pointer">
             <Image
               src="/images/fundraisers/fundraisers-1.webp"
               alt="corporate event"
@@ -142,8 +138,7 @@ export default async function About() {
 
           <Link
             href="/services/private"
-            className="relative min-w-[20rem] md:min-w-[30rem] h-[35rem] md:h-[42rem] group cursor-pointer"
-          >
+            className="relative min-w-[20rem] md:min-w-[30rem] h-[35rem] md:h-[42rem] group cursor-pointer">
             <Image
               src="/images/private/private-0.webp"
               alt="private event"
